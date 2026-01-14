@@ -44,6 +44,14 @@ class April(nn.Module):
 
         return dldq, dldk, dldv
 
+    def get_layer_norm_weights(self, block_index):
+        """
+        Returns the LayerNorm weights and biases for a specific block.
+        """
+        ln1_weight = self.model.blocks[block_index].norm1.weight.data
+        ln1_bias = self.model.blocks[block_index].norm1.bias.data
+
+        return (ln1_weight, ln1_bias)
 
     def forward(self, x):
         # We need to register a hook to get the input embedding z

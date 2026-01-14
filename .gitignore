@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+*.pyc
+
+# Pytest
+.pytest_cache/
+
+# Datasets
+data/
