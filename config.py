@@ -1,0 +1,9 @@
+DATASETS = ["cifar10", "cifar100", "stl10", "tiny_imagenet", "imagenet"]
+DEFAULT_DATASET = "cifar10"
+DEFAULT_MODEL = "vit_tiny_patch16_224"
+DEFAULT_BATCH_SIZE = 64
+DEFAULT_EPOCHS = 10
+DEFAULT_LR = 1e-3
+DEFAULT_DEVICE = "cuda"
+DEFAULT_SAVE_PATH = "checkpoints"
+DEFAULT_LOG_PATH = "logs"
