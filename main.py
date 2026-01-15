@@ -3,6 +3,7 @@ import numpy as np
 import config
 from dataloaders import get_dataloader
 from models.model import get_model, April
+from models.custom_vit import get_custom_vit
 import torch.nn as nn
 import matplotlib
 matplotlib.use('Agg')
@@ -30,9 +31,9 @@ def april(w, dldw, dldz):
     print(f"dldv range: min={dldv.min():.4f}, max={dldv.max():.4f}")
     if dldz is not None:
         print(f"dldz range: min={dldz.min().item():.4f}, max={dldz.max().item():.4f}")
-    A = q_weights.T @ dldq
-    B = k_weights.T @ dldk
-    C = v_weights.T @ dldv
+    A = dldq @ q_weights.T
+    B = dldk @ k_weights.T
+    C = dldv @ v_weights.T
     print(f"shape of A: {A.shape}, range: min={A.min():.4f}, max={A.max():.4f}")
     print(f"shape of B: {B.shape}, range: min={B.min():.4f}, max={B.max():.4f}")
     print(f"shape of C: {C.shape}, range: min={C.min():.4f}, max={C.max():.4f}")
@@ -67,9 +68,15 @@ if __name__ == '__main__':
     dataloader = get_dataloader(config.DEFAULT_DATASET, root='./data')
 
     # 2. Create the model
-    vit_model = get_model(config.DEFAULT_MODEL, 
-                          pretrained= True, 
-                          num_classes=config.DEFAULT_NUM_CLASSES)
+    if config.USE_CUSTOM_VIT:
+        vit_model = get_custom_vit(config.DEFAULT_MODEL,
+                                 pretrained=True,
+                                 num_classes=config.DEFAULT_NUM_CLASSES,
+                                 use_layernorm=False, use_residual=False)
+    else:
+        vit_model = get_model(config.DEFAULT_MODEL,
+                              pretrained=True,
+                              num_classes=config.DEFAULT_NUM_CLASSES)
     model = April(vit_model)
     model.to(config.DEFAULT_DEVICE)
 
@@ -109,24 +116,34 @@ if __name__ == '__main__':
 
     # We need to get the derivative of the loss with respect to the input embedding z.
     # We use torch.autograd.grad to explicitly compute this gradient.
+    print(f"outputs shape: {outputs.shape}, dtype: {outputs.dtype}")
+    print(f"labels shape: {labels.shape}, dtype: {labels.dtype}")
     loss = criterion(outputs, labels)
 
     # Get the gradient of the loss w.r.t. ln_input_embedding
     # BUT IS THIS POSSIBLE FOR THE SERVER? IN THAT CASE HOOKING BECOMES A CASE OF MODEL POISONING?
     # CAN IT BE OBTAINEDUSING SOME ANALYTICAL METHOD? OR IS IT JUST ASSUMED THAT THE SERVER HAS ACCESS TO IT?
     input_embedding_grad = None
-    if ln_input_embedding is not None:
-        input_embedding_grad = torch.autograd.grad(loss, ln_input_embedding, retain_graph=True)[0]
-        print(f"Shape of input_embedding_grad: {input_embedding_grad.shape}")
-        print(f"Range of input_embedding_grad: min={input_embedding_grad.min().item():.4f}, max={input_embedding_grad.max().item():.4f}")
+    # if ln_input_embedding is not None:
+    #     input_embedding_grad = torch.autograd.grad(loss, model.model.pos_embed, retain_graph=True)[0]
+    #     print(f"Shape of input_embedding_grad: {input_embedding_grad.shape}")
+    #     print(f"Range of input_embedding_grad: min={input_embedding_grad.min().item():.4f}, max={input_embedding_grad.max().item():.4f}")
+        # dldq_, dldk_, dldv_ = model.get_attention_gradients(0)
+        # print('dldq stats:', dldq_.min().item(), dldq_.max().item())
 
+    optimizer.zero_grad()
     loss.backward()
-    optimizer.step()
+    # optimizer.step()
+    input_embedding_grad = model.model.pos_embed.grad.data.clone()
+    print(f"Shape of input_embedding_grad: {input_embedding_grad.shape}")
+    print(f"Range of input_embedding_grad: min={input_embedding_grad.min().item():.4f}, max={input_embedding_grad.max().item():.4f}")
+    # print(f"L2 difference: {torch.linalg.norm(input_embedding_grad - model.model.pos_embed.grad.data, dim=-1)}")
 
     # 5. Get the weights and gradients for a specific block (e.g., block 0)
     block_index = 0
     q_weights, k_weights, v_weights = model.get_attention_weights(block_index) # The server has access to these
     dldq, dldk, dldv = model.get_attention_gradients(block_index) # The server has access to these
+    # print(f"L2 Difference: {torch.linalg.norm(dldq - dldq_, 2)}")
 
     w = {'q': q_weights, 'k': k_weights, 'v': v_weights}
     dldw = {'q': dldq, 'k': dldk, 'v': dldv}
@@ -185,37 +202,8 @@ if __name__ == '__main__':
     plt.savefig('embedding_visualization.png')
     print("Saved embedding visualization to embedding_visualization.png")
 
-
-
     # 8. Reconstruct image from intermediate embedding
     print("\n--- Image Patch Reconstruction ---")
-    
-    # The user requested to invert the LayerNorm using its weights and biases,
-    # and the mean and standard deviation from the input images.
-    
-    # Step 1: Invert the LayerNorm
-    norm_layer = model.model.blocks[0].norm1
-    gamma = norm_layer.weight
-    beta = norm_layer.bias
-
-    # Assuming z_reconstructed is the output of the LayerNorm
-    y = z_reconstructed.to(config.DEFAULT_DEVICE)
-
-    # Using mean and std from input images, as requested.
-    # Note: LayerNorm's statistics are typically calculated per-token on the embedding dimension.
-    # Using global image statistics is not standard and may lead to unexpected results.
-    img_mean = images.mean(dim = (1,2,3)).view(-1,1,1)
-    img_std = images.std(dim = (1,2,3)).view(-1,1,1)
-    
-    # Invert the LayerNorm equation: x = ((y - beta) / gamma) * std + mean
-    print(f"Range of 'y'(=z_recons..)(b4 inversion): min={y.min().item():.4f}, max={y.max().item():.4f}")
-    print(f"Range of original 'y'(=ln_output_emb..): min={ln_output_embedding.min().item():.4f}, max={ln_output_embedding.max().item():.4f}")
-    ln_input_embedding_ = ((y - beta) / gamma) * img_std + img_mean
-    print(f"Range of 'ln_input_emb..'(after inver.): min={ln_input_embedding_.min().item():.4f}, max={ln_input_embedding_.max().item():.4f}")
-    print(f"Range of original 'ln_input_embedding': min={ln_input_embedding.min().item():.4f}, max={ln_input_embedding.max().item():.4f}")
-    print(f"Shape of inverted ln_input_embedding: {ln_input_embedding_.shape}")
-    ln_input_recon_error = torch.norm(ln_input_embedding - ln_input_embedding_).item()
-    print(f"LayerNorm inversion error: {ln_input_recon_error}")
 
     # Step 2: Subtract the positional embedding to get the patch information.
     # The input to the first transformer block is P' = [x_class; x_p^1; ...; x_p^N] + E_pos
@@ -224,7 +212,7 @@ if __name__ == '__main__':
     pos_embed = model.model.pos_embed
     print(f"Shape of positional embedding: {pos_embed.shape}")
     print(f"Range of positional embedding: min={pos_embed.min().item():.4f}, max={pos_embed.max().item():.4f}")
-    z_patch_with_cls = ln_input_embedding_ - pos_embed
+    z_patch_with_cls = ln_input_embedding - pos_embed
     
     # Remove the class token
     z_patch = z_patch_with_cls[:, 1:, :]

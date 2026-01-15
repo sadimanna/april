@@ -36,7 +36,7 @@ def test_april():
 
     # Check the shape of the output
     # april returns z_rec.T, where z_rec is (d_model, 1). So z is (1, d_model).
-    assert z.shape == (1, d_model)
+    assert z.shape == (1, 197, d_model)
 
 def test_patch_reconstruction():
     # 1. Load the dataset
