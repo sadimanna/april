@@ -29,7 +29,6 @@ class April(nn.Module):
 
         return q_weights, k_weights, v_weights
 
-
     def get_attention_gradients(self, block_index):
         """
         Returns the gradients of the Q, K, V weights for a specific block.

@@ -58,7 +58,7 @@ def test_patch_reconstruction():
     def hook_ln_input(module, input_val, output_val):
         nonlocal ln_input_embedding
         ln_input_embedding = input_val[0].clone()
-
+    ###### INPUT to first layer norm ######
     handle_ln_input = model.model.blocks[0].norm1.register_forward_hook(hook_ln_input)
 
     # Run forward pass
