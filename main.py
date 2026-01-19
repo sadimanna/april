@@ -121,7 +121,7 @@ if __name__ == '__main__':
         print(f"Range of input_embedding_grad: min={input_embedding_grad.min().item():.4f}, max={input_embedding_grad.max().item():.4f}")
 
     loss.backward()
-    optimizer.step()
+    # optimizer.step()
 
     # 5. Get the weights and gradients for a specific block (e.g., block 0)
     block_index = 0
