@@ -9,6 +9,30 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import datetime
+import logging
+import os
+
+# Configure logging
+def setup_logging():
+    log_dir = 'logs'
+    if not os.path.exists(log_dir):
+        os.makedirs(log_dir)
+    
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_file = os.path.join(log_dir, f'april_run_{timestamp}.log')
+    
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler(log_file),
+            logging.StreamHandler()
+        ]
+    )
+    # Return nothing, just configure
+    return
+
+logger = logging.getLogger(__name__)
 
 def april(w, dldw, dldz):
     """
@@ -22,25 +46,25 @@ def april(w, dldw, dldz):
     dldk = dldw['k'] #.cpu().numpy()
     dldv = dldw['v'] #.cpu().numpy()
 
-    print("\n--- APRIL Algorithm ---")
-    print(f"q_weights range: min={q_weights.min():.4f}, max={q_weights.max():.4f}")
-    print(f"k_weights range: min={k_weights.min():.4f}, max={k_weights.max():.4f}")
-    print(f"v_weights range: min={v_weights.min():.4f}, max={v_weights.max():.4f}")
-    print(f"dldq range: min={dldq.min():.4f}, max={dldq.max():.4f}")
-    print(f"dldk range: min={dldk.min():.4f}, max={dldk.max():.4f}")
-    print(f"dldv range: min={dldv.min():.4f}, max={dldv.max():.4f}")
+    logger.info("\n--- APRIL Algorithm ---")
+    logger.info(f"q_weights range: min={q_weights.min():.4f}, max={q_weights.max():.4f}")
+    logger.info(f"k_weights range: min={k_weights.min():.4f}, max={k_weights.max():.4f}")
+    logger.info(f"v_weights range: min={v_weights.min():.4f}, max={v_weights.max():.4f}")
+    logger.info(f"dldq range: min={dldq.min():.4f}, max={dldq.max():.4f}")
+    logger.info(f"dldk range: min={dldk.min():.4f}, max={dldk.max():.4f}")
+    logger.info(f"dldv range: min={dldv.min():.4f}, max={dldv.max():.4f}")
     if dldz is not None:
-        print(f"dldz range: min={dldz.min().item():.4f}, max={dldz.max().item():.4f}")
+        logger.info(f"dldz range: min={dldz.min().item():.4f}, max={dldz.max().item():.4f}")
     A = dldq @ q_weights.T
     B = dldk @ k_weights.T
     C = dldv @ v_weights.T
-    print(f"shape of A: {A.shape}, range: min={A.min():.4f}, max={A.max():.4f}")
-    print(f"shape of B: {B.shape}, range: min={B.min():.4f}, max={B.max():.4f}")
-    print(f"shape of C: {C.shape}, range: min={C.min():.4f}, max={C.max():.4f}")
+    logger.info(f"shape of A: {A.shape}, range: min={A.min():.4f}, max={A.max():.4f}")
+    logger.info(f"shape of B: {B.shape}, range: min={B.min():.4f}, max={B.max():.4f}")
+    logger.info(f"shape of C: {C.shape}, range: min={C.min():.4f}, max={C.max():.4f}")
 
     b = A + B + C
-    print(f"shape of RHS sum: {b.shape}")
-    print(f"RHS sum range: min={b.min():.4f}, max={b.max():.4f}")
+    logger.info(f"shape of RHS sum: {b.shape}")
+    logger.info(f"RHS sum range: min={b.min():.4f}, max={b.max():.4f}")
 
     if dldz is None:
         return None
@@ -52,12 +76,12 @@ def april(w, dldw, dldz):
     # x = A_pinv * b
 
     A_pinv = torch.linalg.pinv(dldz_reshaped)  # (N, D)
-    print(f"Shape of pseudo-inverse of A: {A_pinv.shape}")
-    print(f"A_pinv range: min={A_pinv.min().item():.4f}, max={A_pinv.max().item():.4f}")
+    logger.info(f"Shape of pseudo-inverse of A: {A_pinv.shape}")
+    logger.info(f"A_pinv range: min={A_pinv.min().item():.4f}, max={A_pinv.max().item():.4f}")
 
     z_reconstructed = A_pinv.T @ b.to(device=A_pinv.device) # (D, N)
-    print(f"Shape of reconstructed z: {z_reconstructed.shape}")
-    print(f"z_reconstructed range: min={z_reconstructed.min():.4f}, max={z_reconstructed.max():.4f}")
+    logger.info(f"Shape of reconstructed z: {z_reconstructed.shape}")
+    logger.info(f"z_reconstructed range: min={z_reconstructed.min():.4f}, max={z_reconstructed.max():.4f}")
     z_reconstructed = z_reconstructed.reshape(batch_size, seq_len, embed_dim)
 
     return z_reconstructed
@@ -65,17 +89,18 @@ def april(w, dldw, dldz):
 
 if __name__ == '__main__':
     # 1. Load the dataset
+    setup_logging()
     dataloader = get_dataloader(config.DEFAULT_DATASET, root='./data')
 
     # 2. Create the model
     if config.USE_CUSTOM_VIT:
         vit_model = get_custom_vit(config.DEFAULT_MODEL,
-                                 pretrained=True,
+                                 pretrained=False,
                                  num_classes=config.DEFAULT_NUM_CLASSES,
                                  use_layernorm=False, use_residual=False)
     else:
         vit_model = get_model(config.DEFAULT_MODEL,
-                              pretrained=True,
+                              pretrained=False,
                               num_classes=config.DEFAULT_NUM_CLASSES)
     model = April(vit_model)
     model.to(config.DEFAULT_DEVICE)
@@ -116,8 +141,8 @@ if __name__ == '__main__':
 
     # We need to get the derivative of the loss with respect to the input embedding z.
     # We use torch.autograd.grad to explicitly compute this gradient.
-    print(f"outputs shape: {outputs.shape}, dtype: {outputs.dtype}")
-    print(f"labels shape: {labels.shape}, dtype: {labels.dtype}")
+    logger.info(f"outputs shape: {outputs.shape}, dtype: {outputs.dtype}")
+    logger.info(f"labels shape: {labels.shape}, dtype: {labels.dtype}")
     loss = criterion(outputs, labels)
 
     # Get the gradient of the loss w.r.t. ln_input_embedding
@@ -135,8 +160,8 @@ if __name__ == '__main__':
     loss.backward()
     # optimizer.step()
     input_embedding_grad = model.model.pos_embed.grad.data.clone()
-    print(f"Shape of input_embedding_grad: {input_embedding_grad.shape}")
-    print(f"Range of input_embedding_grad: min={input_embedding_grad.min().item():.4f}, max={input_embedding_grad.max().item():.4f}")
+    logger.info(f"Shape of input_embedding_grad: {input_embedding_grad.shape}")
+    logger.info(f"Range of input_embedding_grad: min={input_embedding_grad.min().item():.4f}, max={input_embedding_grad.max().item():.4f}")
     # print(f"L2 difference: {torch.linalg.norm(input_embedding_grad - model.model.pos_embed.grad.data, dim=-1)}")
 
     # 5. Get the weights and gradients for a specific block (e.g., block 0)
@@ -152,20 +177,20 @@ if __name__ == '__main__':
     # print(input_embedding_grad)
     z_reconstructed = april(w, dldw, input_embedding_grad)
 
-    print("\n--- Patch Embedding Reconstruction Results ---")
+    logger.info("\n--- Patch Embedding Reconstruction Results ---")
 
     # 7. Compare the reconstructed embedding with the original
     original_embedding = ln_output_embedding #.cpu().detach().numpy()
     
-    print("Original embedding shape:", original_embedding.shape)
-    print("Reconstructed embedding shape:", z_reconstructed.shape)
+    logger.info(f"Original embedding shape: {original_embedding.shape}")
+    logger.info(f"Reconstructed embedding shape: {z_reconstructed.shape}")
 
     # Calculate the error
     error = torch.linalg.norm(original_embedding - z_reconstructed)
-    print(f"Reconstruction error: {error}")
+    logger.info(f"Reconstruction error: {error}")
 
     # --- Embedding Visualization ---
-    print("\n--- Embedding Visualization ---")
+    logger.info("\n--- Embedding Visualization ---")
     
     batch_index = 0
     
@@ -176,8 +201,8 @@ if __name__ == '__main__':
     # Calculate the L2 norm of the embeddings for visualization
     original_emb_norm = torch.linalg.norm(original_emb_patches, axis=-1).detach().cpu().numpy()
     recon_emb_norm = torch.linalg.norm(recon_emb_patches, axis=-1).detach().cpu().numpy()
-    print(f"Original embedding norm shape: {original_emb_norm.shape}")
-    print(f"Reconstructed embedding norm shape: {recon_emb_norm.shape}")
+    logger.info(f"Original embedding norm shape: {original_emb_norm.shape}")
+    logger.info(f"Reconstructed embedding norm shape: {recon_emb_norm.shape}")
     # Get the patch grid dimensions
     num_patches = original_emb_patches.shape[0]
     num_patches_per_dim = int(np.sqrt(num_patches))
@@ -200,24 +225,24 @@ if __name__ == '__main__':
     
     plt.tight_layout()
     plt.savefig('embedding_visualization.png')
-    print("Saved embedding visualization to embedding_visualization.png")
+    logger.info("Saved embedding visualization to embedding_visualization.png")
 
     # 8. Reconstruct image from intermediate embedding
-    print("\n--- Image Patch Reconstruction ---")
+    logger.info("\n--- Image Patch Reconstruction ---")
 
     # Step 2: Subtract the positional embedding to get the patch information.
     # The input to the first transformer block is P' = [x_class; x_p^1; ...; x_p^N] + E_pos
     # So, P' - E_pos = [x_class; x_p^1; ...; x_p^N]
     # ln_input_embedding_ = z_reconstructed.to(config.DEFAULT_DEVICE)
     pos_embed = model.model.pos_embed
-    print(f"Shape of positional embedding: {pos_embed.shape}")
-    print(f"Range of positional embedding: min={pos_embed.min().item():.4f}, max={pos_embed.max().item():.4f}")
+    logger.info(f"Shape of positional embedding: {pos_embed.shape}")
+    logger.info(f"Range of positional embedding: min={pos_embed.min().item():.4f}, max={pos_embed.max().item():.4f}")
     z_patch_with_cls = ln_input_embedding - pos_embed
     
     # Remove the class token
     z_patch = z_patch_with_cls[:, 1:, :]
-    print(f"Shape of patch embeddings (z_patch): {z_patch.shape}")
-    print(f"Range of patch embeddings (z_patch): min={z_patch.min().item():.4f}, max={z_patch.max().item():.4f}")
+    logger.info(f"Shape of patch embeddings (z_patch): {z_patch.shape}")
+    logger.info(f"Range of patch embeddings (z_patch): min={z_patch.min().item():.4f}, max={z_patch.max().item():.4f}")
 
     # Step 3: Multiply with the pseudo-inverse of the patch embedding projection layer.
     patch_proj_layer = model.model.patch_embed.proj
@@ -232,11 +257,11 @@ if __name__ == '__main__':
     
     # Calculate pseudo-inverse
     pinv_proj_matrix = torch.linalg.pinv(proj_matrix)
-    print(f"Shape of pseudo-inverse of projection matrix: {pinv_proj_matrix.shape}")
+    logger.info(f"Shape of pseudo-inverse of projection matrix: {pinv_proj_matrix.shape}")
     
     # Apply pseudo-inverse: (N, L, D) @ (D, C*ps*ps) -> (N, L, C*ps*ps)
     reconstructed_patches_flat = z_patch @ pinv_proj_matrix
-    print(f"Shape of flattened reconstructed patches: {reconstructed_patches_flat.shape}")
+    logger.info(f"Shape of flattened reconstructed patches: {reconstructed_patches_flat.shape}")
 
     # Now we can compare the reconstructed patch with the original image patch.
     # Let's take the first image and first patch.
@@ -259,12 +284,12 @@ if __name__ == '__main__':
     # Calculate reconstruction error for the first patch
     patch_recon_error = torch.norm(first_patch_original - first_patch_reconstructed).item()
     
-    print(f"\nReconstruction error for the first patch: {patch_recon_error}")
-    print(f"Shape of original patch: {first_patch_original.shape}")
-    print(f"Shape of reconstructed patch: {first_patch_reconstructed.shape}")
+    logger.info(f"\nReconstruction error for the first patch: {patch_recon_error}")
+    logger.info(f"Shape of original patch: {first_patch_original.shape}")
+    logger.info(f"Shape of reconstructed patch: {first_patch_reconstructed.shape}")
 
     # --- Image Reconstruction Visualization ---
-    print("\n--- Full Image Reconstruction Visualization ---")
+    logger.info("\n--- Full Image Reconstruction Visualization ---")
 
     # Stitch patches back together to form the full image
     num_patches_per_dim = images.shape[-1] // patch_size

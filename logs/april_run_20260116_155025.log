@@ -1,0 +1,54 @@
+2026-01-16 15:50:26,554 - INFO - Loading pretrained weights from Hugging Face hub (timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k)
+2026-01-16 15:50:35,978 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1364f4470>: Failed to resolve \'huggingface.co\' ([Errno 8] nodename nor servname provided, or not known)"))'), '(Request ID: 99a95ba2-92fe-493c-af13-c2ab5d55554c)')' thrown while requesting HEAD https://huggingface.co/timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k/resolve/main/model.safetensors
+2026-01-16 15:50:35,978 - WARNING - Retrying in 1s [Retry 1/5].
+2026-01-16 15:50:36,983 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1364f46b0>: Failed to resolve \'huggingface.co\' ([Errno 8] nodename nor servname provided, or not known)"))'), '(Request ID: a56ab37a-e044-4950-bd16-e0740ad12ded)')' thrown while requesting HEAD https://huggingface.co/timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k/resolve/main/model.safetensors
+2026-01-16 15:50:36,983 - WARNING - Retrying in 2s [Retry 2/5].
+2026-01-16 15:51:08,999 - WARNING - '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1364f48f0>: Failed to resolve \'huggingface.co\' ([Errno 8] nodename nor servname provided, or not known)"))'), '(Request ID: 60f6d5f2-18e2-436a-b833-2eaa1e39e162)')' thrown while requesting HEAD https://huggingface.co/timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k/resolve/main/model.safetensors
+2026-01-16 15:51:09,000 - WARNING - Retrying in 4s [Retry 3/5].
+2026-01-16 15:51:20,150 - INFO - [timm/vit_tiny_patch16_224.augreg_in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-01-16 15:51:40,116 - INFO - outputs shape: torch.Size([2, 10]), dtype: torch.float32
+2026-01-16 15:51:40,116 - INFO - labels shape: torch.Size([2]), dtype: torch.int64
+2026-01-16 15:51:40,251 - INFO - Shape of input_embedding_grad: torch.Size([1, 197, 192])
+2026-01-16 15:51:40,276 - INFO - Range of input_embedding_grad: min=-0.3654, max=0.3218
+2026-01-16 15:51:40,276 - INFO - 
+--- APRIL Algorithm ---
+2026-01-16 15:51:40,281 - INFO - q_weights range: min=-0.3756, max=0.3811
+2026-01-16 15:51:40,282 - INFO - k_weights range: min=-0.3984, max=0.3901
+2026-01-16 15:51:40,282 - INFO - v_weights range: min=-0.3485, max=0.3787
+2026-01-16 15:51:40,283 - INFO - dldq range: min=-0.5666, max=0.5457
+2026-01-16 15:51:40,283 - INFO - dldk range: min=-2.8095, max=2.3464
+2026-01-16 15:51:40,284 - INFO - dldv range: min=-2.9239, max=3.0279
+2026-01-16 15:51:40,284 - INFO - dldz range: min=-0.3654, max=0.3218
+2026-01-16 15:51:40,294 - INFO - shape of A: torch.Size([192, 192]), range: min=-1.1929, max=1.1486
+2026-01-16 15:51:40,294 - INFO - shape of B: torch.Size([192, 192]), range: min=-1.7134, max=1.6114
+2026-01-16 15:51:40,295 - INFO - shape of C: torch.Size([192, 192]), range: min=-2.2392, max=1.9584
+2026-01-16 15:51:40,295 - INFO - shape of RHS sum: torch.Size([192, 192])
+2026-01-16 15:51:40,295 - INFO - RHS sum range: min=-2.3805, max=2.7540
+2026-01-16 15:51:40,318 - INFO - Shape of pseudo-inverse of A: torch.Size([192, 197])
+2026-01-16 15:51:40,329 - INFO - A_pinv range: min=-2769.4438, max=2714.5469
+2026-01-16 15:51:40,331 - INFO - Shape of reconstructed z: torch.Size([197, 192])
+2026-01-16 15:51:40,335 - INFO - z_reconstructed range: min=-16540.1797, max=14304.2012
+2026-01-16 15:51:40,336 - INFO - 
+--- Patch Embedding Reconstruction Results ---
+2026-01-16 15:51:40,336 - INFO - Original embedding shape: torch.Size([2, 197, 192])
+2026-01-16 15:51:40,336 - INFO - Reconstructed embedding shape: torch.Size([1, 197, 192])
+2026-01-16 15:51:40,345 - INFO - Reconstruction error: 374326.34375
+2026-01-16 15:51:40,345 - INFO - 
+--- Embedding Visualization ---
+2026-01-16 15:51:40,348 - INFO - Original embedding norm shape: (196,)
+2026-01-16 15:51:40,348 - INFO - Reconstructed embedding norm shape: (196,)
+2026-01-16 15:51:40,551 - INFO - Saved embedding visualization to embedding_visualization.png
+2026-01-16 15:51:40,551 - INFO - 
+--- Image Patch Reconstruction ---
+2026-01-16 15:51:40,551 - INFO - Shape of positional embedding: torch.Size([1, 197, 192])
+2026-01-16 15:51:40,558 - INFO - Range of positional embedding: min=-5.4653, max=3.8469
+2026-01-16 15:51:40,558 - INFO - Shape of patch embeddings (z_patch): torch.Size([2, 196, 192])
+2026-01-16 15:51:40,576 - INFO - Range of patch embeddings (z_patch): min=-16.9776, max=15.4689
+2026-01-16 15:51:40,600 - INFO - Shape of pseudo-inverse of projection matrix: torch.Size([192, 768])
+2026-01-16 15:51:40,609 - INFO - Shape of flattened reconstructed patches: torch.Size([2, 196, 768])
+2026-01-16 15:51:40,617 - INFO - 
+Reconstruction error for the first patch: 51.561439514160156
+2026-01-16 15:51:40,617 - INFO - Shape of original patch: torch.Size([3, 16, 16])
+2026-01-16 15:51:40,617 - INFO - Shape of reconstructed patch: torch.Size([3, 16, 16])
+2026-01-16 15:51:40,617 - INFO - 
+--- Full Image Reconstruction Visualization ---
