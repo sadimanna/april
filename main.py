@@ -158,11 +158,15 @@ if __name__ == '__main__':
 
     optimizer.zero_grad()
     loss.backward()
+<<<<<<< HEAD
     # optimizer.step()
     input_embedding_grad = model.model.pos_embed.grad.data.clone()
     logger.info(f"Shape of input_embedding_grad: {input_embedding_grad.shape}")
     logger.info(f"Range of input_embedding_grad: min={input_embedding_grad.min().item():.4f}, max={input_embedding_grad.max().item():.4f}")
     # print(f"L2 difference: {torch.linalg.norm(input_embedding_grad - model.model.pos_embed.grad.data, dim=-1)}")
+=======
+    optimizer.step()
+>>>>>>> 6f9b45a693442eaa24b8dfbe7145753f431d35f1
 
     # 5. Get the weights and gradients for a specific block (e.g., block 0)
     block_index = 0
