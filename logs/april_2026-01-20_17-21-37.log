@@ -1,0 +1,44 @@
+2026-01-20 17:21:37,434 - INFO - APRIL Mode: APRIL with LoRA (Rank: 8)
+2026-01-20 17:21:38,076 - INFO - Dataset is cifar10, using vit_small_cifar
+2026-01-20 17:21:38,076 - INFO - Model Options: LoRA Rank=8, LN=True, Res=True
+2026-01-20 17:21:38,560 - INFO - outputs shape: torch.Size([2, 10]), dtype: torch.float32
+2026-01-20 17:21:38,561 - INFO - labels shape: torch.Size([2]), dtype: torch.int64
+2026-01-20 17:21:38,578 - INFO - Shape of input_embedding_grad: torch.Size([2, 197, 384])
+2026-01-20 17:21:38,592 - INFO - Range of input_embedding_grad: min=-0.4045, max=0.4742
+2026-01-20 17:21:38,714 - INFO - --- APRIL Algorithm ---
+2026-01-20 17:21:38,715 - INFO - --- APRIL Algorithm ---
+2026-01-20 17:21:38,715 - INFO - q_weights range: min=-0.0521, max=0.0521
+2026-01-20 17:21:38,715 - INFO - k_weights range: min=-0.0522, max=0.0521
+2026-01-20 17:21:38,715 - INFO - v_weights range: min=-0.0522, max=0.0522
+2026-01-20 17:21:38,715 - INFO - dldq range: min=0.0000, max=0.0000
+2026-01-20 17:21:38,715 - INFO - dldk range: min=0.0000, max=0.0000
+2026-01-20 17:21:38,716 - INFO - dldv range: min=0.0000, max=0.0000
+2026-01-20 17:21:38,716 - INFO - dldz range: min=-0.4045, max=0.4742
+2026-01-20 17:21:38,716 - INFO - shape of A: torch.Size([384, 384]), range: min=0.0000, max=0.0000
+2026-01-20 17:21:38,716 - INFO - shape of B: torch.Size([384, 384]), range: min=0.0000, max=0.0000
+2026-01-20 17:21:38,716 - INFO - shape of C: torch.Size([384, 384]), range: min=0.0000, max=0.0000
+2026-01-20 17:21:38,717 - INFO - shape of RHS sum: torch.Size([384, 384])
+2026-01-20 17:21:38,717 - INFO - RHS sum range: min=0.0000, max=0.0000
+2026-01-20 17:21:38,793 - INFO - Shape of pseudo-inverse of A: torch.Size([384, 394])
+2026-01-20 17:21:38,794 - INFO - A_pinv range: min=-653.9496, max=682.5640
+2026-01-20 17:21:38,794 - INFO - Shape of reconstructed z: torch.Size([394, 384])
+2026-01-20 17:21:38,794 - INFO - z_reconstructed range: min=0.0000, max=0.0000
+2026-01-20 17:21:38,794 - INFO - --- Patch Embedding Reconstruction Results ---
+2026-01-20 17:21:38,794 - INFO - Original embedding shape: torch.Size([2, 197, 384])
+2026-01-20 17:21:38,794 - INFO - Reconstructed embedding shape: torch.Size([2, 197, 384])
+2026-01-20 17:21:38,813 - INFO - Reconstruction error: 388.9073486328125
+2026-01-20 17:21:38,813 - INFO - --- Embedding Visualization ---
+2026-01-20 17:21:38,814 - INFO - Original embedding norm shape: (196,)
+2026-01-20 17:21:38,814 - INFO - Reconstructed embedding norm shape: (196,)
+2026-01-20 17:21:39,028 - INFO - Saved embedding visualization to embedding_visualization.png
+2026-01-20 17:21:39,028 - INFO - --- Image Patch Reconstruction ---
+2026-01-20 17:21:39,028 - INFO - Shape of positional embedding: torch.Size([1, 197, 384])
+2026-01-20 17:21:39,029 - INFO - Range of positional embedding: min=-0.0817, max=0.0849
+2026-01-20 17:21:39,029 - INFO - Shape of patch embeddings (z_patch): torch.Size([2, 196, 384])
+2026-01-20 17:21:39,029 - INFO - Range of patch embeddings (z_patch): min=-2.3248, max=2.2631
+2026-01-20 17:21:39,052 - INFO - Shape of pseudo-inverse of projection matrix: torch.Size([384, 768])
+2026-01-20 17:21:39,052 - INFO - Shape of flattened reconstructed patches: torch.Size([2, 196, 768])
+2026-01-20 17:21:39,052 - INFO - Reconstruction error for the first patch: 27.674631118774414
+2026-01-20 17:21:39,052 - INFO - Shape of original patch: torch.Size([3, 16, 16])
+2026-01-20 17:21:39,053 - INFO - Shape of reconstructed patch: torch.Size([3, 16, 16])
+2026-01-20 17:21:39,053 - INFO - --- Full Image Reconstruction Visualization ---
