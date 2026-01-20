@@ -11,28 +11,24 @@ import matplotlib.pyplot as plt
 import datetime
 import logging
 import os
+import sys
 
-# Configure logging
-def setup_logging():
-    log_dir = 'logs'
-    if not os.path.exists(log_dir):
-        os.makedirs(log_dir)
-    
-    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    log_file = os.path.join(log_dir, f'april_run_{timestamp}.log')
-    
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(levelname)s - %(message)s',
-        handlers=[
-            logging.FileHandler(log_file),
-            logging.StreamHandler()
-        ]
-    )
-    # Return nothing, just configure
-    return
+# Configure logging at module level
+log_dir = config.DEFAULT_LOG_PATH
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)
 
-logger = logging.getLogger(__name__)
+timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+log_file = os.path.join(log_dir, f'april_run_{timestamp}.log')
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(log_file),
+        logging.StreamHandler()
+    ]
+)
 
 def april(w, dldw, dldz):
     """
@@ -103,7 +99,6 @@ if __name__ == '__main__':
     print_banner(args.lora_rank)
 
     # 1. Load the dataset
-    setup_logging()
     dataloader = get_dataloader(config.DEFAULT_DATASET, root='./data')
 
     # 2. Create the model
@@ -196,15 +191,7 @@ if __name__ == '__main__':
         
     optimizer.zero_grad()
     loss.backward()
-<<<<<<< HEAD
-    # optimizer.step()
-    input_embedding_grad = model.model.pos_embed.grad.data.clone()
-    logger.info(f"Shape of input_embedding_grad: {input_embedding_grad.shape}")
-    logger.info(f"Range of input_embedding_grad: min={input_embedding_grad.min().item():.4f}, max={input_embedding_grad.max().item():.4f}")
-    # print(f"L2 difference: {torch.linalg.norm(input_embedding_grad - model.model.pos_embed.grad.data, dim=-1)}")
-=======
     optimizer.step()
->>>>>>> 6f9b45a693442eaa24b8dfbe7145753f431d35f1
 
     # 5. Get the weights and gradients for a specific block (e.g., block 0)
     block_index = 0
