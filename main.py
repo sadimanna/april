@@ -367,7 +367,7 @@ if __name__ == '__main__':
 
         plt.tight_layout()
         nowtime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        plt.savefig(f'reconstructed_images_{nowtime}.png')
+        plt.savefig(f'./viz/reconstructed_images_{nowtime}.png')
     else:
         logging.error("Failed to reconstruct z. dldz was None.")
 
