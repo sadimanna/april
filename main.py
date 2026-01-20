@@ -191,7 +191,7 @@ if __name__ == '__main__':
         
     optimizer.zero_grad()
     loss.backward()
-    optimizer.step()
+    # optimizer.step()
 
     # 5. Get the weights and gradients for a specific block (e.g., block 0)
     block_index = 0

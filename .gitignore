@@ -8,4 +8,4 @@ __pycache__/
 # Datasets
 data/
 logs/
-*.png
+viz/
