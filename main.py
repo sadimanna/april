@@ -14,22 +14,24 @@ import os
 import sys
 from scipy.ndimage import median_filter
 
-# Configure logging at module level
-log_dir = config.DEFAULT_LOG_PATH
-if not os.path.exists(log_dir):
-    os.makedirs(log_dir)
+def setup_logging():
+    # Configure logging
+    log_dir = config.DEFAULT_LOG_PATH
+    if not os.path.exists(log_dir):
+        os.makedirs(log_dir)
 
-timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-log_file = os.path.join(log_dir, f'april_run_{timestamp}.log')
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_file = os.path.join(log_dir, f'april_run_{timestamp}.log')
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler(log_file),
-        logging.StreamHandler()
-    ]
-)
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler(log_file),
+            logging.StreamHandler()
+        ]
+    )
+    return log_file
 
 def april(w, dldw, dldz):
     """
@@ -89,6 +91,9 @@ import argparse
 from banner import print_banner
 
 if __name__ == '__main__':
+    # Initialize logging
+    setup_logging()
+
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='APRIL with LoRA')
     parser.add_argument('--lora_rank', type=int, default=4, help='LoRA rank (default: 4). Set to 0 to disable.')
@@ -139,13 +144,12 @@ if __name__ == '__main__':
     model.to(config.DEFAULT_DEVICE)
     if args.lora_rank > 0:
         for n,p in model.model.named_parameters():
-            if 'lora' not in n.lower() and 'head' not in n.lower():
+            if 'lora' not in n.lower() and 'head' not in n.lower() and 'pos_embed' not in n.lower():
+                # print("False :",n)
                 p.requires_grad = False
             else:
+                # print("True: ",n)
                 p.requires_grad = True
-        # for n,p in model.model.named_parameters():
-        #     if p.requires_grad:
-        #         print(n)
 
 
     # 3. Define the loss function and optimizer
@@ -197,17 +201,23 @@ if __name__ == '__main__':
     #     # No, we need dL/dz. autograd.grad can do this.
     #     # But we need to make sure retain_graph=True in backward if we do this after?
     #     # Actually, let's just do it here.
-    logging.info(f"Norm of pos_embed_grad: {model.model._pos_embed.grad}")
-    input_embedding_grad = model.model._pos_embed.grad #torch.autograd.grad(loss, ln_input_embedding, retain_graph=True)[0]
-    logging.info(f"Shape of input_embedding_grad: {input_embedding_grad.shape}")
-    logging.info(f"Range of input_embedding_grad: min={input_embedding_grad.min().item():.4f}, max={input_embedding_grad.max().item():.4f}")
-        
+    
     optimizer.zero_grad()
     loss.backward()
-    # optimizer.step()
+    optimizer.step()
+    outputs = model(images)
+    loss = criterion(outputs, labels)
+    optimizer.zero_grad()
+    loss.backward()
+
     # for n,p in model.model.named_parameters():
     #     if p.grad is not None:
     #         logging.info(f"Norm of gradient: {n}::{p.grad.norm()}")
+
+    logging.info(f"Shape of pos_embed_grad: {model.model.pos_embed.grad.shape}")
+    input_embedding_grad = model.model.pos_embed.grad #torch.autograd.grad(loss, ln_input_embedding, retain_graph=True)[0]
+    logging.info(f"Shape of input_embedding_grad: {input_embedding_grad.shape}")
+    logging.info(f"Range of input_embedding_grad: min={input_embedding_grad.min().item():.4f}, max={input_embedding_grad.max().item():.4f}")
 
     # 5. Get the weights and gradients for a specific block (e.g., block 0)
     block_index = 0
@@ -334,7 +344,7 @@ if __name__ == '__main__':
         # Calculate reconstruction error for the first patch
         patch_recon_error = torch.norm(first_patch_original - first_patch_reconstructed).item()
         
-        logging.info(f"Reconstruction error for the first patch: {patch_recon_error}")
+        logging.info(f"Reconstruction error for the first patch: {patch_recon_error:.4f}")
         logging.info(f"Shape of original patch: {first_patch_original.shape}")
         logging.info(f"Shape of reconstructed patch: {first_patch_reconstructed.shape}")
 
@@ -351,10 +361,10 @@ if __name__ == '__main__':
             patch_size,
             patch_size
         ).permute(0, 3, 1, 4, 2, 5).reshape(images.shape[0], C, images.shape[-1], images.shape[-1])
-        logging.info("Range of reconstructed images: min={}, max={}".format(reconstructed_images.min().item(), reconstructed_images.max().item()))
+        logging.info("Range of reconstructed images: min={:.4f}, max={:.4f}".format(reconstructed_images.min().item(), reconstructed_images.max().item()))
         # reconstructed_images = reconstructed_images - reconstructed_images.min()
         # reconstructed_images = reconstructed_images / (reconstructed_images.max() + 1e-10)
-        # logging.info("Range of reconstructed images after normalization: min={}, max={}".format(reconstructed_images.min().item(), reconstructed_images.max().item()))
+        # logging.info("Range of reconstructed images after normalization: min={:.4f}, max={:.4f}".format(reconstructed_images.min().item(), reconstructed_images.max().item()))
         # Plot original vs. reconstructed images
         fig, axes = plt.subplots(images.shape[0], 2, figsize=(6, images.shape[0] * 3))
         

@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 from timm.models.vision_transformer import Block as TimmBlock
 from timm.models.vision_transformer import VisionTransformer as TimmVisionTransformer, checkpoint_seq
-from timm.models.layers import PatchEmbed
+from timm.layers import PatchEmbed
 from .vit_config import VIT_CONFIGS
 from functools import partial
 import torch.nn.functional as F
@@ -21,8 +21,8 @@ class LoRALayer(nn.Module):
 
         # Initialize weights
         nn.init.kaiming_uniform_(self.lora_A, a=5**0.5)
-        nn.init.kaiming_uniform_(self.lora_B, a=5**0.5)
-        # nn.init.zeros_(self.lora_B)
+        # nn.init.kaiming_uniform_(self.lora_B, a=5**0.5)
+        nn.init.zeros_(self.lora_B)
         # self.lora_B.data = self.lora_B.data + torch.randn_like(self.lora_B.data) * 0.01
 
     def forward(self, x):
@@ -83,9 +83,9 @@ class CustomAttention(nn.Module):
 
         self.lora_rank = lora_rank
         if lora_rank > 0:
-            self.lora_q = LoRALayer(dim, dim, rank=lora_rank)
-            self.lora_k = LoRALayer(dim, dim, rank=lora_rank)
-            self.lora_v = LoRALayer(dim, dim, rank=lora_rank)
+            self.lora_q = LoRALayer(dim, dim, rank=lora_rank, alpha = lora_rank//2)
+            self.lora_k = LoRALayer(dim, dim, rank=lora_rank, alpha = lora_rank//2)
+            self.lora_v = LoRALayer(dim, dim, rank=lora_rank, alpha = lora_rank//2)
 
     def forward(self, x, attn_mask=None):
         B, N, C = x.shape
