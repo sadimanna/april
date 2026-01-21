@@ -1,7 +1,7 @@
 import torch
 import timm
 import torch.nn as nn
-
+import logging
 def get_model(model_name, pretrained=False, num_classes=10):
     """
     Creates a ViT model.
@@ -58,6 +58,7 @@ class April(nn.Module):
         
         # Check for LoRA
         if hasattr(attn, 'lora_rank') and attn.lora_rank > 0:
+            logging.info("Has LoRA")
             grads = []
             for name in ['q', 'k', 'v']:
                 lora_layer = getattr(attn, f'lora_{name}')
@@ -85,7 +86,9 @@ class April(nn.Module):
                 
                 # "returned gradient matrix must be square rooted before returning"
                 # Assuming signed element-wise square root to preserve directionality while compressing magnitude
-                G = G.sign() * torch.sqrt(G.abs())
+                # G = G.sign() * torch.sqrt(G.abs())
+
+                logging.info(f"Norm of gradient: {torch.linalg.norm(G)}")
                 
                 grads.append(G)
             

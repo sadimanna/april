@@ -12,6 +12,7 @@ import datetime
 import logging
 import os
 import sys
+from scipy.ndimage import median_filter
 
 # Configure logging at module level
 log_dir = config.DEFAULT_LOG_PATH
@@ -51,9 +52,9 @@ def april(w, dldw, dldz):
     logging.info(f"dldv range: min={dldv.min():.4f}, max={dldv.max():.4f}")
     if dldz is not None:
         logging.info(f"dldz range: min={dldz.min().item():.4f}, max={dldz.max().item():.4f}")
-    A = dldq @ q_weights.T
-    B = dldk @ k_weights.T
-    C = dldv @ v_weights.T
+    A = q_weights.T @ dldq #@ q_weights.T
+    B = k_weights.T @ dldk #@ k_weights.T
+    C = v_weights.T @ dldv #@ v_weights.T
     logging.info(f"shape of A: {A.shape}, range: min={A.min():.4f}, max={A.max():.4f}")
     logging.info(f"shape of B: {B.shape}, range: min={B.min():.4f}, max={B.max():.4f}")
     logging.info(f"shape of C: {C.shape}, range: min={C.min():.4f}, max={C.max():.4f}")
@@ -76,7 +77,7 @@ def april(w, dldw, dldz):
     logging.info(f"Shape of pseudo-inverse of A: {A_pinv.shape}")
     logging.info(f"A_pinv range: min={A_pinv.min().item():.4f}, max={A_pinv.max().item():.4f}")
 
-    z_reconstructed = A_pinv.T @ b.to(device=A_pinv.device) # (D, N)
+    z_reconstructed = A_pinv.T @ b.to(device=A_pinv.device) # (D, N) #torch.linalg.lstsq(dldz_reshaped.T, b, driver='gels', rcond=None).solution #
     logging.info(f"Shape of reconstructed z: {z_reconstructed.shape}")
     logging.info(f"z_reconstructed range: min={z_reconstructed.min():.4f}, max={z_reconstructed.max():.4f}")
     z_reconstructed = z_reconstructed.reshape(batch_size, seq_len, embed_dim)
@@ -128,13 +129,24 @@ if __name__ == '__main__':
                                  num_classes=config.DEFAULT_NUM_CLASSES,
                                  use_layernorm=args.use_layernorm, 
                                  use_residual=args.use_residual,
-                                 lora_rank=args.lora_rank)
+                                 lora_rank=args.lora_rank,
+                                 patch_embed_type='linear')
     else:
         vit_model = get_model(config.DEFAULT_MODEL,
                               pretrained=False,
                               num_classes=config.DEFAULT_NUM_CLASSES)
     model = April(vit_model)
     model.to(config.DEFAULT_DEVICE)
+    if args.lora_rank > 0:
+        for n,p in model.model.named_parameters():
+            if 'lora' not in n.lower() and 'head' not in n.lower():
+                p.requires_grad = False
+            else:
+                p.requires_grad = True
+        # for n,p in model.model.named_parameters():
+        #     if p.requires_grad:
+        #         print(n)
+
 
     # 3. Define the loss function and optimizer
     criterion = nn.CrossEntropyLoss()
@@ -180,18 +192,22 @@ if __name__ == '__main__':
     # BUT IS THIS POSSIBLE FOR THE SERVER? IN THAT CASE HOOKING BECOMES A CASE OF MODEL POISONING?
     # CAN IT BE OBTAINEDUSING SOME ANALYTICAL METHOD? OR IS IT JUST ASSUMED THAT THE SERVER HAS ACCESS TO IT?
     input_embedding_grad = None
-    if ln_input_embedding is not None and ln_input_embedding.requires_grad:
-        # We need to compute gradients w.r.t input AFTER backward? 
-        # No, we need dL/dz. autograd.grad can do this.
-        # But we need to make sure retain_graph=True in backward if we do this after?
-        # Actually, let's just do it here.
-        input_embedding_grad = torch.autograd.grad(loss, ln_input_embedding, retain_graph=True)[0]
-        logging.info(f"Shape of input_embedding_grad: {input_embedding_grad.shape}")
-        logging.info(f"Range of input_embedding_grad: min={input_embedding_grad.min().item():.4f}, max={input_embedding_grad.max().item():.4f}")
+    # if ln_input_embedding is not None and ln_input_embedding.requires_grad:
+    #     # We need to compute gradients w.r.t input AFTER backward? 
+    #     # No, we need dL/dz. autograd.grad can do this.
+    #     # But we need to make sure retain_graph=True in backward if we do this after?
+    #     # Actually, let's just do it here.
+    logging.info(f"Norm of pos_embed_grad: {model.model._pos_embed.grad}")
+    input_embedding_grad = model.model._pos_embed.grad #torch.autograd.grad(loss, ln_input_embedding, retain_graph=True)[0]
+    logging.info(f"Shape of input_embedding_grad: {input_embedding_grad.shape}")
+    logging.info(f"Range of input_embedding_grad: min={input_embedding_grad.min().item():.4f}, max={input_embedding_grad.max().item():.4f}")
         
     optimizer.zero_grad()
     loss.backward()
     # optimizer.step()
+    # for n,p in model.model.named_parameters():
+    #     if p.grad is not None:
+    #         logging.info(f"Norm of gradient: {n}::{p.grad.norm()}")
 
     # 5. Get the weights and gradients for a specific block (e.g., block 0)
     block_index = 0
@@ -255,7 +271,7 @@ if __name__ == '__main__':
         fig.colorbar(im2, ax=axes[1])
         
         plt.tight_layout()
-        plt.savefig('embedding_visualization.png')
+        plt.savefig('./viz/embedding_visualization.png')
         logging.info("Saved embedding visualization to embedding_visualization.png")
 
         # 8. Reconstruct image from intermediate embedding
@@ -268,7 +284,7 @@ if __name__ == '__main__':
         pos_embed = model.model.pos_embed
         logging.info(f"Shape of positional embedding: {pos_embed.shape}")
         logging.info(f"Range of positional embedding: min={pos_embed.min().item():.4f}, max={pos_embed.max().item():.4f}")
-        z_patch_with_cls = ln_input_embedding - pos_embed
+        z_patch_with_cls = z_reconstructed - pos_embed
         
         # Remove the class token
         z_patch = z_patch_with_cls[:, 1:, :]
@@ -284,14 +300,17 @@ if __name__ == '__main__':
         patch_proj_weights = patch_proj_layer.weight
         
         # Reshape to (D, C*ps*ps) and transpose to (C*ps*ps, D)
-        proj_matrix = patch_proj_weights.view(patch_proj_weights.shape[0], -1).T
+        proj_matrix = patch_proj_weights.view(patch_proj_weights.shape[0], -1)
         
         # Calculate pseudo-inverse
         pinv_proj_matrix = torch.linalg.pinv(proj_matrix)
         logging.info(f"Shape of pseudo-inverse of projection matrix: {pinv_proj_matrix.shape}")
         
         # Apply pseudo-inverse: (N, L, D) @ (D, C*ps*ps) -> (N, L, C*ps*ps)
-        reconstructed_patches_flat = z_patch @ pinv_proj_matrix
+        z_patch = z_patch - model.model.patch_embed.proj.bias
+        logging.info(f"Shape of z_patch: {z_patch.shape}")
+        logging.info(f"Shape of patch_proj_weights: {proj_matrix.shape}")
+        reconstructed_patches_flat = z_patch @ pinv_proj_matrix.T # torch.linalg.lstsq(proj_matrix, z_patch[0].T, driver='gels', rcond=None).solution.T #
         logging.info(f"Shape of flattened reconstructed patches: {reconstructed_patches_flat.shape}")
 
         # Now we can compare the reconstructed patch with the original image patch.
@@ -332,7 +351,10 @@ if __name__ == '__main__':
             patch_size,
             patch_size
         ).permute(0, 3, 1, 4, 2, 5).reshape(images.shape[0], C, images.shape[-1], images.shape[-1])
-
+        logging.info("Range of reconstructed images: min={}, max={}".format(reconstructed_images.min().item(), reconstructed_images.max().item()))
+        # reconstructed_images = reconstructed_images - reconstructed_images.min()
+        # reconstructed_images = reconstructed_images / (reconstructed_images.max() + 1e-10)
+        # logging.info("Range of reconstructed images after normalization: min={}, max={}".format(reconstructed_images.min().item(), reconstructed_images.max().item()))
         # Plot original vs. reconstructed images
         fig, axes = plt.subplots(images.shape[0], 2, figsize=(6, images.shape[0] * 3))
         
@@ -351,6 +373,7 @@ if __name__ == '__main__':
             original_img = images[i].cpu().detach().permute(1, 2, 0).numpy()
             original_img = std * original_img + mean
             original_img = np.clip(original_img, 0, 1)
+            # original_img = median_filter(original_img, size=(3, 3, 1))
             
             ax_orig.imshow(original_img)
             ax_orig.set_title(f"Image {i+1}: Original")
@@ -360,6 +383,7 @@ if __name__ == '__main__':
             recon_img = reconstructed_images[i].cpu().detach().permute(1, 2, 0).numpy()
             recon_img = std * recon_img + mean
             recon_img = np.clip(recon_img, 0, 1)
+            recon_img = median_filter(recon_img, size=(16, 16, 1))
 
             ax_recon.imshow(recon_img)
             ax_recon.set_title(f"Image {i+1}: Reconstructed")

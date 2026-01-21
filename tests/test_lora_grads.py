@@ -15,6 +15,10 @@ def test_lora_gradients():
     vit = get_custom_vit(model_name='vit_base_patch16_224', lora_rank=rank)
     model = April(vit)
     
+    for n,p in model.model.named_parameters():
+        if 'lora' not in n.lower() and 'head' not in n.lower():
+            p.requires_grad = False
+
     # Perturb lora_B to avoid zero gradients (singularity at init)
     with torch.no_grad():
         for name, param in model.named_parameters():

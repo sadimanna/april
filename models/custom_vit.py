@@ -1,9 +1,11 @@
 import torch
 import torch.nn as nn
 from timm.models.vision_transformer import Block as TimmBlock
-from timm.models.vision_transformer import VisionTransformer as TimmVisionTransformer
-from timm.layers import PatchEmbed
+from timm.models.vision_transformer import VisionTransformer as TimmVisionTransformer, checkpoint_seq
+from timm.models.layers import PatchEmbed
 from .vit_config import VIT_CONFIGS
+from functools import partial
+import torch.nn.functional as F
 
 class LoRALayer(nn.Module):
     def __init__(self, in_features, out_features, rank=4, alpha=1.0):
@@ -12,18 +14,57 @@ class LoRALayer(nn.Module):
         self.alpha = alpha
         self.scale = alpha / rank
 
-        self.lora_A = nn.Parameter(torch.randn(in_features, rank))
-        self.lora_B = nn.Parameter(torch.zeros(rank, out_features))
+        self.lora_A = nn.Parameter(torch.randn(in_features, rank), requires_grad = True)
+        self.lora_B = nn.Parameter(torch.randn(rank, out_features), requires_grad = True)
+        # Perturb lora_B to avoid zero gradients (singularity at init)
+        # with torch.no_grad():
 
         # Initialize weights
         nn.init.kaiming_uniform_(self.lora_A, a=5**0.5)
-        nn.init.zeros_(self.lora_B)
+        nn.init.kaiming_uniform_(self.lora_B, a=5**0.5)
+        # nn.init.zeros_(self.lora_B)
+        # self.lora_B.data = self.lora_B.data + torch.randn_like(self.lora_B.data) * 0.01
 
     def forward(self, x):
         # x: (batch_size, seq_len, in_features)
         # lora_A: (in_features, rank)
         # lora_B: (rank, out_features)
         return (x @ self.lora_A @ self.lora_B) * self.scale
+
+class CustomPatchEmbed(PatchEmbed):
+    """ Image to Patch Embedding
+    """
+    def __init__(self, img_size=224, patch_size=16, in_chans=3, embed_dim=768, norm_layer=None, flatten=True, patch_embed_type='conv', **kwargs):
+        super().__init__(img_size=img_size, patch_size=patch_size, in_chans=in_chans, embed_dim=embed_dim, norm_layer=norm_layer, flatten=flatten, **kwargs)
+        self.patch_embed_type = patch_embed_type
+        
+        if patch_embed_type == 'linear':
+            self.proj = nn.Linear(self.patch_size[0] * self.patch_size[1] * in_chans, embed_dim)
+    
+    def forward(self, x):
+        if self.patch_embed_type == 'linear':
+            if x.dim() == 4:
+                x = F.unfold(x, kernel_size=self.patch_size, stride=self.patch_size) # (B, C*P*P, N)
+                x = x.transpose(1, 2) # (B, N, C*P*P)
+            elif x.dim() == 5:
+                # Assume (B, N, C, Ph, Pw)
+                B, N, C, Ph, Pw = x.shape
+                x = x.reshape(B, N, -1)
+            elif x.dim() == 3:
+                # Assume (B, N, D)
+                pass
+            else:
+                raise ValueError(f"Unsupported input shape for Linear PatchEmbed: {x.shape}. Expected 3D, 4D, or 5D.")
+            
+            x = self.proj(x)
+            if self.norm is not None:
+                x = self.norm(x)
+            return x
+        else:
+            if x.dim() != 4:
+                 raise ValueError(f"Conv PatchEmbed only supports 4D input (B, C, H, W). Got {x.dim()}D: {x.shape}")
+            return super().forward(x)
+
 
 class CustomAttention(nn.Module):
     def __init__(self, dim, num_heads=8, qkv_bias=False, qk_norm=False, attn_drop=0., proj_drop=0., norm_layer=nn.LayerNorm, lora_rank=0):
@@ -46,7 +87,7 @@ class CustomAttention(nn.Module):
             self.lora_k = LoRALayer(dim, dim, rank=lora_rank)
             self.lora_v = LoRALayer(dim, dim, rank=lora_rank)
 
-    def forward(self, x):
+    def forward(self, x, attn_mask=None):
         B, N, C = x.shape
         qkv = self.qkv(x).reshape(B, N, 3, self.num_heads, self.head_dim).permute(2, 0, 3, 1, 4)
         q, k, v = qkv.unbind(0)
@@ -55,7 +96,6 @@ class CustomAttention(nn.Module):
             # Apply LoRA to q, k, v
             # q, k, v are (B, num_heads, N, head_dim)
             # Need to reshape/permute to apply LoRA which expects (B, N, C)
-            
             # LoRA forward returns (B, N, C)
             q_lora = self.lora_q(x).reshape(B, N, self.num_heads, self.head_dim).permute(0, 2, 1, 3)
             k_lora = self.lora_k(x).reshape(B, N, self.num_heads, self.head_dim).permute(0, 2, 1, 3)
@@ -69,6 +109,10 @@ class CustomAttention(nn.Module):
 
         q = q * self.scale
         attn = (q @ k.transpose(-2, -1))
+        
+        if attn_mask is not None:
+            attn = attn + attn_mask
+
         attn = attn.softmax(dim=-1)
         attn = self.attn_drop(attn)
 
@@ -95,12 +139,12 @@ class CustomBlock(TimmBlock):
             self.norm1 = nn.Identity()
             self.norm2 = nn.Identity()
 
-    def forward(self, x):
+    def forward(self, x, attn_mask=None):
         if self.use_residual:
-            x = x + self.drop_path1(self.ls1(self.attn(self.norm1(x))))
+            x = x + self.drop_path1(self.ls1(self.attn(self.norm1(x), attn_mask=attn_mask)))
             x = x + self.drop_path2(self.ls2(self.mlp(self.norm2(x))))
         else:
-            x = self.drop_path1(self.ls1(self.attn(self.norm1(x))))
+            x = self.drop_path1(self.ls1(self.attn(self.norm1(x), attn_mask=attn_mask)))
             x = self.drop_path2(self.ls2(self.mlp(self.norm2(x))))
         return x
 
@@ -109,10 +153,13 @@ class CustomVisionTransformer(TimmVisionTransformer):
                  num_heads=12, mlp_ratio=4., qkv_bias=True, qk_scale=None, representation_size=None,
                  distilled=False, drop_rate=0., attn_drop_rate=0., drop_path_rate=0., embed_layer=None,
                  norm_layer=None, act_layer=None, weight_init='', use_layernorm=True, use_residual=True, 
-                 global_pool='', lora_rank=0):
+                 global_pool='', lora_rank=0, patch_embed_type='conv'):
         
         # Default act_layer to nn.GELU if None
         act_layer = act_layer or nn.GELU
+
+        # Use partial to pass patch_embed_type to CustomPatchEmbed
+        embed_layer = partial(CustomPatchEmbed, patch_embed_type=patch_embed_type) if embed_layer is None or embed_layer == PatchEmbed or embed_layer == CustomPatchEmbed else embed_layer
 
         super(CustomVisionTransformer, self).__init__(img_size=img_size, patch_size=patch_size, in_chans=in_chans, num_classes=num_classes, embed_dim=embed_dim, depth=depth,
                                                      num_heads=num_heads, mlp_ratio=mlp_ratio, qkv_bias=qkv_bias,
@@ -133,7 +180,39 @@ class CustomVisionTransformer(TimmVisionTransformer):
                 lora_rank=lora_rank)
             for i in range(depth)])
 
-def get_custom_vit(model_name='vit_base_patch16_224', pretrained=False, lora_rank=0, **kwargs):
+    def _process_input(self, x):
+        """
+        Check and reshape input to align with the PatchEmbed model requirements.
+        """
+        if self.patch_embed.patch_embed_type == 'conv':
+            if x.dim() != 4:
+                # Attempt to reshape 3D/5D to 4D if possible, or raise error
+                if x.dim() == 5:
+                     # (B, N, C, Ph, Pw) -> (B, C, H, W)
+                     # This is complex without knowing grid size, so we might just warn/error
+                     pass
+        return x
+
+    def forward_features(self, x, attn_mask=None):
+        x = self._process_input(x)
+        x = self.patch_embed(x)
+        x = self._pos_embed(x)
+        x = self.patch_drop(x)
+        x = self.norm_pre(x)
+        
+        if attn_mask is not None:
+            # If mask provided, we need to apply blocks one by one
+            for blk in self.blocks:
+                x = blk(x, attn_mask=attn_mask)
+        elif self.grad_checkpointing and not torch.jit.is_scripting():
+            x = checkpoint_seq(self.blocks, x)
+        else:
+            x = self.blocks(x)
+
+        x = self.norm(x)
+        return x
+
+def get_custom_vit(model_name='vit_base_patch16_224', pretrained=False, lora_rank=0, patch_embed_type='conv', **kwargs):
     config = VIT_CONFIGS.get(model_name)
     if config is None:
         raise ValueError(f"Model {model_name} not supported. Available models: {list(VIT_CONFIGS.keys())}")
@@ -146,9 +225,10 @@ def get_custom_vit(model_name='vit_base_patch16_224', pretrained=False, lora_ran
         mlp_ratio=4,
         qkv_bias=True,
         norm_layer=nn.LayerNorm,
-        embed_layer=PatchEmbed,
+        embed_layer=CustomPatchEmbed,
         global_pool='token',
         lora_rank=lora_rank,
+        patch_embed_type=patch_embed_type,
         in_chans = 1 if 'mnist' in model_name else 3,
         **kwargs
     )
@@ -179,4 +259,26 @@ if __name__ == '__main__':
     for name, param in vit_base_lora.named_parameters():
         if 'lora' in name:
             print(name, param.shape)
+            
+    # --- ViT Base with Linear PatchEmbed ---
+    print("\n--- ViT Base with Linear PatchEmbed ---")
+    vit_linear = get_custom_vit(model_name='vit_base_patch16_224', patch_embed_type='linear', lora_rank=0)
+    output_linear = vit_linear(dummy_input)
+    print("Output shape:", output_linear.shape)
+    print("Patch embed type:", vit_linear.patch_embed.patch_embed_type)
+    print("Patch embed proj:", vit_linear.patch_embed.proj)
+
+    # --- Test with 3D Input (Flattened Patches) ---
+    print("\n--- ViT Base with Linear PatchEmbed (3D Input) ---")
+    # Patch size 16, 3 channels -> 768 features. 224/16 = 14 -> 14x14 = 196 patches.
+    dummy_input_3d = torch.randn(2, 196, 768)
+    output_3d = vit_linear(dummy_input_3d)
+    print("3D Input Output shape:", output_3d.shape)
+
+    # --- Test with 5D Input (Batched Patches) ---
+    print("\n--- ViT Base with Linear PatchEmbed (5D Input) ---")
+    dummy_input_5d = torch.randn(2, 196, 3, 16, 16)
+    output_5d = vit_linear(dummy_input_5d)
+    print("5D Input Output shape:", output_5d.shape)
+
 
