@@ -116,10 +116,18 @@ if __name__ == '__main__':
     # b. Calculate ground truth gradients
     # Enable gradients for relevant parameters
     params_to_track = []
+    names = []
     for n, p in model.named_parameters():
-        if 'lora' in n.lower() or 'head' in n.lower() or 'pos_embed' in n.lower():
+        if args.lora_rank > 0:
+            if 'lora' in n.lower() or 'head' in n.lower() or 'pos_embed' in n.lower():
+                p.requires_grad = True
+                params_to_track.append(p)
+        else:
             p.requires_grad = True
-            params_to_track.append(p)
+            if 'pos_embed' not in n.lower():
+                params_to_track.append(p)
+                names.append(n)
+    print(names)
     
     logging.info(f"Number of parameters tracked for reconstruction: {len(params_to_track)}")
     tracked_param_count = sum(p.numel() for p in params_to_track)
@@ -161,7 +169,8 @@ if __name__ == '__main__':
         
         # Gradient matching loss (MSE)
         grad_loss = 0
-        for g_o, g_g in zip(grads_opt, grads_gt):
+        for n, g_o, g_g in zip([n for n, p in model.named_parameters() if p.requires_grad], grads_opt, grads_gt):
+            # if 'pos_embed' not in n.lower():
             grad_loss += torch.nn.functional.mse_loss(g_o, g_g)
             
         # Positional embedding gradient loss (MSE)
@@ -176,7 +185,7 @@ if __name__ == '__main__':
             if pos_embed_grad_opt is not None:
                 pos_loss = 1 - torch.nn.functional.cosine_similarity(pos_embed_grad_opt.flatten(), pos_embed_grad_gt.flatten(), dim=0)
 
-        total_loss = grad_loss + pos_loss
+        total_loss = grad_loss + 0.05 * pos_loss
         total_loss.backward()
         optimizer_x.step()
         
