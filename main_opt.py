@@ -116,7 +116,7 @@ if __name__ == '__main__':
     # b. Calculate ground truth gradients
     # Enable gradients for relevant parameters
     params_to_track = []
-    names = []
+    # names = []
     for n, p in model.named_parameters():
         if args.lora_rank > 0:
             if 'lora' in n.lower() or 'head' in n.lower() or 'pos_embed' in n.lower():
@@ -124,10 +124,10 @@ if __name__ == '__main__':
                 params_to_track.append(p)
         else:
             p.requires_grad = True
-            if 'pos_embed' not in n.lower():
-                params_to_track.append(p)
-                names.append(n)
-    print(names)
+            # if 'pos_embed' not in n.lower():
+            params_to_track.append(p)
+    #         names.append(n)
+    # print(names)
     
     logging.info(f"Number of parameters tracked for reconstruction: {len(params_to_track)}")
     tracked_param_count = sum(p.numel() for p in params_to_track)
@@ -143,10 +143,15 @@ if __name__ == '__main__':
     
     # Positional embedding gradient specifically (often the last or easily identifiable)
     pos_embed_grad_gt = None
+    # print(len([n for n, p in model.named_parameters() if p.requires_grad]))
+    # print(len(grads_gt))
     for n, g in zip([n for n, p in model.named_parameters() if p.requires_grad], grads_gt):
         if 'pos_embed' in n.lower():
             pos_embed_grad_gt = g
             break
+    if pos_embed_grad_gt is not None:
+        logging.info(f"Positional Embedding Gradient norm (GT): {pos_embed_grad_gt.norm().item():.6f}")
+        logging.info(f"Positional Embedding Shape: {pos_embed_grad_gt.shape}")
 
     # d. Randomly initialize sample x_opt
     x_opt = torch.randn_like(images).to(config.DEFAULT_DEVICE).requires_grad_(True)
@@ -170,8 +175,8 @@ if __name__ == '__main__':
         # Gradient matching loss (MSE)
         grad_loss = 0
         for n, g_o, g_g in zip([n for n, p in model.named_parameters() if p.requires_grad], grads_opt, grads_gt):
-            # if 'pos_embed' not in n.lower():
-            grad_loss += torch.nn.functional.mse_loss(g_o, g_g)
+            if 'pos_embed' not in n.lower():
+                grad_loss += torch.nn.functional.mse_loss(g_o, g_g) # 1 - torch.nn.functional.cosine_similarity(g_o.flatten(), g_g.flatten(), dim=0) # 
             
         # Positional embedding gradient loss (MSE)
         pos_loss = 0
@@ -183,9 +188,10 @@ if __name__ == '__main__':
                     pos_embed_grad_opt = g
                     break
             if pos_embed_grad_opt is not None:
-                pos_loss = 1 - torch.nn.functional.cosine_similarity(pos_embed_grad_opt.flatten(), pos_embed_grad_gt.flatten(), dim=0)
+                embed_dim = pos_embed_grad_opt.shape[-1]
+                pos_loss = 1 - torch.nn.functional.cosine_similarity(pos_embed_grad_opt.view(-1, embed_dim), pos_embed_grad_gt.view(-1, embed_dim), dim=-1)
 
-        total_loss = grad_loss + 0.05 * pos_loss
+        total_loss = grad_loss + 0.1 * pos_loss
         total_loss.backward()
         optimizer_x.step()
         
