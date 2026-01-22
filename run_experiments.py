@@ -15,6 +15,7 @@ from datetime import datetime
 import logging
 import glob
 import numpy as np
+import torch
 
 # Configure logging
 logging.basicConfig(
@@ -24,18 +25,18 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Define hyperparameter grids
-BATCH_SIZES = [1, 2, 4, 8, 16, 24]
-LEARNING_RATES = [1e-3, 5e-3, 1e-2, 5e-2, 1e-1]
-ALPHA_VALUES = [0.01, 0.05, 0.1, 0.5, 1.0]
+BATCH_SIZES = [1] #, 2, 4, 8, 16, 24]
+LEARNING_RATES = [1e-1]
+ALPHA_VALUES = [0.1, 0.2, 0.5, 1.0] #0.01, 0.05, 0.1]
 
 # Number of times to run each configuration
 NUM_RUNS = 5
 
 # Other fixed arguments
-ITERATIONS = 800
-DATASET = 'mnist'
+ITERATIONS = 1500
+DATASET = 'cifar10'
 PRETRAINED = False
-DEVICE = 'cuda'
+DEVICE = 'cuda' if torch.cuda.is_available() else 'mps' if torch.backends.mps.is_available() else 'cpu'
 
 def run_experiment(batch_size, lr_opt, alpha, exp_id, run_num, exp_dir):
     """
@@ -52,6 +53,8 @@ def run_experiment(batch_size, lr_opt, alpha, exp_id, run_num, exp_dir):
         '--alpha', str(alpha),
         '--iterations', str(ITERATIONS),
         '--dataset', DATASET,
+        '--use_layernorm',
+        '--use_residual'
     ]
     
     if PRETRAINED:
