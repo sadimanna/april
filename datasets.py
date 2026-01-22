@@ -3,8 +3,9 @@ from torch.utils.data import Dataset
 import os
 
 class ImageDataset(Dataset):
-    def __init__(self, root, transform=None):
+    def __init__(self, root, split='train', transform=None):
         self.root = root
+        self.split = split
         self.transform = transform
         self.dataset = self._get_dataset()
 
@@ -22,36 +23,41 @@ class ImageDataset(Dataset):
 
 class CIFAR10Dataset(ImageDataset):
     def _get_dataset(self):
-        return datasets.CIFAR10(root=self.root, train=True, download=True)
+        train = self.split == 'train'
+        return datasets.CIFAR10(root=self.root, train=train, download=True)
 
 class CIFAR100Dataset(ImageDataset):
     def _get_dataset(self):
-        return datasets.CIFAR100(root=self.root, train=True, download=True)
+        train = self.split == 'train'
+        return datasets.CIFAR100(root=self.root, train=train, download=True)
 
 class STL10Dataset(ImageDataset):
     def _get_dataset(self):
-        return datasets.STL10(root=self.root, split='train', download=True)
+        return datasets.STL10(root=self.root, split=self.split, download=True)
 
 class TinyImageNetDataset(ImageDataset):
     def _get_dataset(self):
         # Assuming Tiny ImageNet is structured like ImageFolder
-        return datasets.ImageFolder(root=os.path.join(self.root, 'tiny-imagenet-200', 'train'))
+        # train/val splits are folders
+        split_dir = 'val' if self.split == 'val' else 'train'
+        return datasets.ImageFolder(root=os.path.join(self.root, 'tiny-imagenet-200', split_dir))
 
 class ImageNetDataset(ImageDataset):
     def _get_dataset(self):
         # Assuming ImageNet is structured like ImageFolder
-        return datasets.ImageFolder(root=os.path.join(self.root, 'train'))
+        split_dir = 'val' if self.split == 'val' else 'train'
+        return datasets.ImageFolder(root=os.path.join(self.root, split_dir))
 
-def get_dataset(dataset_name, root, transform=None):
+def get_dataset(dataset_name, root, split='train', transform=None):
     if dataset_name == "cifar10":
-        return CIFAR10Dataset(root=root, transform=transform)
+        return CIFAR10Dataset(root=root, split=split, transform=transform)
     elif dataset_name == "cifar100":
-        return CIFAR100Dataset(root=root, transform=transform)
+        return CIFAR100Dataset(root=root, split=split, transform=transform)
     elif dataset_name == "stl10":
-        return STL10Dataset(root=root, transform=transform)
+        return STL10Dataset(root=root, split=split, transform=transform)
     elif dataset_name == "tiny_imagenet":
-        return TinyImageNetDataset(root=root, transform=transform)
+        return TinyImageNetDataset(root=root, split=split, transform=transform)
     elif dataset_name == "imagenet":
-        return ImageNetDataset(root=root, transform=transform)
+        return ImageNetDataset(root=root, split=split, transform=transform)
     else:
         raise ValueError(f"Unknown dataset: {dataset_name}")

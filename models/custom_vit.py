@@ -15,7 +15,7 @@ class LoRALayer(nn.Module):
         self.scale = alpha / rank
 
         self.lora_A = nn.Parameter(torch.randn(in_features, rank), requires_grad = True)
-        self.lora_B = nn.Parameter(torch.randn(rank, out_features), requires_grad = True)
+        self.lora_B = nn.Parameter(torch.zeros(rank, out_features), requires_grad = True)
         # Perturb lora_B to avoid zero gradients (singularity at init)
         # with torch.no_grad():
 
@@ -83,9 +83,9 @@ class CustomAttention(nn.Module):
 
         self.lora_rank = lora_rank
         if lora_rank > 0:
-            self.lora_q = LoRALayer(dim, dim, rank=lora_rank, alpha = 16)
-            self.lora_k = LoRALayer(dim, dim, rank=lora_rank, alpha = 16)
-            self.lora_v = LoRALayer(dim, dim, rank=lora_rank, alpha = 16)
+            self.lora_q = LoRALayer(dim, dim, rank=lora_rank, alpha = 8)
+            self.lora_k = LoRALayer(dim, dim, rank=lora_rank, alpha = 8)
+            self.lora_v = LoRALayer(dim, dim, rank=lora_rank, alpha = 8)
 
     def forward(self, x, attn_mask=None):
         B, N, C = x.shape
@@ -159,7 +159,7 @@ class CustomVisionTransformer(TimmVisionTransformer):
         act_layer = act_layer or nn.GELU
 
         # Use partial to pass patch_embed_type to CustomPatchEmbed
-        embed_layer = partial(CustomPatchEmbed, patch_embed_type=patch_embed_type) if embed_layer is None or embed_layer == PatchEmbed or embed_layer == CustomPatchEmbed else embed_layer
+        embed_layer = partial(CustomPatchEmbed, img_size=img_size, patch_embed_type=patch_embed_type) if embed_layer is None or embed_layer == PatchEmbed or embed_layer == CustomPatchEmbed else embed_layer
 
         super(CustomVisionTransformer, self).__init__(img_size=img_size, patch_size=patch_size, in_chans=in_chans, num_classes=num_classes, embed_dim=embed_dim, depth=depth,
                                                      num_heads=num_heads, mlp_ratio=mlp_ratio, qkv_bias=qkv_bias,
@@ -218,6 +218,7 @@ def get_custom_vit(model_name='vit_base_patch16_224', pretrained=False, lora_ran
         raise ValueError(f"Model {model_name} not supported. Available models: {list(VIT_CONFIGS.keys())}")
 
     model = CustomVisionTransformer(
+        img_size=config.get('img_size', 224),
         patch_size=config['patch_size'],
         embed_dim=config['embed_dim'],
         depth=config['depth'],

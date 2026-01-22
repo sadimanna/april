@@ -204,11 +204,11 @@ if __name__ == '__main__':
     
     optimizer.zero_grad()
     loss.backward()
-    optimizer.step()
-    outputs = model(images)
-    loss = criterion(outputs, labels)
-    optimizer.zero_grad()
-    loss.backward()
+    # optimizer.step()
+    # outputs = model(images)
+    # loss = criterion(outputs, labels)
+    # optimizer.zero_grad()
+    # loss.backward()
 
     # for n,p in model.model.named_parameters():
     #     if p.grad is not None:
