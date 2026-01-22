@@ -83,9 +83,9 @@ class CustomAttention(nn.Module):
 
         self.lora_rank = lora_rank
         if lora_rank > 0:
-            self.lora_q = LoRALayer(dim, dim, rank=lora_rank, alpha = lora_rank//2)
-            self.lora_k = LoRALayer(dim, dim, rank=lora_rank, alpha = lora_rank//2)
-            self.lora_v = LoRALayer(dim, dim, rank=lora_rank, alpha = lora_rank//2)
+            self.lora_q = LoRALayer(dim, dim, rank=lora_rank, alpha = 16)
+            self.lora_k = LoRALayer(dim, dim, rank=lora_rank, alpha = 16)
+            self.lora_v = LoRALayer(dim, dim, rank=lora_rank, alpha = 16)
 
     def forward(self, x, attn_mask=None):
         B, N, C = x.shape

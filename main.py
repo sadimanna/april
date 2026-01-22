@@ -393,7 +393,7 @@ if __name__ == '__main__':
             recon_img = reconstructed_images[i].cpu().detach().permute(1, 2, 0).numpy()
             recon_img = std * recon_img + mean
             recon_img = np.clip(recon_img, 0, 1)
-            recon_img = median_filter(recon_img, size=(16, 16, 1))
+            # recon_img = median_filter(recon_img, size=(16, 16, 1))
 
             ax_recon.imshow(recon_img)
             ax_recon.set_title(f"Image {i+1}: Reconstructed")
