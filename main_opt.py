@@ -49,6 +49,8 @@ if __name__ == '__main__':
     parser.add_argument('--lr_opt', type=float, default=1e-3, help='Learning rate for input optimization')
     parser.add_argument('--pretrained', action='store_true', help='Use pretrained weights')
     parser.add_argument('--dataset', type=str, default=config.DEFAULT_DATASET, help='Dataset to use (default from config)')
+    parser.add_argument('--batch_size', type=int, default=1, help='Batch size for dataloader (default: 1)')
+    parser.add_argument('--alpha', type=float, default=0.1, help='Weight for positional embedding loss (default: 0.1)')
     args = parser.parse_args()
 
     # Print Banner
@@ -61,7 +63,7 @@ if __name__ == '__main__':
     logging.info("================================================")
 
     # 1. Load the dataset
-    dataloader = get_dataloader(args.dataset, root='./data', split='test')
+    dataloader = get_dataloader(args.dataset, root='./data', split='test', batch_size=args.batch_size)
 
     # 2. Create the model
     if config.USE_CUSTOM_VIT:
@@ -177,7 +179,7 @@ if __name__ == '__main__':
         for n, g_o, g_g in zip([n for n, p in model.named_parameters() if p.requires_grad], grads_opt, grads_gt):
             if 'pos_embed' not in n.lower():
                 grad_loss += torch.nn.functional.mse_loss(g_o, g_g) # 1 - torch.nn.functional.cosine_similarity(g_o.flatten(), g_g.flatten(), dim=0) # 
-            
+        # grad_loss /= len(grads_gt) - 1  # Exclude pos_embed from count
         # Positional embedding gradient loss (MSE)
         pos_loss = 0
         if pos_embed_grad_gt is not None:
@@ -190,8 +192,9 @@ if __name__ == '__main__':
             if pos_embed_grad_opt is not None:
                 embed_dim = pos_embed_grad_opt.shape[-1]
                 pos_loss = 1 - torch.nn.functional.cosine_similarity(pos_embed_grad_opt.view(-1, embed_dim), pos_embed_grad_gt.view(-1, embed_dim), dim=-1)
+                pos_loss = pos_loss.sum()
 
-        total_loss = grad_loss + 0.1 * pos_loss
+        total_loss = grad_loss + args.alpha * pos_loss
         total_loss.backward()
         optimizer_x.step()
         
@@ -205,38 +208,71 @@ if __name__ == '__main__':
     from skimage.metrics import peak_signal_noise_ratio as psnr_metric
     from skimage.metrics import structural_similarity as ssim_metric
 
-    # Convert to numpy for skimage
-    x_gt_np = images[0].detach().cpu().permute(1, 2, 0).numpy()
-    x_opt_np = x_opt[0].detach().cpu().permute(1, 2, 0).numpy()
+    # Determine number of image pairs to save (max 4)
+    batch_size = images.shape[0]
+    n_pairs = min(4, batch_size)
     
-    # Un-normalize if needed (assuming standard normalization)
-    mean = np.array([0.485, 0.456, 0.406])
-    std = np.array([0.229, 0.224, 0.225])
+    # Un-normalize parameters (assuming standard normalization)
+    if args.dataset == 'mnist':
+        mean = np.array([0.1307])
+        std = np.array([0.3081])
+    else:
+        mean = np.array([0.485, 0.456, 0.406])
+        std = np.array([0.229, 0.224, 0.225])
     
-    x_gt_np = np.clip(std * x_gt_np + mean, 0, 1)
-    x_opt_np = np.clip(std * x_opt_np + mean, 0, 1)
+    # Prepare lists for images and metrics
+    x_gt_np_list = []
+    x_opt_np_list = []
+    psnr_list = []
+    ssim_list = []
     
-    psnr_val = psnr_metric(x_gt_np, x_opt_np, data_range=1.0)
-    # Use win_size=3 or similar for small images like CIFAR
-    ssim_val = ssim_metric(x_gt_np, x_opt_np, data_range=1.0, channel_axis=2, win_size=3)
-    mse_val = np.mean((x_gt_np - x_opt_np) ** 2)
+    for idx in range(n_pairs):
+        x_gt_np = images[idx].detach().cpu().permute(1, 2, 0).numpy()
+        x_opt_np = x_opt[idx].detach().cpu().permute(1, 2, 0).numpy()
+        
+        x_gt_np = np.clip(std * x_gt_np + mean, 0, 1)
+        x_opt_np = np.clip(std * x_opt_np + mean, 0, 1)
+        
+        x_gt_np_list.append(x_gt_np)
+        x_opt_np_list.append(x_opt_np)
+        
+        psnr_val = psnr_metric(x_gt_np, x_opt_np, data_range=1.0)
+        # Use win_size=3 for small images like CIFAR
+        try:
+            ssim_val = ssim_metric(x_gt_np, x_opt_np, data_range=1.0, channel_axis=2, win_size=3)
+        except TypeError:
+            # fallback for older skimage versions
+            ssim_val = ssim_metric(x_gt_np, x_opt_np, data_range=1.0, multichannel=True)
+        
+        psnr_list.append(psnr_val)
+        ssim_list.append(ssim_val)
     
-    logging.info(f"Final Metrics - PSNR: {psnr_val:.2f}, SSIM: {ssim_val:.4f}, MSE: {mse_val:.6f}")
+    mse_val = np.mean([(a - b) ** 2 for a, b in zip(x_gt_np_list, x_opt_np_list)])
+    logging.info(f"Final Metrics (first {n_pairs}) - PSNR mean: {np.mean(psnr_list):.2f}, SSIM mean: {np.mean(ssim_list):.4f}, MSE: {mse_val:.6f}")
     
-    # Save results
+    # Save results grid: n_pairs rows x 2 columns (original | reconstructed)
     viz_dir = './viz'
     if not os.path.exists(viz_dir):
         os.makedirs(viz_dir)
-        
-    fig, axes = plt.subplots(1, 2, figsize=(10, 5))
-    axes[0].imshow(x_gt_np)
-    axes[0].set_title("Original (Ground Truth)")
-    axes[0].axis('off')
     
-    axes[1].imshow(x_opt_np)
-    axes[1].set_title(f"Reconstructed (PSNR: {psnr_val:.2f})")
-    axes[1].axis('off')
+    fig, axes = plt.subplots(n_pairs, 2, figsize=(6, 3 * n_pairs))
+    if n_pairs == 1:
+        axes = np.expand_dims(axes, 0)
+    
+    for r in range(n_pairs):
+        ax_gt = axes[r, 0]
+        ax_rec = axes[r, 1]
+        
+        ax_gt.imshow(x_gt_np_list[r])
+        ax_gt.set_title("Original")
+        ax_gt.axis('off')
+        
+        ax_rec.imshow(x_opt_np_list[r])
+        ax_rec.set_title(f"Reconstructed (PSNR: {psnr_list[r]:.2f})")
+        ax_rec.axis('off')
     
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    plt.savefig(os.path.join(viz_dir, f'reconstruction_opt_{timestamp}.png'))
-    logging.info(f"Saved reconstruction result to {viz_dir}/reconstruction_opt_{timestamp}.png")
+    out_path = os.path.join(viz_dir, f'reconstruction_opt_{timestamp}.png')
+    plt.tight_layout()
+    plt.savefig(out_path)
+    logging.info(f"Saved reconstruction result to {out_path}")

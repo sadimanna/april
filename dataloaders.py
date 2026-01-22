@@ -13,6 +13,12 @@ def get_dataloader(dataset_name, root, split='train', batch_size=config.DEFAULT_
             transforms.ToTensor(),
             transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
         ])
+    elif dataset_name == "mnist":
+        transform = transforms.Compose([
+            transforms.Resize(28),
+            transforms.ToTensor(),
+            transforms.Normalize(mean=[0.1307], std=[0.3081]),
+        ])
     elif dataset_name == "stl10":
         transform = transforms.Compose([
             transforms.Resize(96),

@@ -20,6 +20,11 @@ class ImageDataset(Dataset):
         if self.transform:
             img = self.transform(img)
         return img, label
+    
+class MNISTDataset(ImageDataset):
+    def _get_dataset(self):
+        train = self.split == 'train'
+        return datasets.MNIST(root=self.root, train=train, download=True)
 
 class CIFAR10Dataset(ImageDataset):
     def _get_dataset(self):
@@ -53,6 +58,8 @@ def get_dataset(dataset_name, root, split='train', transform=None):
         return CIFAR10Dataset(root=root, split=split, transform=transform)
     elif dataset_name == "cifar100":
         return CIFAR100Dataset(root=root, split=split, transform=transform)
+    elif dataset_name == "mnist":
+        return MNISTDataset(root=root, split=split, transform=transform)
     elif dataset_name == "stl10":
         return STL10Dataset(root=root, split=split, transform=transform)
     elif dataset_name == "tiny_imagenet":
