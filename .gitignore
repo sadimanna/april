@@ -7,6 +7,6 @@ __pycache__/
 
 # Datasets
 data/
-logs/
+logs/*.log
 viz/
 pretrained/

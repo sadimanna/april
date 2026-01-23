@@ -25,9 +25,9 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Define hyperparameter grids
-BATCH_SIZES = [1] #, 2, 4, 8, 16, 24]
-LEARNING_RATES = [1e-1]
-ALPHA_VALUES = [0.1, 0.2, 0.5, 1.0] #0.01, 0.05, 0.1]
+BATCH_SIZES = [1, 2, 4, 8, 16, 24]
+LEARNING_RATES = [1e-2, 5e-2, 1e-1]
+ALPHA_VALUES = [0.01, 0.05, 0.1, 0.2, 0.5, 1.0] #0.01, 0.05, 0.1
 
 # Number of times to run each configuration
 NUM_RUNS = 5
@@ -150,7 +150,7 @@ def organize_results(all_results):
         config_results[key].append(result)
     
     # Create summary CSV with averaged metrics
-    csv_file = os.path.join(summary_dir, 'results_summary.csv')
+    csv_file = os.path.join(summary_dir, f'{DATASET}_results_summary.csv')
     fieldnames = ['batch_size', 'lr_opt', 'alpha', 'psnr_mean_avg', 'psnr_std', 'ssim_mean_avg', 'ssim_std', 'mse_avg', 'mse_std', 'num_runs']
     
     with open(csv_file, 'w', newline='') as f:
@@ -224,7 +224,7 @@ def main():
         for lr_opt in LEARNING_RATES:
             for alpha in ALPHA_VALUES:
                 # Create experiment-specific directory
-                exp_dir_name = f"bs{batch_size}_lr{lr_opt:.0e}_alpha{alpha}"
+                exp_dir_name = f"{DATASET}/bs{batch_size}_lr{lr_opt:.0e}_alpha{alpha}"
                 exp_dir = os.path.join('./viz', exp_dir_name)
                 os.makedirs(exp_dir, exist_ok=True)
                 logger.info(f"Created experiment directory: {exp_dir}")

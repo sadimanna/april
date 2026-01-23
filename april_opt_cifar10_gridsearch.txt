@@ -1,0 +1,14 @@
+2026-01-23 12:15:52,639 - INFO - Starting experiment grid search
+2026-01-23 12:15:52,639 - INFO - Batch sizes: [1, 2, 4, 8, 16, 24]
+2026-01-23 12:15:52,639 - INFO - Learning rates: [0.01, 0.05, 0.1]
+2026-01-23 12:15:52,639 - INFO - Alpha values: [0.01, 0.05, 0.1, 0.2, 0.5, 1.0]
+2026-01-23 12:15:52,639 - INFO - Number of runs per configuration: 5
+2026-01-23 12:15:52,639 - INFO - Total experiments: 540
+2026-01-23 12:15:52,639 - INFO - Created experiment directory: ./viz/cifar10/bs1_lr1e-02_alpha0.01
+2026-01-23 12:15:52,639 - INFO - Running experiment 1, run 1/5: BS=1, LR=0.01, Alpha=0.01
+2026-01-23 12:16:33,000 - INFO - Saved viz to ./viz/cifar10/bs1_lr1e-02_alpha0.01/run_1_reconstruction_opt_20260123_121632.png
+2026-01-23 12:16:33,000 - INFO - Experiment 1, run 1 completed. PSNR: 10.55, SSIM: 0.0884
+2026-01-23 12:16:33,000 - INFO - Running experiment 1, run 2/5: BS=1, LR=0.01, Alpha=0.01
+2026-01-23 12:17:13,590 - INFO - Saved viz to ./viz/cifar10/bs1_lr1e-02_alpha0.01/run_2_reconstruction_opt_20260123_121712.png
+2026-01-23 12:17:13,591 - INFO - Experiment 1, run 2 completed. PSNR: 10.70, SSIM: 0.0450
+2026-01-23 12:17:13,591 - INFO - Running experiment 1, run 3/5: BS=1, LR=0.01, Alpha=0.01

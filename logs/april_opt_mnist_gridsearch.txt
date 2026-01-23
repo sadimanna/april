@@ -1,0 +1,1852 @@
+2026-01-23 12:16:31,826 - INFO - Starting experiment grid search
+2026-01-23 12:16:31,826 - INFO - Batch sizes: [1, 2, 4, 8, 16, 24]
+2026-01-23 12:16:31,826 - INFO - Learning rates: [0.01, 0.05, 0.1]
+2026-01-23 12:16:31,826 - INFO - Alpha values: [0.01, 0.05, 0.1, 0.2, 0.5, 1.0]
+2026-01-23 12:16:31,826 - INFO - Number of runs per configuration: 5
+2026-01-23 12:16:31,826 - INFO - Total experiments: 540
+2026-01-23 12:16:31,826 - INFO - Created experiment directory: ./viz/mnist/bs1_lr1e-02_alpha0.01
+2026-01-23 12:16:31,826 - INFO - Running experiment 1, run 1/5: BS=1, LR=0.01, Alpha=0.01
+2026-01-23 12:16:55,816 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.01/run_1_reconstruction_opt_20260123_121654.png
+2026-01-23 12:16:55,816 - INFO - Experiment 1, run 1 completed. PSNR: 10.12, SSIM: 0.0306
+2026-01-23 12:16:55,816 - INFO - Running experiment 1, run 2/5: BS=1, LR=0.01, Alpha=0.01
+2026-01-23 12:17:21,064 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.01/run_2_reconstruction_opt_20260123_121720.png
+2026-01-23 12:17:21,064 - INFO - Experiment 1, run 2 completed. PSNR: 11.24, SSIM: 0.1064
+2026-01-23 12:17:21,064 - INFO - Running experiment 1, run 3/5: BS=1, LR=0.01, Alpha=0.01
+2026-01-23 12:17:45,826 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.01/run_3_reconstruction_opt_20260123_121744.png
+2026-01-23 12:17:45,826 - INFO - Experiment 1, run 3 completed. PSNR: 6.50, SSIM: 0.0472
+2026-01-23 12:17:45,826 - INFO - Running experiment 1, run 4/5: BS=1, LR=0.01, Alpha=0.01
+2026-01-23 12:18:10,171 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.01/run_4_reconstruction_opt_20260123_121809.png
+2026-01-23 12:18:10,171 - INFO - Experiment 1, run 4 completed. PSNR: 8.25, SSIM: 0.1026
+2026-01-23 12:18:10,171 - INFO - Running experiment 1, run 5/5: BS=1, LR=0.01, Alpha=0.01
+2026-01-23 12:18:34,307 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.01/run_5_reconstruction_opt_20260123_121833.png
+2026-01-23 12:18:34,307 - INFO - Experiment 1, run 5 completed. PSNR: 10.03, SSIM: 0.1058
+2026-01-23 12:18:34,307 - INFO - Created experiment directory: ./viz/mnist/bs1_lr1e-02_alpha0.05
+2026-01-23 12:18:34,307 - INFO - Running experiment 2, run 1/5: BS=1, LR=0.01, Alpha=0.05
+2026-01-23 12:18:58,469 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.05/run_1_reconstruction_opt_20260123_121857.png
+2026-01-23 12:18:58,469 - INFO - Experiment 2, run 1 completed. PSNR: 12.96, SSIM: 0.1929
+2026-01-23 12:18:58,469 - INFO - Running experiment 2, run 2/5: BS=1, LR=0.01, Alpha=0.05
+2026-01-23 12:19:22,659 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.05/run_2_reconstruction_opt_20260123_121921.png
+2026-01-23 12:19:22,659 - INFO - Experiment 2, run 2 completed. PSNR: 11.51, SSIM: 0.1908
+2026-01-23 12:19:22,659 - INFO - Running experiment 2, run 3/5: BS=1, LR=0.01, Alpha=0.05
+2026-01-23 12:19:48,311 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.05/run_3_reconstruction_opt_20260123_121947.png
+2026-01-23 12:19:48,311 - INFO - Experiment 2, run 3 completed. PSNR: 9.99, SSIM: 0.1068
+2026-01-23 12:19:48,311 - INFO - Running experiment 2, run 4/5: BS=1, LR=0.01, Alpha=0.05
+2026-01-23 12:20:12,638 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.05/run_4_reconstruction_opt_20260123_122011.png
+2026-01-23 12:20:12,638 - INFO - Experiment 2, run 4 completed. PSNR: 11.44, SSIM: 0.1268
+2026-01-23 12:20:12,638 - INFO - Running experiment 2, run 5/5: BS=1, LR=0.01, Alpha=0.05
+2026-01-23 12:20:35,825 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.05/run_5_reconstruction_opt_20260123_122035.png
+2026-01-23 12:20:35,825 - INFO - Experiment 2, run 5 completed. PSNR: 12.93, SSIM: 0.2270
+2026-01-23 12:20:35,825 - INFO - Created experiment directory: ./viz/mnist/bs1_lr1e-02_alpha0.1
+2026-01-23 12:20:35,825 - INFO - Running experiment 3, run 1/5: BS=1, LR=0.01, Alpha=0.1
+2026-01-23 12:20:59,714 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.1/run_1_reconstruction_opt_20260123_122058.png
+2026-01-23 12:20:59,714 - INFO - Experiment 3, run 1 completed. PSNR: 14.51, SSIM: 0.2078
+2026-01-23 12:20:59,714 - INFO - Running experiment 3, run 2/5: BS=1, LR=0.01, Alpha=0.1
+2026-01-23 12:21:24,798 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.1/run_2_reconstruction_opt_20260123_122123.png
+2026-01-23 12:21:24,798 - INFO - Experiment 3, run 2 completed. PSNR: 13.05, SSIM: 0.2818
+2026-01-23 12:21:24,798 - INFO - Running experiment 3, run 3/5: BS=1, LR=0.01, Alpha=0.1
+2026-01-23 12:21:48,976 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.1/run_3_reconstruction_opt_20260123_122148.png
+2026-01-23 12:21:48,976 - INFO - Experiment 3, run 3 completed. PSNR: 12.89, SSIM: 0.2473
+2026-01-23 12:21:48,976 - INFO - Running experiment 3, run 4/5: BS=1, LR=0.01, Alpha=0.1
+2026-01-23 12:22:14,081 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.1/run_4_reconstruction_opt_20260123_122213.png
+2026-01-23 12:22:14,081 - INFO - Experiment 3, run 4 completed. PSNR: 11.12, SSIM: 0.2403
+2026-01-23 12:22:14,081 - INFO - Running experiment 3, run 5/5: BS=1, LR=0.01, Alpha=0.1
+2026-01-23 12:22:38,748 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.1/run_5_reconstruction_opt_20260123_122237.png
+2026-01-23 12:22:38,748 - INFO - Experiment 3, run 5 completed. PSNR: 14.09, SSIM: 0.2194
+2026-01-23 12:22:38,748 - INFO - Created experiment directory: ./viz/mnist/bs1_lr1e-02_alpha0.2
+2026-01-23 12:22:38,748 - INFO - Running experiment 4, run 1/5: BS=1, LR=0.01, Alpha=0.2
+2026-01-23 12:23:03,992 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.2/run_1_reconstruction_opt_20260123_122303.png
+2026-01-23 12:23:03,992 - INFO - Experiment 4, run 1 completed. PSNR: 16.63, SSIM: 0.2764
+2026-01-23 12:23:03,992 - INFO - Running experiment 4, run 2/5: BS=1, LR=0.01, Alpha=0.2
+2026-01-23 12:23:27,491 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.2/run_2_reconstruction_opt_20260123_122326.png
+2026-01-23 12:23:27,491 - INFO - Experiment 4, run 2 completed. PSNR: 16.03, SSIM: 0.1654
+2026-01-23 12:23:27,491 - INFO - Running experiment 4, run 3/5: BS=1, LR=0.01, Alpha=0.2
+2026-01-23 12:23:54,495 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.2/run_3_reconstruction_opt_20260123_122353.png
+2026-01-23 12:23:54,496 - INFO - Experiment 4, run 3 completed. PSNR: 12.36, SSIM: 0.2407
+2026-01-23 12:23:54,496 - INFO - Running experiment 4, run 4/5: BS=1, LR=0.01, Alpha=0.2
+2026-01-23 12:24:21,390 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.2/run_4_reconstruction_opt_20260123_122420.png
+2026-01-23 12:24:21,390 - INFO - Experiment 4, run 4 completed. PSNR: 12.54, SSIM: 0.2035
+2026-01-23 12:24:21,390 - INFO - Running experiment 4, run 5/5: BS=1, LR=0.01, Alpha=0.2
+2026-01-23 12:24:46,148 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.2/run_5_reconstruction_opt_20260123_122445.png
+2026-01-23 12:24:46,148 - INFO - Experiment 4, run 5 completed. PSNR: 14.80, SSIM: 0.2549
+2026-01-23 12:24:46,148 - INFO - Created experiment directory: ./viz/mnist/bs1_lr1e-02_alpha0.5
+2026-01-23 12:24:46,148 - INFO - Running experiment 5, run 1/5: BS=1, LR=0.01, Alpha=0.5
+2026-01-23 12:25:08,637 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.5/run_1_reconstruction_opt_20260123_122507.png
+2026-01-23 12:25:08,637 - INFO - Experiment 5, run 1 completed. PSNR: 13.49, SSIM: 0.2285
+2026-01-23 12:25:08,637 - INFO - Running experiment 5, run 2/5: BS=1, LR=0.01, Alpha=0.5
+2026-01-23 12:25:31,372 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.5/run_2_reconstruction_opt_20260123_122530.png
+2026-01-23 12:25:31,372 - INFO - Experiment 5, run 2 completed. PSNR: 14.47, SSIM: 0.2303
+2026-01-23 12:25:31,372 - INFO - Running experiment 5, run 3/5: BS=1, LR=0.01, Alpha=0.5
+2026-01-23 12:25:53,750 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.5/run_3_reconstruction_opt_20260123_122552.png
+2026-01-23 12:25:53,750 - INFO - Experiment 5, run 3 completed. PSNR: 12.27, SSIM: 0.2375
+2026-01-23 12:25:53,750 - INFO - Running experiment 5, run 4/5: BS=1, LR=0.01, Alpha=0.5
+2026-01-23 12:26:16,605 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.5/run_4_reconstruction_opt_20260123_122615.png
+2026-01-23 12:26:16,605 - INFO - Experiment 5, run 4 completed. PSNR: 12.09, SSIM: 0.2438
+2026-01-23 12:26:16,606 - INFO - Running experiment 5, run 5/5: BS=1, LR=0.01, Alpha=0.5
+2026-01-23 12:26:39,180 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha0.5/run_5_reconstruction_opt_20260123_122638.png
+2026-01-23 12:26:39,180 - INFO - Experiment 5, run 5 completed. PSNR: 12.07, SSIM: 0.1523
+2026-01-23 12:26:39,180 - INFO - Created experiment directory: ./viz/mnist/bs1_lr1e-02_alpha1.0
+2026-01-23 12:26:39,180 - INFO - Running experiment 6, run 1/5: BS=1, LR=0.01, Alpha=1.0
+2026-01-23 12:27:01,723 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha1.0/run_1_reconstruction_opt_20260123_122700.png
+2026-01-23 12:27:01,723 - INFO - Experiment 6, run 1 completed. PSNR: 13.36, SSIM: 0.2443
+2026-01-23 12:27:01,723 - INFO - Running experiment 6, run 2/5: BS=1, LR=0.01, Alpha=1.0
+2026-01-23 12:27:24,888 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha1.0/run_2_reconstruction_opt_20260123_122724.png
+2026-01-23 12:27:24,888 - INFO - Experiment 6, run 2 completed. PSNR: 16.64, SSIM: 0.2251
+2026-01-23 12:27:24,888 - INFO - Running experiment 6, run 3/5: BS=1, LR=0.01, Alpha=1.0
+2026-01-23 12:27:46,871 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha1.0/run_3_reconstruction_opt_20260123_122746.png
+2026-01-23 12:27:46,871 - INFO - Experiment 6, run 3 completed. PSNR: 16.62, SSIM: 0.1731
+2026-01-23 12:27:46,871 - INFO - Running experiment 6, run 4/5: BS=1, LR=0.01, Alpha=1.0
+2026-01-23 12:28:09,730 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha1.0/run_4_reconstruction_opt_20260123_122808.png
+2026-01-23 12:28:09,730 - INFO - Experiment 6, run 4 completed. PSNR: 14.67, SSIM: 0.3372
+2026-01-23 12:28:09,730 - INFO - Running experiment 6, run 5/5: BS=1, LR=0.01, Alpha=1.0
+2026-01-23 12:28:32,019 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-02_alpha1.0/run_5_reconstruction_opt_20260123_122831.png
+2026-01-23 12:28:32,019 - INFO - Experiment 6, run 5 completed. PSNR: 13.12, SSIM: 0.2065
+2026-01-23 12:28:32,019 - INFO - Created experiment directory: ./viz/mnist/bs1_lr5e-02_alpha0.01
+2026-01-23 12:28:32,019 - INFO - Running experiment 7, run 1/5: BS=1, LR=0.05, Alpha=0.01
+2026-01-23 12:28:54,725 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.01/run_1_reconstruction_opt_20260123_122853.png
+2026-01-23 12:28:54,725 - INFO - Experiment 7, run 1 completed. PSNR: 20.05, SSIM: 0.2105
+2026-01-23 12:28:54,725 - INFO - Running experiment 7, run 2/5: BS=1, LR=0.05, Alpha=0.01
+2026-01-23 12:29:17,001 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.01/run_2_reconstruction_opt_20260123_122916.png
+2026-01-23 12:29:17,001 - INFO - Experiment 7, run 2 completed. PSNR: 12.48, SSIM: 0.1596
+2026-01-23 12:29:17,001 - INFO - Running experiment 7, run 3/5: BS=1, LR=0.05, Alpha=0.01
+2026-01-23 12:29:39,357 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.01/run_3_reconstruction_opt_20260123_122938.png
+2026-01-23 12:29:39,358 - INFO - Experiment 7, run 3 completed. PSNR: 18.80, SSIM: 0.4184
+2026-01-23 12:29:39,358 - INFO - Running experiment 7, run 4/5: BS=1, LR=0.05, Alpha=0.01
+2026-01-23 12:30:02,054 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.01/run_4_reconstruction_opt_20260123_123001.png
+2026-01-23 12:30:02,054 - INFO - Experiment 7, run 4 completed. PSNR: 10.14, SSIM: 0.1483
+2026-01-23 12:30:02,054 - INFO - Running experiment 7, run 5/5: BS=1, LR=0.05, Alpha=0.01
+2026-01-23 12:30:24,364 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.01/run_5_reconstruction_opt_20260123_123023.png
+2026-01-23 12:30:24,364 - INFO - Experiment 7, run 5 completed. PSNR: 10.50, SSIM: 0.1870
+2026-01-23 12:30:24,364 - INFO - Created experiment directory: ./viz/mnist/bs1_lr5e-02_alpha0.05
+2026-01-23 12:30:24,364 - INFO - Running experiment 8, run 1/5: BS=1, LR=0.05, Alpha=0.05
+2026-01-23 12:30:47,270 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.05/run_1_reconstruction_opt_20260123_123046.png
+2026-01-23 12:30:47,270 - INFO - Experiment 8, run 1 completed. PSNR: 18.64, SSIM: 0.4174
+2026-01-23 12:30:47,271 - INFO - Running experiment 8, run 2/5: BS=1, LR=0.05, Alpha=0.05
+2026-01-23 12:31:10,337 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.05/run_2_reconstruction_opt_20260122_232711.png
+2026-01-23 12:31:10,337 - INFO - Experiment 8, run 2 completed. PSNR: 27.12, SSIM: 0.4101
+2026-01-23 12:31:10,337 - INFO - Running experiment 8, run 3/5: BS=1, LR=0.05, Alpha=0.05
+2026-01-23 12:31:33,003 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.05/run_3_reconstruction_opt_20260123_123132.png
+2026-01-23 12:31:33,003 - INFO - Experiment 8, run 3 completed. PSNR: 22.05, SSIM: 0.3253
+2026-01-23 12:31:33,003 - INFO - Running experiment 8, run 4/5: BS=1, LR=0.05, Alpha=0.05
+2026-01-23 12:31:55,462 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.05/run_4_reconstruction_opt_20260123_123154.png
+2026-01-23 12:31:55,462 - INFO - Experiment 8, run 4 completed. PSNR: 32.01, SSIM: 0.5150
+2026-01-23 12:31:55,462 - INFO - Running experiment 8, run 5/5: BS=1, LR=0.05, Alpha=0.05
+2026-01-23 12:32:18,128 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.05/run_5_reconstruction_opt_20260123_123217.png
+2026-01-23 12:32:18,128 - INFO - Experiment 8, run 5 completed. PSNR: 30.09, SSIM: 0.5261
+2026-01-23 12:32:18,128 - INFO - Created experiment directory: ./viz/mnist/bs1_lr5e-02_alpha0.1
+2026-01-23 12:32:18,128 - INFO - Running experiment 9, run 1/5: BS=1, LR=0.05, Alpha=0.1
+2026-01-23 12:32:40,971 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.1/run_1_reconstruction_opt_20260123_123240.png
+2026-01-23 12:32:40,971 - INFO - Experiment 9, run 1 completed. PSNR: 33.95, SSIM: 0.6956
+2026-01-23 12:32:40,971 - INFO - Running experiment 9, run 2/5: BS=1, LR=0.05, Alpha=0.1
+2026-01-23 12:33:02,884 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.1/run_2_reconstruction_opt_20260123_123302.png
+2026-01-23 12:33:02,884 - INFO - Experiment 9, run 2 completed. PSNR: 27.73, SSIM: 0.5613
+2026-01-23 12:33:02,884 - INFO - Running experiment 9, run 3/5: BS=1, LR=0.05, Alpha=0.1
+2026-01-23 12:33:25,414 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.1/run_3_reconstruction_opt_20260123_123324.png
+2026-01-23 12:33:25,414 - INFO - Experiment 9, run 3 completed. PSNR: 29.79, SSIM: 0.5272
+2026-01-23 12:33:25,414 - INFO - Running experiment 9, run 4/5: BS=1, LR=0.05, Alpha=0.1
+2026-01-23 12:33:48,034 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.1/run_4_reconstruction_opt_20260123_123347.png
+2026-01-23 12:33:48,034 - INFO - Experiment 9, run 4 completed. PSNR: 20.87, SSIM: 0.4008
+2026-01-23 12:33:48,034 - INFO - Running experiment 9, run 5/5: BS=1, LR=0.05, Alpha=0.1
+2026-01-23 12:34:10,254 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.1/run_5_reconstruction_opt_20260123_123409.png
+2026-01-23 12:34:10,254 - INFO - Experiment 9, run 5 completed. PSNR: 23.45, SSIM: 0.4208
+2026-01-23 12:34:10,254 - INFO - Created experiment directory: ./viz/mnist/bs1_lr5e-02_alpha0.2
+2026-01-23 12:34:10,254 - INFO - Running experiment 10, run 1/5: BS=1, LR=0.05, Alpha=0.2
+2026-01-23 12:34:35,323 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.2/run_1_reconstruction_opt_20260123_123434.png
+2026-01-23 12:34:35,323 - INFO - Experiment 10, run 1 completed. PSNR: 34.99, SSIM: 0.5619
+2026-01-23 12:34:35,323 - INFO - Running experiment 10, run 2/5: BS=1, LR=0.05, Alpha=0.2
+2026-01-23 12:35:00,001 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.2/run_2_reconstruction_opt_20260123_123459.png
+2026-01-23 12:35:00,001 - INFO - Experiment 10, run 2 completed. PSNR: 25.06, SSIM: 0.4768
+2026-01-23 12:35:00,001 - INFO - Running experiment 10, run 3/5: BS=1, LR=0.05, Alpha=0.2
+2026-01-23 12:35:24,195 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.2/run_3_reconstruction_opt_20260123_123523.png
+2026-01-23 12:35:24,195 - INFO - Experiment 10, run 3 completed. PSNR: 29.03, SSIM: 0.4147
+2026-01-23 12:35:24,195 - INFO - Running experiment 10, run 4/5: BS=1, LR=0.05, Alpha=0.2
+2026-01-23 12:35:48,964 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.2/run_4_reconstruction_opt_20260123_123548.png
+2026-01-23 12:35:48,964 - INFO - Experiment 10, run 4 completed. PSNR: 22.36, SSIM: 0.5144
+2026-01-23 12:35:48,964 - INFO - Running experiment 10, run 5/5: BS=1, LR=0.05, Alpha=0.2
+2026-01-23 12:36:12,798 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.2/run_5_reconstruction_opt_20260123_123611.png
+2026-01-23 12:36:12,798 - INFO - Experiment 10, run 5 completed. PSNR: 25.20, SSIM: 0.4851
+2026-01-23 12:36:12,798 - INFO - Created experiment directory: ./viz/mnist/bs1_lr5e-02_alpha0.5
+2026-01-23 12:36:12,798 - INFO - Running experiment 11, run 1/5: BS=1, LR=0.05, Alpha=0.5
+2026-01-23 12:36:37,746 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.5/run_1_reconstruction_opt_20260123_123636.png
+2026-01-23 12:36:37,746 - INFO - Experiment 11, run 1 completed. PSNR: 28.94, SSIM: 0.6129
+2026-01-23 12:36:37,746 - INFO - Running experiment 11, run 2/5: BS=1, LR=0.05, Alpha=0.5
+2026-01-23 12:37:01,923 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.5/run_2_reconstruction_opt_20260123_123701.png
+2026-01-23 12:37:01,923 - INFO - Experiment 11, run 2 completed. PSNR: 24.71, SSIM: 0.3972
+2026-01-23 12:37:01,923 - INFO - Running experiment 11, run 3/5: BS=1, LR=0.05, Alpha=0.5
+2026-01-23 12:37:26,407 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.5/run_3_reconstruction_opt_20260123_123725.png
+2026-01-23 12:37:26,407 - INFO - Experiment 11, run 3 completed. PSNR: 35.24, SSIM: 0.6793
+2026-01-23 12:37:26,407 - INFO - Running experiment 11, run 4/5: BS=1, LR=0.05, Alpha=0.5
+2026-01-23 12:37:49,699 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.5/run_4_reconstruction_opt_20260123_123748.png
+2026-01-23 12:37:49,699 - INFO - Experiment 11, run 4 completed. PSNR: 29.43, SSIM: 0.5774
+2026-01-23 12:37:49,699 - INFO - Running experiment 11, run 5/5: BS=1, LR=0.05, Alpha=0.5
+2026-01-23 12:38:14,197 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha0.5/run_5_reconstruction_opt_20260123_123813.png
+2026-01-23 12:38:14,197 - INFO - Experiment 11, run 5 completed. PSNR: 31.52, SSIM: 0.6029
+2026-01-23 12:38:14,197 - INFO - Created experiment directory: ./viz/mnist/bs1_lr5e-02_alpha1.0
+2026-01-23 12:38:14,197 - INFO - Running experiment 12, run 1/5: BS=1, LR=0.05, Alpha=1.0
+2026-01-23 12:38:38,439 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha1.0/run_1_reconstruction_opt_20260123_123837.png
+2026-01-23 12:38:38,439 - INFO - Experiment 12, run 1 completed. PSNR: 30.85, SSIM: 0.6243
+2026-01-23 12:38:38,439 - INFO - Running experiment 12, run 2/5: BS=1, LR=0.05, Alpha=1.0
+2026-01-23 12:39:01,928 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha1.0/run_2_reconstruction_opt_20260123_123901.png
+2026-01-23 12:39:01,928 - INFO - Experiment 12, run 2 completed. PSNR: 29.83, SSIM: 0.5755
+2026-01-23 12:39:01,928 - INFO - Running experiment 12, run 3/5: BS=1, LR=0.05, Alpha=1.0
+2026-01-23 12:39:27,426 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha1.0/run_3_reconstruction_opt_20260123_123926.png
+2026-01-23 12:39:27,426 - INFO - Experiment 12, run 3 completed. PSNR: 32.73, SSIM: 0.6042
+2026-01-23 12:39:27,426 - INFO - Running experiment 12, run 4/5: BS=1, LR=0.05, Alpha=1.0
+2026-01-23 12:39:51,463 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha1.0/run_4_reconstruction_opt_20260123_123950.png
+2026-01-23 12:39:51,463 - INFO - Experiment 12, run 4 completed. PSNR: 27.68, SSIM: 0.4502
+2026-01-23 12:39:51,463 - INFO - Running experiment 12, run 5/5: BS=1, LR=0.05, Alpha=1.0
+2026-01-23 12:40:17,386 - INFO - Saved viz to ./viz/mnist/bs1_lr5e-02_alpha1.0/run_5_reconstruction_opt_20260123_124016.png
+2026-01-23 12:40:17,386 - INFO - Experiment 12, run 5 completed. PSNR: 30.17, SSIM: 0.5434
+2026-01-23 12:40:17,386 - INFO - Created experiment directory: ./viz/mnist/bs1_lr1e-01_alpha0.01
+2026-01-23 12:40:17,386 - INFO - Running experiment 13, run 1/5: BS=1, LR=0.1, Alpha=0.01
+2026-01-23 12:40:42,742 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.01/run_1_reconstruction_opt_20260123_124041.png
+2026-01-23 12:40:42,742 - INFO - Experiment 13, run 1 completed. PSNR: 32.43, SSIM: 0.7010
+2026-01-23 12:40:42,742 - INFO - Running experiment 13, run 2/5: BS=1, LR=0.1, Alpha=0.01
+2026-01-23 12:41:08,248 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.01/run_2_reconstruction_opt_20260123_124107.png
+2026-01-23 12:41:08,248 - INFO - Experiment 13, run 2 completed. PSNR: 31.50, SSIM: 0.5315
+2026-01-23 12:41:08,248 - INFO - Running experiment 13, run 3/5: BS=1, LR=0.1, Alpha=0.01
+2026-01-23 12:41:33,628 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.01/run_3_reconstruction_opt_20260123_124132.png
+2026-01-23 12:41:33,628 - INFO - Experiment 13, run 3 completed. PSNR: 29.27, SSIM: 0.6265
+2026-01-23 12:41:33,628 - INFO - Running experiment 13, run 4/5: BS=1, LR=0.1, Alpha=0.01
+2026-01-23 12:41:58,132 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.01/run_4_reconstruction_opt_20260123_124157.png
+2026-01-23 12:41:58,132 - INFO - Experiment 13, run 4 completed. PSNR: 30.90, SSIM: 0.6505
+2026-01-23 12:41:58,132 - INFO - Running experiment 13, run 5/5: BS=1, LR=0.1, Alpha=0.01
+2026-01-23 12:42:23,210 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.01/run_5_reconstruction_opt_20260123_124222.png
+2026-01-23 12:42:23,211 - INFO - Experiment 13, run 5 completed. PSNR: 37.08, SSIM: 0.7681
+2026-01-23 12:42:23,211 - INFO - Created experiment directory: ./viz/mnist/bs1_lr1e-01_alpha0.05
+2026-01-23 12:42:23,211 - INFO - Running experiment 14, run 1/5: BS=1, LR=0.1, Alpha=0.05
+2026-01-23 12:42:48,724 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.05/run_1_reconstruction_opt_20260123_124247.png
+2026-01-23 12:42:48,724 - INFO - Experiment 14, run 1 completed. PSNR: 43.22, SSIM: 0.9052
+2026-01-23 12:42:48,724 - INFO - Running experiment 14, run 2/5: BS=1, LR=0.1, Alpha=0.05
+2026-01-23 12:43:13,027 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.05/run_2_reconstruction_opt_20260123_124312.png
+2026-01-23 12:43:13,027 - INFO - Experiment 14, run 2 completed. PSNR: 25.45, SSIM: 0.5407
+2026-01-23 12:43:13,027 - INFO - Running experiment 14, run 3/5: BS=1, LR=0.1, Alpha=0.05
+2026-01-23 12:43:36,420 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.05/run_3_reconstruction_opt_20260123_124335.png
+2026-01-23 12:43:36,420 - INFO - Experiment 14, run 3 completed. PSNR: 29.26, SSIM: 0.6246
+2026-01-23 12:43:36,420 - INFO - Running experiment 14, run 4/5: BS=1, LR=0.1, Alpha=0.05
+2026-01-23 12:43:59,366 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.05/run_4_reconstruction_opt_20260123_124358.png
+2026-01-23 12:43:59,367 - INFO - Experiment 14, run 4 completed. PSNR: 34.40, SSIM: 0.7083
+2026-01-23 12:43:59,367 - INFO - Running experiment 14, run 5/5: BS=1, LR=0.1, Alpha=0.05
+2026-01-23 12:44:22,898 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.05/run_5_reconstruction_opt_20260123_124422.png
+2026-01-23 12:44:22,898 - INFO - Experiment 14, run 5 completed. PSNR: 38.37, SSIM: 0.8130
+2026-01-23 12:44:22,898 - INFO - Created experiment directory: ./viz/mnist/bs1_lr1e-01_alpha0.1
+2026-01-23 12:44:22,898 - INFO - Running experiment 15, run 1/5: BS=1, LR=0.1, Alpha=0.1
+2026-01-23 12:44:45,140 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.1/run_1_reconstruction_opt_20260123_124444.png
+2026-01-23 12:44:45,140 - INFO - Experiment 15, run 1 completed. PSNR: 45.50, SSIM: 0.9362
+2026-01-23 12:44:45,141 - INFO - Running experiment 15, run 2/5: BS=1, LR=0.1, Alpha=0.1
+2026-01-23 12:45:07,981 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.1/run_2_reconstruction_opt_20260123_124507.png
+2026-01-23 12:45:07,981 - INFO - Experiment 15, run 2 completed. PSNR: 40.60, SSIM: 0.8758
+2026-01-23 12:45:07,981 - INFO - Running experiment 15, run 3/5: BS=1, LR=0.1, Alpha=0.1
+2026-01-23 12:45:31,121 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.1/run_3_reconstruction_opt_20260123_124530.png
+2026-01-23 12:45:31,122 - INFO - Experiment 15, run 3 completed. PSNR: 40.18, SSIM: 0.8649
+2026-01-23 12:45:31,122 - INFO - Running experiment 15, run 4/5: BS=1, LR=0.1, Alpha=0.1
+2026-01-23 12:45:53,871 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.1/run_4_reconstruction_opt_20260123_124553.png
+2026-01-23 12:45:53,871 - INFO - Experiment 15, run 4 completed. PSNR: 40.84, SSIM: 0.8502
+2026-01-23 12:45:53,871 - INFO - Running experiment 15, run 5/5: BS=1, LR=0.1, Alpha=0.1
+2026-01-23 12:46:16,757 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.1/run_5_reconstruction_opt_20260123_124615.png
+2026-01-23 12:46:16,757 - INFO - Experiment 15, run 5 completed. PSNR: 35.19, SSIM: 0.7521
+2026-01-23 12:46:16,757 - INFO - Created experiment directory: ./viz/mnist/bs1_lr1e-01_alpha0.2
+2026-01-23 12:46:16,757 - INFO - Running experiment 16, run 1/5: BS=1, LR=0.1, Alpha=0.2
+2026-01-23 12:46:40,185 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.2/run_1_reconstruction_opt_20260123_124639.png
+2026-01-23 12:46:40,185 - INFO - Experiment 16, run 1 completed. PSNR: 43.48, SSIM: 0.9340
+2026-01-23 12:46:40,185 - INFO - Running experiment 16, run 2/5: BS=1, LR=0.1, Alpha=0.2
+2026-01-23 12:47:03,362 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.2/run_2_reconstruction_opt_20260123_124702.png
+2026-01-23 12:47:03,362 - INFO - Experiment 16, run 2 completed. PSNR: 45.55, SSIM: 0.9405
+2026-01-23 12:47:03,362 - INFO - Running experiment 16, run 3/5: BS=1, LR=0.1, Alpha=0.2
+2026-01-23 12:47:26,393 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.2/run_3_reconstruction_opt_20260123_124725.png
+2026-01-23 12:47:26,393 - INFO - Experiment 16, run 3 completed. PSNR: 37.71, SSIM: 0.7881
+2026-01-23 12:47:26,393 - INFO - Running experiment 16, run 4/5: BS=1, LR=0.1, Alpha=0.2
+2026-01-23 12:47:49,322 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.2/run_4_reconstruction_opt_20260123_124748.png
+2026-01-23 12:47:49,322 - INFO - Experiment 16, run 4 completed. PSNR: 39.73, SSIM: 0.8396
+2026-01-23 12:47:49,322 - INFO - Running experiment 16, run 5/5: BS=1, LR=0.1, Alpha=0.2
+2026-01-23 12:48:12,115 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.2/run_5_reconstruction_opt_20260123_124811.png
+2026-01-23 12:48:12,115 - INFO - Experiment 16, run 5 completed. PSNR: 38.81, SSIM: 0.8374
+2026-01-23 12:48:12,115 - INFO - Created experiment directory: ./viz/mnist/bs1_lr1e-01_alpha0.5
+2026-01-23 12:48:12,115 - INFO - Running experiment 17, run 1/5: BS=1, LR=0.1, Alpha=0.5
+2026-01-23 12:48:34,822 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.5/run_1_reconstruction_opt_20260123_124834.png
+2026-01-23 12:48:34,822 - INFO - Experiment 17, run 1 completed. PSNR: 41.72, SSIM: 0.8962
+2026-01-23 12:48:34,822 - INFO - Running experiment 17, run 2/5: BS=1, LR=0.1, Alpha=0.5
+2026-01-23 12:48:57,828 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.5/run_2_reconstruction_opt_20260123_124857.png
+2026-01-23 12:48:57,828 - INFO - Experiment 17, run 2 completed. PSNR: 36.35, SSIM: 0.7453
+2026-01-23 12:48:57,828 - INFO - Running experiment 17, run 3/5: BS=1, LR=0.1, Alpha=0.5
+2026-01-23 12:49:20,674 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.5/run_3_reconstruction_opt_20260123_124920.png
+2026-01-23 12:49:20,674 - INFO - Experiment 17, run 3 completed. PSNR: 48.13, SSIM: 0.9690
+2026-01-23 12:49:20,674 - INFO - Running experiment 17, run 4/5: BS=1, LR=0.1, Alpha=0.5
+2026-01-23 12:49:43,846 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.5/run_4_reconstruction_opt_20260123_124943.png
+2026-01-23 12:49:43,846 - INFO - Experiment 17, run 4 completed. PSNR: 42.27, SSIM: 0.8929
+2026-01-23 12:49:43,846 - INFO - Running experiment 17, run 5/5: BS=1, LR=0.1, Alpha=0.5
+2026-01-23 12:50:06,877 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha0.5/run_5_reconstruction_opt_20260123_125006.png
+2026-01-23 12:50:06,877 - INFO - Experiment 17, run 5 completed. PSNR: 39.06, SSIM: 0.8723
+2026-01-23 12:50:06,877 - INFO - Created experiment directory: ./viz/mnist/bs1_lr1e-01_alpha1.0
+2026-01-23 12:50:06,877 - INFO - Running experiment 18, run 1/5: BS=1, LR=0.1, Alpha=1.0
+2026-01-23 12:50:29,484 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha1.0/run_1_reconstruction_opt_20260123_125028.png
+2026-01-23 12:50:29,484 - INFO - Experiment 18, run 1 completed. PSNR: 44.45, SSIM: 0.9414
+2026-01-23 12:50:29,484 - INFO - Running experiment 18, run 2/5: BS=1, LR=0.1, Alpha=1.0
+2026-01-23 12:50:52,205 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha1.0/run_2_reconstruction_opt_20260123_125051.png
+2026-01-23 12:50:52,205 - INFO - Experiment 18, run 2 completed. PSNR: 38.88, SSIM: 0.8931
+2026-01-23 12:50:52,205 - INFO - Running experiment 18, run 3/5: BS=1, LR=0.1, Alpha=1.0
+2026-01-23 12:51:14,961 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha1.0/run_3_reconstruction_opt_20260123_125114.png
+2026-01-23 12:51:14,961 - INFO - Experiment 18, run 3 completed. PSNR: 47.82, SSIM: 0.9628
+2026-01-23 12:51:14,961 - INFO - Running experiment 18, run 4/5: BS=1, LR=0.1, Alpha=1.0
+2026-01-23 12:51:38,139 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha1.0/run_4_reconstruction_opt_20260123_125137.png
+2026-01-23 12:51:38,139 - INFO - Experiment 18, run 4 completed. PSNR: 39.69, SSIM: 0.8297
+2026-01-23 12:51:38,139 - INFO - Running experiment 18, run 5/5: BS=1, LR=0.1, Alpha=1.0
+2026-01-23 12:52:02,623 - INFO - Saved viz to ./viz/mnist/bs1_lr1e-01_alpha1.0/run_5_reconstruction_opt_20260123_125201.png
+2026-01-23 12:52:02,623 - INFO - Experiment 18, run 5 completed. PSNR: 27.50, SSIM: 0.6261
+2026-01-23 12:52:02,623 - INFO - Created experiment directory: ./viz/mnist/bs2_lr1e-02_alpha0.01
+2026-01-23 12:52:02,623 - INFO - Running experiment 19, run 1/5: BS=2, LR=0.01, Alpha=0.01
+2026-01-23 12:52:25,508 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.01/run_1_reconstruction_opt_20260123_125224.png
+2026-01-23 12:52:25,508 - INFO - Experiment 19, run 1 completed. PSNR: 9.16, SSIM: 0.0909
+2026-01-23 12:52:25,508 - INFO - Running experiment 19, run 2/5: BS=2, LR=0.01, Alpha=0.01
+2026-01-23 12:52:49,209 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.01/run_2_reconstruction_opt_20260123_125248.png
+2026-01-23 12:52:49,209 - INFO - Experiment 19, run 2 completed. PSNR: 10.13, SSIM: 0.1088
+2026-01-23 12:52:49,210 - INFO - Running experiment 19, run 3/5: BS=2, LR=0.01, Alpha=0.01
+2026-01-23 12:53:11,805 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.01/run_3_reconstruction_opt_20260123_125310.png
+2026-01-23 12:53:11,805 - INFO - Experiment 19, run 3 completed. PSNR: 10.74, SSIM: 0.1608
+2026-01-23 12:53:11,805 - INFO - Running experiment 19, run 4/5: BS=2, LR=0.01, Alpha=0.01
+2026-01-23 12:53:34,857 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.01/run_4_reconstruction_opt_20260123_125333.png
+2026-01-23 12:53:34,857 - INFO - Experiment 19, run 4 completed. PSNR: 8.64, SSIM: 0.0348
+2026-01-23 12:53:34,857 - INFO - Running experiment 19, run 5/5: BS=2, LR=0.01, Alpha=0.01
+2026-01-23 12:53:58,521 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.01/run_5_reconstruction_opt_20260123_125357.png
+2026-01-23 12:53:58,521 - INFO - Experiment 19, run 5 completed. PSNR: 10.69, SSIM: 0.1108
+2026-01-23 12:53:58,521 - INFO - Created experiment directory: ./viz/mnist/bs2_lr1e-02_alpha0.05
+2026-01-23 12:53:58,521 - INFO - Running experiment 20, run 1/5: BS=2, LR=0.01, Alpha=0.05
+2026-01-23 12:54:21,830 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.05/run_1_reconstruction_opt_20260123_125420.png
+2026-01-23 12:54:21,830 - INFO - Experiment 20, run 1 completed. PSNR: 12.11, SSIM: 0.1589
+2026-01-23 12:54:21,830 - INFO - Running experiment 20, run 2/5: BS=2, LR=0.01, Alpha=0.05
+2026-01-23 12:54:45,539 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.05/run_2_reconstruction_opt_20260123_125444.png
+2026-01-23 12:54:45,539 - INFO - Experiment 20, run 2 completed. PSNR: 10.29, SSIM: 0.1055
+2026-01-23 12:54:45,539 - INFO - Running experiment 20, run 3/5: BS=2, LR=0.01, Alpha=0.05
+2026-01-23 12:55:08,123 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.05/run_3_reconstruction_opt_20260123_125507.png
+2026-01-23 12:55:08,123 - INFO - Experiment 20, run 3 completed. PSNR: 10.03, SSIM: 0.1176
+2026-01-23 12:55:08,123 - INFO - Running experiment 20, run 4/5: BS=2, LR=0.01, Alpha=0.05
+2026-01-23 12:55:31,228 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.05/run_4_reconstruction_opt_20260123_125530.png
+2026-01-23 12:55:31,228 - INFO - Experiment 20, run 4 completed. PSNR: 11.37, SSIM: 0.1031
+2026-01-23 12:55:31,228 - INFO - Running experiment 20, run 5/5: BS=2, LR=0.01, Alpha=0.05
+2026-01-23 12:55:54,421 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.05/run_5_reconstruction_opt_20260123_125553.png
+2026-01-23 12:55:54,421 - INFO - Experiment 20, run 5 completed. PSNR: 11.32, SSIM: 0.1731
+2026-01-23 12:55:54,421 - INFO - Created experiment directory: ./viz/mnist/bs2_lr1e-02_alpha0.1
+2026-01-23 12:55:54,421 - INFO - Running experiment 21, run 1/5: BS=2, LR=0.01, Alpha=0.1
+2026-01-23 12:56:17,191 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.1/run_1_reconstruction_opt_20260123_125616.png
+2026-01-23 12:56:17,191 - INFO - Experiment 21, run 1 completed. PSNR: 13.15, SSIM: 0.1879
+2026-01-23 12:56:17,191 - INFO - Running experiment 21, run 2/5: BS=2, LR=0.01, Alpha=0.1
+2026-01-23 12:56:40,448 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.1/run_2_reconstruction_opt_20260123_125639.png
+2026-01-23 12:56:40,448 - INFO - Experiment 21, run 2 completed. PSNR: 11.83, SSIM: 0.1709
+2026-01-23 12:56:40,448 - INFO - Running experiment 21, run 3/5: BS=2, LR=0.01, Alpha=0.1
+2026-01-23 12:57:03,385 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.1/run_3_reconstruction_opt_20260123_125702.png
+2026-01-23 12:57:03,385 - INFO - Experiment 21, run 3 completed. PSNR: 13.66, SSIM: 0.1221
+2026-01-23 12:57:03,385 - INFO - Running experiment 21, run 4/5: BS=2, LR=0.01, Alpha=0.1
+2026-01-23 12:57:26,781 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.1/run_4_reconstruction_opt_20260123_125725.png
+2026-01-23 12:57:26,781 - INFO - Experiment 21, run 4 completed. PSNR: 12.13, SSIM: 0.1691
+2026-01-23 12:57:26,782 - INFO - Running experiment 21, run 5/5: BS=2, LR=0.01, Alpha=0.1
+2026-01-23 12:57:49,520 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.1/run_5_reconstruction_opt_20260123_125748.png
+2026-01-23 12:57:49,520 - INFO - Experiment 21, run 5 completed. PSNR: 12.97, SSIM: 0.1897
+2026-01-23 12:57:49,520 - INFO - Created experiment directory: ./viz/mnist/bs2_lr1e-02_alpha0.2
+2026-01-23 12:57:49,520 - INFO - Running experiment 22, run 1/5: BS=2, LR=0.01, Alpha=0.2
+2026-01-23 12:58:12,422 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.2/run_1_reconstruction_opt_20260123_125811.png
+2026-01-23 12:58:12,422 - INFO - Experiment 22, run 1 completed. PSNR: 11.98, SSIM: 0.1351
+2026-01-23 12:58:12,422 - INFO - Running experiment 22, run 2/5: BS=2, LR=0.01, Alpha=0.2
+2026-01-23 12:58:35,421 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.2/run_2_reconstruction_opt_20260123_125834.png
+2026-01-23 12:58:35,421 - INFO - Experiment 22, run 2 completed. PSNR: 10.90, SSIM: 0.1541
+2026-01-23 12:58:35,421 - INFO - Running experiment 22, run 3/5: BS=2, LR=0.01, Alpha=0.2
+2026-01-23 12:58:58,170 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.2/run_3_reconstruction_opt_20260123_125857.png
+2026-01-23 12:58:58,170 - INFO - Experiment 22, run 3 completed. PSNR: 12.52, SSIM: 0.1410
+2026-01-23 12:58:58,170 - INFO - Running experiment 22, run 4/5: BS=2, LR=0.01, Alpha=0.2
+2026-01-23 12:59:21,872 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.2/run_4_reconstruction_opt_20260123_125920.png
+2026-01-23 12:59:21,872 - INFO - Experiment 22, run 4 completed. PSNR: 11.18, SSIM: 0.1759
+2026-01-23 12:59:21,872 - INFO - Running experiment 22, run 5/5: BS=2, LR=0.01, Alpha=0.2
+2026-01-23 12:59:46,003 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.2/run_5_reconstruction_opt_20260123_125945.png
+2026-01-23 12:59:46,004 - INFO - Experiment 22, run 5 completed. PSNR: 11.97, SSIM: 0.1378
+2026-01-23 12:59:46,004 - INFO - Created experiment directory: ./viz/mnist/bs2_lr1e-02_alpha0.5
+2026-01-23 12:59:46,004 - INFO - Running experiment 23, run 1/5: BS=2, LR=0.01, Alpha=0.5
+2026-01-23 13:00:09,336 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.5/run_1_reconstruction_opt_20260123_130008.png
+2026-01-23 13:00:09,336 - INFO - Experiment 23, run 1 completed. PSNR: 12.69, SSIM: 0.1808
+2026-01-23 13:00:09,336 - INFO - Running experiment 23, run 2/5: BS=2, LR=0.01, Alpha=0.5
+2026-01-23 13:00:33,179 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.5/run_2_reconstruction_opt_20260123_130032.png
+2026-01-23 13:00:33,179 - INFO - Experiment 23, run 2 completed. PSNR: 13.23, SSIM: 0.1447
+2026-01-23 13:00:33,179 - INFO - Running experiment 23, run 3/5: BS=2, LR=0.01, Alpha=0.5
+2026-01-23 13:00:56,498 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.5/run_3_reconstruction_opt_20260123_130055.png
+2026-01-23 13:00:56,498 - INFO - Experiment 23, run 3 completed. PSNR: 12.87, SSIM: 0.1896
+2026-01-23 13:00:56,498 - INFO - Running experiment 23, run 4/5: BS=2, LR=0.01, Alpha=0.5
+2026-01-23 13:01:19,586 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.5/run_4_reconstruction_opt_20260123_130118.png
+2026-01-23 13:01:19,586 - INFO - Experiment 23, run 4 completed. PSNR: 11.15, SSIM: 0.1303
+2026-01-23 13:01:19,586 - INFO - Running experiment 23, run 5/5: BS=2, LR=0.01, Alpha=0.5
+2026-01-23 13:01:42,181 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha0.5/run_5_reconstruction_opt_20260123_130141.png
+2026-01-23 13:01:42,181 - INFO - Experiment 23, run 5 completed. PSNR: 12.33, SSIM: 0.1950
+2026-01-23 13:01:42,181 - INFO - Created experiment directory: ./viz/mnist/bs2_lr1e-02_alpha1.0
+2026-01-23 13:01:42,181 - INFO - Running experiment 24, run 1/5: BS=2, LR=0.01, Alpha=1.0
+2026-01-23 13:02:05,767 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha1.0/run_1_reconstruction_opt_20260123_130204.png
+2026-01-23 13:02:05,767 - INFO - Experiment 24, run 1 completed. PSNR: 10.77, SSIM: 0.1450
+2026-01-23 13:02:05,767 - INFO - Running experiment 24, run 2/5: BS=2, LR=0.01, Alpha=1.0
+2026-01-23 13:02:28,924 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha1.0/run_2_reconstruction_opt_20260123_130228.png
+2026-01-23 13:02:28,924 - INFO - Experiment 24, run 2 completed. PSNR: 11.23, SSIM: 0.1702
+2026-01-23 13:02:28,924 - INFO - Running experiment 24, run 3/5: BS=2, LR=0.01, Alpha=1.0
+2026-01-23 13:02:51,877 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha1.0/run_3_reconstruction_opt_20260123_130251.png
+2026-01-23 13:02:51,877 - INFO - Experiment 24, run 3 completed. PSNR: 10.94, SSIM: 0.1381
+2026-01-23 13:02:51,878 - INFO - Running experiment 24, run 4/5: BS=2, LR=0.01, Alpha=1.0
+2026-01-23 13:03:14,973 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha1.0/run_4_reconstruction_opt_20260123_130314.png
+2026-01-23 13:03:14,973 - INFO - Experiment 24, run 4 completed. PSNR: 12.96, SSIM: 0.1820
+2026-01-23 13:03:14,973 - INFO - Running experiment 24, run 5/5: BS=2, LR=0.01, Alpha=1.0
+2026-01-23 13:03:38,234 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-02_alpha1.0/run_5_reconstruction_opt_20260123_130337.png
+2026-01-23 13:03:38,234 - INFO - Experiment 24, run 5 completed. PSNR: 11.99, SSIM: 0.1483
+2026-01-23 13:03:38,234 - INFO - Created experiment directory: ./viz/mnist/bs2_lr5e-02_alpha0.01
+2026-01-23 13:03:38,234 - INFO - Running experiment 25, run 1/5: BS=2, LR=0.05, Alpha=0.01
+2026-01-23 13:04:01,014 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.01/run_1_reconstruction_opt_20260123_130400.png
+2026-01-23 13:04:01,014 - INFO - Experiment 25, run 1 completed. PSNR: 14.99, SSIM: 0.2558
+2026-01-23 13:04:01,014 - INFO - Running experiment 25, run 2/5: BS=2, LR=0.05, Alpha=0.01
+2026-01-23 13:04:24,026 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.01/run_2_reconstruction_opt_20260123_130423.png
+2026-01-23 13:04:24,026 - INFO - Experiment 25, run 2 completed. PSNR: 15.15, SSIM: 0.2755
+2026-01-23 13:04:24,027 - INFO - Running experiment 25, run 3/5: BS=2, LR=0.05, Alpha=0.01
+2026-01-23 13:04:46,747 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.01/run_3_reconstruction_opt_20260123_130445.png
+2026-01-23 13:04:46,747 - INFO - Experiment 25, run 3 completed. PSNR: 15.42, SSIM: 0.2701
+2026-01-23 13:04:46,747 - INFO - Running experiment 25, run 4/5: BS=2, LR=0.05, Alpha=0.01
+2026-01-23 13:05:09,957 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.01/run_4_reconstruction_opt_20260123_130509.png
+2026-01-23 13:05:09,957 - INFO - Experiment 25, run 4 completed. PSNR: 17.53, SSIM: 0.2605
+2026-01-23 13:05:09,957 - INFO - Running experiment 25, run 5/5: BS=2, LR=0.05, Alpha=0.01
+2026-01-23 13:05:32,774 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.01/run_5_reconstruction_opt_20260123_130531.png
+2026-01-23 13:05:32,774 - INFO - Experiment 25, run 5 completed. PSNR: 18.73, SSIM: 0.2890
+2026-01-23 13:05:32,774 - INFO - Created experiment directory: ./viz/mnist/bs2_lr5e-02_alpha0.05
+2026-01-23 13:05:32,774 - INFO - Running experiment 26, run 1/5: BS=2, LR=0.05, Alpha=0.05
+2026-01-23 13:05:55,969 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.05/run_1_reconstruction_opt_20260123_130555.png
+2026-01-23 13:05:55,969 - INFO - Experiment 26, run 1 completed. PSNR: 20.08, SSIM: 0.3737
+2026-01-23 13:05:55,969 - INFO - Running experiment 26, run 2/5: BS=2, LR=0.05, Alpha=0.05
+2026-01-23 13:06:19,271 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.05/run_2_reconstruction_opt_20260123_130618.png
+2026-01-23 13:06:19,271 - INFO - Experiment 26, run 2 completed. PSNR: 20.83, SSIM: 0.3060
+2026-01-23 13:06:19,271 - INFO - Running experiment 26, run 3/5: BS=2, LR=0.05, Alpha=0.05
+2026-01-23 13:06:42,091 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.05/run_3_reconstruction_opt_20260123_130641.png
+2026-01-23 13:06:42,091 - INFO - Experiment 26, run 3 completed. PSNR: 20.22, SSIM: 0.3883
+2026-01-23 13:06:42,091 - INFO - Running experiment 26, run 4/5: BS=2, LR=0.05, Alpha=0.05
+2026-01-23 13:07:05,382 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.05/run_4_reconstruction_opt_20260123_130704.png
+2026-01-23 13:07:05,382 - INFO - Experiment 26, run 4 completed. PSNR: 19.74, SSIM: 0.3587
+2026-01-23 13:07:05,382 - INFO - Running experiment 26, run 5/5: BS=2, LR=0.05, Alpha=0.05
+2026-01-23 13:07:28,594 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.05/run_5_reconstruction_opt_20260123_130727.png
+2026-01-23 13:07:28,595 - INFO - Experiment 26, run 5 completed. PSNR: 22.49, SSIM: 0.4188
+2026-01-23 13:07:28,595 - INFO - Created experiment directory: ./viz/mnist/bs2_lr5e-02_alpha0.1
+2026-01-23 13:07:28,595 - INFO - Running experiment 27, run 1/5: BS=2, LR=0.05, Alpha=0.1
+2026-01-23 13:07:51,570 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.1/run_1_reconstruction_opt_20260123_130750.png
+2026-01-23 13:07:51,570 - INFO - Experiment 27, run 1 completed. PSNR: 20.13, SSIM: 0.2792
+2026-01-23 13:07:51,570 - INFO - Running experiment 27, run 2/5: BS=2, LR=0.05, Alpha=0.1
+2026-01-23 13:08:14,701 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.1/run_2_reconstruction_opt_20260123_130813.png
+2026-01-23 13:08:14,701 - INFO - Experiment 27, run 2 completed. PSNR: 20.94, SSIM: 0.3283
+2026-01-23 13:08:14,701 - INFO - Running experiment 27, run 3/5: BS=2, LR=0.05, Alpha=0.1
+2026-01-23 13:08:37,644 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.1/run_3_reconstruction_opt_20260123_130836.png
+2026-01-23 13:08:37,644 - INFO - Experiment 27, run 3 completed. PSNR: 24.58, SSIM: 0.3304
+2026-01-23 13:08:37,644 - INFO - Running experiment 27, run 4/5: BS=2, LR=0.05, Alpha=0.1
+2026-01-23 13:09:00,964 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.1/run_4_reconstruction_opt_20260123_130900.png
+2026-01-23 13:09:00,964 - INFO - Experiment 27, run 4 completed. PSNR: 20.40, SSIM: 0.3666
+2026-01-23 13:09:00,964 - INFO - Running experiment 27, run 5/5: BS=2, LR=0.05, Alpha=0.1
+2026-01-23 13:09:23,861 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.1/run_5_reconstruction_opt_20260123_130922.png
+2026-01-23 13:09:23,861 - INFO - Experiment 27, run 5 completed. PSNR: 21.77, SSIM: 0.4260
+2026-01-23 13:09:23,861 - INFO - Created experiment directory: ./viz/mnist/bs2_lr5e-02_alpha0.2
+2026-01-23 13:09:23,861 - INFO - Running experiment 28, run 1/5: BS=2, LR=0.05, Alpha=0.2
+2026-01-23 13:09:46,980 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.2/run_1_reconstruction_opt_20260123_130946.png
+2026-01-23 13:09:46,980 - INFO - Experiment 28, run 1 completed. PSNR: 21.37, SSIM: 0.3995
+2026-01-23 13:09:46,980 - INFO - Running experiment 28, run 2/5: BS=2, LR=0.05, Alpha=0.2
+2026-01-23 13:10:10,217 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.2/run_2_reconstruction_opt_20260123_131009.png
+2026-01-23 13:10:10,217 - INFO - Experiment 28, run 2 completed. PSNR: 24.90, SSIM: 0.4040
+2026-01-23 13:10:10,217 - INFO - Running experiment 28, run 3/5: BS=2, LR=0.05, Alpha=0.2
+2026-01-23 13:10:33,023 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.2/run_3_reconstruction_opt_20260123_131032.png
+2026-01-23 13:10:33,023 - INFO - Experiment 28, run 3 completed. PSNR: 19.64, SSIM: 0.3608
+2026-01-23 13:10:33,023 - INFO - Running experiment 28, run 4/5: BS=2, LR=0.05, Alpha=0.2
+2026-01-23 13:10:56,494 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.2/run_4_reconstruction_opt_20260123_131055.png
+2026-01-23 13:10:56,494 - INFO - Experiment 28, run 4 completed. PSNR: 24.08, SSIM: 0.3854
+2026-01-23 13:10:56,494 - INFO - Running experiment 28, run 5/5: BS=2, LR=0.05, Alpha=0.2
+2026-01-23 13:11:19,427 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.2/run_5_reconstruction_opt_20260123_131118.png
+2026-01-23 13:11:19,427 - INFO - Experiment 28, run 5 completed. PSNR: 19.38, SSIM: 0.3723
+2026-01-23 13:11:19,427 - INFO - Created experiment directory: ./viz/mnist/bs2_lr5e-02_alpha0.5
+2026-01-23 13:11:19,427 - INFO - Running experiment 29, run 1/5: BS=2, LR=0.05, Alpha=0.5
+2026-01-23 13:11:42,269 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.5/run_1_reconstruction_opt_20260123_131141.png
+2026-01-23 13:11:42,269 - INFO - Experiment 29, run 1 completed. PSNR: 17.49, SSIM: 0.2745
+2026-01-23 13:11:42,269 - INFO - Running experiment 29, run 2/5: BS=2, LR=0.05, Alpha=0.5
+2026-01-23 13:12:05,623 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.5/run_2_reconstruction_opt_20260123_131204.png
+2026-01-23 13:12:05,624 - INFO - Experiment 29, run 2 completed. PSNR: 20.47, SSIM: 0.3998
+2026-01-23 13:12:05,624 - INFO - Running experiment 29, run 3/5: BS=2, LR=0.05, Alpha=0.5
+2026-01-23 13:12:28,325 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.5/run_3_reconstruction_opt_20260123_131227.png
+2026-01-23 13:12:28,325 - INFO - Experiment 29, run 3 completed. PSNR: 18.33, SSIM: 0.1404
+2026-01-23 13:12:28,325 - INFO - Running experiment 29, run 4/5: BS=2, LR=0.05, Alpha=0.5
+2026-01-23 13:12:51,489 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.5/run_4_reconstruction_opt_20260123_131250.png
+2026-01-23 13:12:51,489 - INFO - Experiment 29, run 4 completed. PSNR: 24.34, SSIM: 0.3220
+2026-01-23 13:12:51,489 - INFO - Running experiment 29, run 5/5: BS=2, LR=0.05, Alpha=0.5
+2026-01-23 13:13:14,442 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha0.5/run_5_reconstruction_opt_20260123_131313.png
+2026-01-23 13:13:14,442 - INFO - Experiment 29, run 5 completed. PSNR: 21.56, SSIM: 0.3711
+2026-01-23 13:13:14,442 - INFO - Created experiment directory: ./viz/mnist/bs2_lr5e-02_alpha1.0
+2026-01-23 13:13:14,442 - INFO - Running experiment 30, run 1/5: BS=2, LR=0.05, Alpha=1.0
+2026-01-23 13:13:37,501 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha1.0/run_1_reconstruction_opt_20260123_131336.png
+2026-01-23 13:13:37,501 - INFO - Experiment 30, run 1 completed. PSNR: 19.82, SSIM: 0.2460
+2026-01-23 13:13:37,501 - INFO - Running experiment 30, run 2/5: BS=2, LR=0.05, Alpha=1.0
+2026-01-23 13:14:00,684 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha1.0/run_2_reconstruction_opt_20260123_131359.png
+2026-01-23 13:14:00,684 - INFO - Experiment 30, run 2 completed. PSNR: 18.62, SSIM: 0.3332
+2026-01-23 13:14:00,685 - INFO - Running experiment 30, run 3/5: BS=2, LR=0.05, Alpha=1.0
+2026-01-23 13:14:23,689 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha1.0/run_3_reconstruction_opt_20260123_131422.png
+2026-01-23 13:14:23,690 - INFO - Experiment 30, run 3 completed. PSNR: 18.47, SSIM: 0.2723
+2026-01-23 13:14:23,690 - INFO - Running experiment 30, run 4/5: BS=2, LR=0.05, Alpha=1.0
+2026-01-23 13:14:46,594 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha1.0/run_4_reconstruction_opt_20260123_131445.png
+2026-01-23 13:14:46,594 - INFO - Experiment 30, run 4 completed. PSNR: 18.92, SSIM: 0.2313
+2026-01-23 13:14:46,594 - INFO - Running experiment 30, run 5/5: BS=2, LR=0.05, Alpha=1.0
+2026-01-23 13:15:09,987 - INFO - Saved viz to ./viz/mnist/bs2_lr5e-02_alpha1.0/run_5_reconstruction_opt_20260123_131509.png
+2026-01-23 13:15:09,987 - INFO - Experiment 30, run 5 completed. PSNR: 18.07, SSIM: 0.3035
+2026-01-23 13:15:09,987 - INFO - Created experiment directory: ./viz/mnist/bs2_lr1e-01_alpha0.01
+2026-01-23 13:15:09,987 - INFO - Running experiment 31, run 1/5: BS=2, LR=0.1, Alpha=0.01
+2026-01-23 13:15:32,779 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.01/run_1_reconstruction_opt_20260123_131531.png
+2026-01-23 13:15:32,779 - INFO - Experiment 31, run 1 completed. PSNR: 18.03, SSIM: 0.3545
+2026-01-23 13:15:32,779 - INFO - Running experiment 31, run 2/5: BS=2, LR=0.1, Alpha=0.01
+2026-01-23 13:15:56,186 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.01/run_2_reconstruction_opt_20260123_131555.png
+2026-01-23 13:15:56,186 - INFO - Experiment 31, run 2 completed. PSNR: 27.86, SSIM: 0.4542
+2026-01-23 13:15:56,186 - INFO - Running experiment 31, run 3/5: BS=2, LR=0.1, Alpha=0.01
+2026-01-23 13:16:19,019 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.01/run_3_reconstruction_opt_20260123_131618.png
+2026-01-23 13:16:19,019 - INFO - Experiment 31, run 3 completed. PSNR: 24.20, SSIM: 0.4812
+2026-01-23 13:16:19,019 - INFO - Running experiment 31, run 4/5: BS=2, LR=0.1, Alpha=0.01
+2026-01-23 13:16:41,477 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.01/run_4_reconstruction_opt_20260123_131640.png
+2026-01-23 13:16:41,477 - INFO - Experiment 31, run 4 completed. PSNR: 26.30, SSIM: 0.4375
+2026-01-23 13:16:41,477 - INFO - Running experiment 31, run 5/5: BS=2, LR=0.1, Alpha=0.01
+2026-01-23 13:17:05,195 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.01/run_5_reconstruction_opt_20260123_131704.png
+2026-01-23 13:17:05,196 - INFO - Experiment 31, run 5 completed. PSNR: 29.81, SSIM: 0.5520
+2026-01-23 13:17:05,196 - INFO - Created experiment directory: ./viz/mnist/bs2_lr1e-01_alpha0.05
+2026-01-23 13:17:05,196 - INFO - Running experiment 32, run 1/5: BS=2, LR=0.1, Alpha=0.05
+2026-01-23 13:17:28,219 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.05/run_1_reconstruction_opt_20260123_131727.png
+2026-01-23 13:17:28,219 - INFO - Experiment 32, run 1 completed. PSNR: 31.95, SSIM: 0.5780
+2026-01-23 13:17:28,219 - INFO - Running experiment 32, run 2/5: BS=2, LR=0.1, Alpha=0.05
+2026-01-23 13:17:51,422 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.05/run_2_reconstruction_opt_20260123_131750.png
+2026-01-23 13:17:51,422 - INFO - Experiment 32, run 2 completed. PSNR: 32.50, SSIM: 0.5861
+2026-01-23 13:17:51,422 - INFO - Running experiment 32, run 3/5: BS=2, LR=0.1, Alpha=0.05
+2026-01-23 13:18:14,466 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.05/run_3_reconstruction_opt_20260123_131813.png
+2026-01-23 13:18:14,466 - INFO - Experiment 32, run 3 completed. PSNR: 28.73, SSIM: 0.4951
+2026-01-23 13:18:14,466 - INFO - Running experiment 32, run 4/5: BS=2, LR=0.1, Alpha=0.05
+2026-01-23 13:18:37,898 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.05/run_4_reconstruction_opt_20260123_131836.png
+2026-01-23 13:18:37,898 - INFO - Experiment 32, run 4 completed. PSNR: 29.42, SSIM: 0.6132
+2026-01-23 13:18:37,898 - INFO - Running experiment 32, run 5/5: BS=2, LR=0.1, Alpha=0.05
+2026-01-23 13:19:00,722 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.05/run_5_reconstruction_opt_20260123_131859.png
+2026-01-23 13:19:00,722 - INFO - Experiment 32, run 5 completed. PSNR: 27.91, SSIM: 0.5593
+2026-01-23 13:19:00,722 - INFO - Created experiment directory: ./viz/mnist/bs2_lr1e-01_alpha0.1
+2026-01-23 13:19:00,722 - INFO - Running experiment 33, run 1/5: BS=2, LR=0.1, Alpha=0.1
+2026-01-23 13:19:23,783 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.1/run_1_reconstruction_opt_20260123_131922.png
+2026-01-23 13:19:23,783 - INFO - Experiment 33, run 1 completed. PSNR: 27.84, SSIM: 0.5344
+2026-01-23 13:19:23,783 - INFO - Running experiment 33, run 2/5: BS=2, LR=0.1, Alpha=0.1
+2026-01-23 13:19:47,076 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.1/run_2_reconstruction_opt_20260123_131946.png
+2026-01-23 13:19:47,076 - INFO - Experiment 33, run 2 completed. PSNR: 29.83, SSIM: 0.4791
+2026-01-23 13:19:47,076 - INFO - Running experiment 33, run 3/5: BS=2, LR=0.1, Alpha=0.1
+2026-01-23 13:20:10,168 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.1/run_3_reconstruction_opt_20260123_132009.png
+2026-01-23 13:20:10,168 - INFO - Experiment 33, run 3 completed. PSNR: 9.10, SSIM: 0.0915
+2026-01-23 13:20:10,168 - INFO - Running experiment 33, run 4/5: BS=2, LR=0.1, Alpha=0.1
+2026-01-23 13:20:33,424 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.1/run_4_reconstruction_opt_20260123_132032.png
+2026-01-23 13:20:33,424 - INFO - Experiment 33, run 4 completed. PSNR: 29.74, SSIM: 0.5564
+2026-01-23 13:20:33,424 - INFO - Running experiment 33, run 5/5: BS=2, LR=0.1, Alpha=0.1
+2026-01-23 13:20:56,147 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.1/run_5_reconstruction_opt_20260123_132055.png
+2026-01-23 13:20:56,147 - INFO - Experiment 33, run 5 completed. PSNR: 29.51, SSIM: 0.5436
+2026-01-23 13:20:56,147 - INFO - Created experiment directory: ./viz/mnist/bs2_lr1e-01_alpha0.2
+2026-01-23 13:20:56,148 - INFO - Running experiment 34, run 1/5: BS=2, LR=0.1, Alpha=0.2
+2026-01-23 13:21:19,424 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.2/run_1_reconstruction_opt_20260123_132118.png
+2026-01-23 13:21:19,424 - INFO - Experiment 34, run 1 completed. PSNR: 26.98, SSIM: 0.4855
+2026-01-23 13:21:19,424 - INFO - Running experiment 34, run 2/5: BS=2, LR=0.1, Alpha=0.2
+2026-01-23 13:21:42,660 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.2/run_2_reconstruction_opt_20260123_132141.png
+2026-01-23 13:21:42,660 - INFO - Experiment 34, run 2 completed. PSNR: 25.20, SSIM: 0.4356
+2026-01-23 13:21:42,660 - INFO - Running experiment 34, run 3/5: BS=2, LR=0.1, Alpha=0.2
+2026-01-23 13:22:05,407 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.2/run_3_reconstruction_opt_20260123_132204.png
+2026-01-23 13:22:05,407 - INFO - Experiment 34, run 3 completed. PSNR: 30.65, SSIM: 0.5978
+2026-01-23 13:22:05,407 - INFO - Running experiment 34, run 4/5: BS=2, LR=0.1, Alpha=0.2
+2026-01-23 13:22:28,210 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.2/run_4_reconstruction_opt_20260123_132227.png
+2026-01-23 13:22:28,210 - INFO - Experiment 34, run 4 completed. PSNR: 19.61, SSIM: 0.2209
+2026-01-23 13:22:28,210 - INFO - Running experiment 34, run 5/5: BS=2, LR=0.1, Alpha=0.2
+2026-01-23 13:22:51,386 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.2/run_5_reconstruction_opt_20260123_132250.png
+2026-01-23 13:22:51,387 - INFO - Experiment 34, run 5 completed. PSNR: 28.02, SSIM: 0.4666
+2026-01-23 13:22:51,387 - INFO - Created experiment directory: ./viz/mnist/bs2_lr1e-01_alpha0.5
+2026-01-23 13:22:51,387 - INFO - Running experiment 35, run 1/5: BS=2, LR=0.1, Alpha=0.5
+2026-01-23 13:23:14,756 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.5/run_1_reconstruction_opt_20260123_132313.png
+2026-01-23 13:23:14,757 - INFO - Experiment 35, run 1 completed. PSNR: 23.42, SSIM: 0.3774
+2026-01-23 13:23:14,757 - INFO - Running experiment 35, run 2/5: BS=2, LR=0.1, Alpha=0.5
+2026-01-23 13:23:37,594 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.5/run_2_reconstruction_opt_20260123_132336.png
+2026-01-23 13:23:37,594 - INFO - Experiment 35, run 2 completed. PSNR: 24.49, SSIM: 0.3975
+2026-01-23 13:23:37,594 - INFO - Running experiment 35, run 3/5: BS=2, LR=0.1, Alpha=0.5
+2026-01-23 13:24:00,628 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.5/run_3_reconstruction_opt_20260123_132359.png
+2026-01-23 13:24:00,628 - INFO - Experiment 35, run 3 completed. PSNR: 28.57, SSIM: 0.4849
+2026-01-23 13:24:00,628 - INFO - Running experiment 35, run 4/5: BS=2, LR=0.1, Alpha=0.5
+2026-01-23 13:24:24,151 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.5/run_4_reconstruction_opt_20260123_132423.png
+2026-01-23 13:24:24,151 - INFO - Experiment 35, run 4 completed. PSNR: 28.55, SSIM: 0.4600
+2026-01-23 13:24:24,151 - INFO - Running experiment 35, run 5/5: BS=2, LR=0.1, Alpha=0.5
+2026-01-23 13:24:48,355 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha0.5/run_5_reconstruction_opt_20260123_132447.png
+2026-01-23 13:24:48,355 - INFO - Experiment 35, run 5 completed. PSNR: 27.90, SSIM: 0.4552
+2026-01-23 13:24:48,355 - INFO - Created experiment directory: ./viz/mnist/bs2_lr1e-01_alpha1.0
+2026-01-23 13:24:48,355 - INFO - Running experiment 36, run 1/5: BS=2, LR=0.1, Alpha=1.0
+2026-01-23 13:25:13,486 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha1.0/run_1_reconstruction_opt_20260123_132512.png
+2026-01-23 13:25:13,486 - INFO - Experiment 36, run 1 completed. PSNR: 13.97, SSIM: 0.2498
+2026-01-23 13:25:13,486 - INFO - Running experiment 36, run 2/5: BS=2, LR=0.1, Alpha=1.0
+2026-01-23 13:25:39,817 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha1.0/run_2_reconstruction_opt_20260122_232122.png
+2026-01-23 13:25:39,817 - INFO - Experiment 36, run 2 completed. PSNR: 9.26, SSIM: 0.0650
+2026-01-23 13:25:39,817 - INFO - Running experiment 36, run 3/5: BS=2, LR=0.1, Alpha=1.0
+2026-01-23 13:26:04,657 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha1.0/run_3_reconstruction_opt_20260123_132603.png
+2026-01-23 13:26:04,658 - INFO - Experiment 36, run 3 completed. PSNR: 22.93, SSIM: 0.4043
+2026-01-23 13:26:04,658 - INFO - Running experiment 36, run 4/5: BS=2, LR=0.1, Alpha=1.0
+2026-01-23 13:26:27,838 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha1.0/run_4_reconstruction_opt_20260123_132626.png
+2026-01-23 13:26:27,838 - INFO - Experiment 36, run 4 completed. PSNR: 25.02, SSIM: 0.4615
+2026-01-23 13:26:27,838 - INFO - Running experiment 36, run 5/5: BS=2, LR=0.1, Alpha=1.0
+2026-01-23 13:26:50,682 - INFO - Saved viz to ./viz/mnist/bs2_lr1e-01_alpha1.0/run_5_reconstruction_opt_20260123_132649.png
+2026-01-23 13:26:50,682 - INFO - Experiment 36, run 5 completed. PSNR: 24.66, SSIM: 0.3726
+2026-01-23 13:26:50,682 - INFO - Created experiment directory: ./viz/mnist/bs4_lr1e-02_alpha0.01
+2026-01-23 13:26:50,682 - INFO - Running experiment 37, run 1/5: BS=4, LR=0.01, Alpha=0.01
+2026-01-23 13:27:14,405 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.01/run_1_reconstruction_opt_20260123_132713.png
+2026-01-23 13:27:14,405 - INFO - Experiment 37, run 1 completed. PSNR: 10.53, SSIM: 0.1076
+2026-01-23 13:27:14,405 - INFO - Running experiment 37, run 2/5: BS=4, LR=0.01, Alpha=0.01
+2026-01-23 13:27:37,410 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.01/run_2_reconstruction_opt_20260123_132736.png
+2026-01-23 13:27:37,410 - INFO - Experiment 37, run 2 completed. PSNR: 10.27, SSIM: 0.1186
+2026-01-23 13:27:37,410 - INFO - Running experiment 37, run 3/5: BS=4, LR=0.01, Alpha=0.01
+2026-01-23 13:28:00,577 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.01/run_3_reconstruction_opt_20260123_132759.png
+2026-01-23 13:28:00,577 - INFO - Experiment 37, run 3 completed. PSNR: 10.28, SSIM: 0.0875
+2026-01-23 13:28:00,577 - INFO - Running experiment 37, run 4/5: BS=4, LR=0.01, Alpha=0.01
+2026-01-23 13:28:23,731 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.01/run_4_reconstruction_opt_20260123_132822.png
+2026-01-23 13:28:23,731 - INFO - Experiment 37, run 4 completed. PSNR: 9.84, SSIM: 0.1239
+2026-01-23 13:28:23,731 - INFO - Running experiment 37, run 5/5: BS=4, LR=0.01, Alpha=0.01
+2026-01-23 13:28:46,809 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.01/run_5_reconstruction_opt_20260123_132845.png
+2026-01-23 13:28:46,810 - INFO - Experiment 37, run 5 completed. PSNR: 10.11, SSIM: 0.0766
+2026-01-23 13:28:46,810 - INFO - Created experiment directory: ./viz/mnist/bs4_lr1e-02_alpha0.05
+2026-01-23 13:28:46,810 - INFO - Running experiment 38, run 1/5: BS=4, LR=0.01, Alpha=0.05
+2026-01-23 13:29:10,757 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.05/run_1_reconstruction_opt_20260123_132909.png
+2026-01-23 13:29:10,757 - INFO - Experiment 38, run 1 completed. PSNR: 10.13, SSIM: 0.0969
+2026-01-23 13:29:10,757 - INFO - Running experiment 38, run 2/5: BS=4, LR=0.01, Alpha=0.05
+2026-01-23 13:29:34,537 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.05/run_2_reconstruction_opt_20260123_132933.png
+2026-01-23 13:29:34,537 - INFO - Experiment 38, run 2 completed. PSNR: 10.01, SSIM: 0.0854
+2026-01-23 13:29:34,537 - INFO - Running experiment 38, run 3/5: BS=4, LR=0.01, Alpha=0.05
+2026-01-23 13:29:58,722 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.05/run_3_reconstruction_opt_20260123_132957.png
+2026-01-23 13:29:58,722 - INFO - Experiment 38, run 3 completed. PSNR: 9.95, SSIM: 0.0860
+2026-01-23 13:29:58,722 - INFO - Running experiment 38, run 4/5: BS=4, LR=0.01, Alpha=0.05
+2026-01-23 13:30:21,343 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.05/run_4_reconstruction_opt_20260123_133020.png
+2026-01-23 13:30:21,343 - INFO - Experiment 38, run 4 completed. PSNR: 10.72, SSIM: 0.1251
+2026-01-23 13:30:21,343 - INFO - Running experiment 38, run 5/5: BS=4, LR=0.01, Alpha=0.05
+2026-01-23 13:30:44,456 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.05/run_5_reconstruction_opt_20260123_133043.png
+2026-01-23 13:30:44,456 - INFO - Experiment 38, run 5 completed. PSNR: 10.08, SSIM: 0.1063
+2026-01-23 13:30:44,456 - INFO - Created experiment directory: ./viz/mnist/bs4_lr1e-02_alpha0.1
+2026-01-23 13:30:44,456 - INFO - Running experiment 39, run 1/5: BS=4, LR=0.01, Alpha=0.1
+2026-01-23 13:31:07,920 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.1/run_1_reconstruction_opt_20260123_133106.png
+2026-01-23 13:31:07,921 - INFO - Experiment 39, run 1 completed. PSNR: 10.83, SSIM: 0.1107
+2026-01-23 13:31:07,921 - INFO - Running experiment 39, run 2/5: BS=4, LR=0.01, Alpha=0.1
+2026-01-23 13:31:30,890 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.1/run_2_reconstruction_opt_20260123_133129.png
+2026-01-23 13:31:30,891 - INFO - Experiment 39, run 2 completed. PSNR: 10.51, SSIM: 0.1186
+2026-01-23 13:31:30,891 - INFO - Running experiment 39, run 3/5: BS=4, LR=0.01, Alpha=0.1
+2026-01-23 13:31:54,394 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.1/run_3_reconstruction_opt_20260123_133153.png
+2026-01-23 13:31:54,394 - INFO - Experiment 39, run 3 completed. PSNR: 9.58, SSIM: 0.0507
+2026-01-23 13:31:54,394 - INFO - Running experiment 39, run 4/5: BS=4, LR=0.01, Alpha=0.1
+2026-01-23 13:32:17,585 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.1/run_4_reconstruction_opt_20260123_133217.png
+2026-01-23 13:32:17,585 - INFO - Experiment 39, run 4 completed. PSNR: 11.85, SSIM: 0.0789
+2026-01-23 13:32:17,585 - INFO - Running experiment 39, run 5/5: BS=4, LR=0.01, Alpha=0.1
+2026-01-23 13:32:40,694 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.1/run_5_reconstruction_opt_20260123_133239.png
+2026-01-23 13:32:40,694 - INFO - Experiment 39, run 5 completed. PSNR: 11.77, SSIM: 0.0888
+2026-01-23 13:32:40,694 - INFO - Created experiment directory: ./viz/mnist/bs4_lr1e-02_alpha0.2
+2026-01-23 13:32:40,694 - INFO - Running experiment 40, run 1/5: BS=4, LR=0.01, Alpha=0.2
+2026-01-23 13:33:04,767 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.2/run_1_reconstruction_opt_20260123_133303.png
+2026-01-23 13:33:04,768 - INFO - Experiment 40, run 1 completed. PSNR: 10.48, SSIM: 0.0785
+2026-01-23 13:33:04,768 - INFO - Running experiment 40, run 2/5: BS=4, LR=0.01, Alpha=0.2
+2026-01-23 13:33:27,817 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.2/run_2_reconstruction_opt_20260123_133326.png
+2026-01-23 13:33:27,817 - INFO - Experiment 40, run 2 completed. PSNR: 9.55, SSIM: 0.0832
+2026-01-23 13:33:27,817 - INFO - Running experiment 40, run 3/5: BS=4, LR=0.01, Alpha=0.2
+2026-01-23 13:33:51,245 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.2/run_3_reconstruction_opt_20260123_133350.png
+2026-01-23 13:33:51,245 - INFO - Experiment 40, run 3 completed. PSNR: 10.20, SSIM: 0.0653
+2026-01-23 13:33:51,245 - INFO - Running experiment 40, run 4/5: BS=4, LR=0.01, Alpha=0.2
+2026-01-23 13:34:15,024 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.2/run_4_reconstruction_opt_20260123_133413.png
+2026-01-23 13:34:15,024 - INFO - Experiment 40, run 4 completed. PSNR: 10.01, SSIM: 0.0816
+2026-01-23 13:34:15,024 - INFO - Running experiment 40, run 5/5: BS=4, LR=0.01, Alpha=0.2
+2026-01-23 13:34:38,378 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.2/run_5_reconstruction_opt_20260123_133437.png
+2026-01-23 13:34:38,379 - INFO - Experiment 40, run 5 completed. PSNR: 10.73, SSIM: 0.0902
+2026-01-23 13:34:38,379 - INFO - Created experiment directory: ./viz/mnist/bs4_lr1e-02_alpha0.5
+2026-01-23 13:34:38,379 - INFO - Running experiment 41, run 1/5: BS=4, LR=0.01, Alpha=0.5
+2026-01-23 13:35:01,971 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.5/run_1_reconstruction_opt_20260123_133500.png
+2026-01-23 13:35:01,971 - INFO - Experiment 41, run 1 completed. PSNR: 10.20, SSIM: 0.0586
+2026-01-23 13:35:01,971 - INFO - Running experiment 41, run 2/5: BS=4, LR=0.01, Alpha=0.5
+2026-01-23 13:35:25,439 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.5/run_2_reconstruction_opt_20260123_133524.png
+2026-01-23 13:35:25,439 - INFO - Experiment 41, run 2 completed. PSNR: 10.04, SSIM: 0.0910
+2026-01-23 13:35:25,439 - INFO - Running experiment 41, run 3/5: BS=4, LR=0.01, Alpha=0.5
+2026-01-23 13:35:48,771 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.5/run_3_reconstruction_opt_20260123_133547.png
+2026-01-23 13:35:48,771 - INFO - Experiment 41, run 3 completed. PSNR: 10.16, SSIM: 0.0862
+2026-01-23 13:35:48,771 - INFO - Running experiment 41, run 4/5: BS=4, LR=0.01, Alpha=0.5
+2026-01-23 13:36:11,820 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.5/run_4_reconstruction_opt_20260123_133610.png
+2026-01-23 13:36:11,820 - INFO - Experiment 41, run 4 completed. PSNR: 9.94, SSIM: 0.0892
+2026-01-23 13:36:11,820 - INFO - Running experiment 41, run 5/5: BS=4, LR=0.01, Alpha=0.5
+2026-01-23 13:36:35,056 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha0.5/run_5_reconstruction_opt_20260123_133634.png
+2026-01-23 13:36:35,057 - INFO - Experiment 41, run 5 completed. PSNR: 10.11, SSIM: 0.0839
+2026-01-23 13:36:35,057 - INFO - Created experiment directory: ./viz/mnist/bs4_lr1e-02_alpha1.0
+2026-01-23 13:36:35,057 - INFO - Running experiment 42, run 1/5: BS=4, LR=0.01, Alpha=1.0
+2026-01-23 13:36:58,991 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha1.0/run_1_reconstruction_opt_20260123_133657.png
+2026-01-23 13:36:58,991 - INFO - Experiment 42, run 1 completed. PSNR: 10.16, SSIM: 0.0712
+2026-01-23 13:36:58,991 - INFO - Running experiment 42, run 2/5: BS=4, LR=0.01, Alpha=1.0
+2026-01-23 13:37:22,068 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha1.0/run_2_reconstruction_opt_20260123_133720.png
+2026-01-23 13:37:22,068 - INFO - Experiment 42, run 2 completed. PSNR: 9.42, SSIM: 0.0859
+2026-01-23 13:37:22,068 - INFO - Running experiment 42, run 3/5: BS=4, LR=0.01, Alpha=1.0
+2026-01-23 13:37:45,732 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha1.0/run_3_reconstruction_opt_20260123_133744.png
+2026-01-23 13:37:45,732 - INFO - Experiment 42, run 3 completed. PSNR: 10.82, SSIM: 0.0638
+2026-01-23 13:37:45,732 - INFO - Running experiment 42, run 4/5: BS=4, LR=0.01, Alpha=1.0
+2026-01-23 13:38:08,664 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha1.0/run_4_reconstruction_opt_20260123_133807.png
+2026-01-23 13:38:08,664 - INFO - Experiment 42, run 4 completed. PSNR: 9.16, SSIM: 0.0679
+2026-01-23 13:38:08,664 - INFO - Running experiment 42, run 5/5: BS=4, LR=0.01, Alpha=1.0
+2026-01-23 13:38:32,000 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-02_alpha1.0/run_5_reconstruction_opt_20260123_133830.png
+2026-01-23 13:38:32,000 - INFO - Experiment 42, run 5 completed. PSNR: 10.67, SSIM: 0.0835
+2026-01-23 13:38:32,000 - INFO - Created experiment directory: ./viz/mnist/bs4_lr5e-02_alpha0.01
+2026-01-23 13:38:32,000 - INFO - Running experiment 43, run 1/5: BS=4, LR=0.05, Alpha=0.01
+2026-01-23 13:38:54,852 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.01/run_1_reconstruction_opt_20260123_133853.png
+2026-01-23 13:38:54,853 - INFO - Experiment 43, run 1 completed. PSNR: 10.77, SSIM: 0.1126
+2026-01-23 13:38:54,853 - INFO - Running experiment 43, run 2/5: BS=4, LR=0.05, Alpha=0.01
+2026-01-23 13:39:18,510 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.01/run_2_reconstruction_opt_20260123_133917.png
+2026-01-23 13:39:18,510 - INFO - Experiment 43, run 2 completed. PSNR: 17.26, SSIM: 0.3139
+2026-01-23 13:39:18,510 - INFO - Running experiment 43, run 3/5: BS=4, LR=0.05, Alpha=0.01
+2026-01-23 13:39:42,604 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.01/run_3_reconstruction_opt_20260123_133941.png
+2026-01-23 13:39:42,604 - INFO - Experiment 43, run 3 completed. PSNR: 19.10, SSIM: 0.2032
+2026-01-23 13:39:42,604 - INFO - Running experiment 43, run 4/5: BS=4, LR=0.05, Alpha=0.01
+2026-01-23 13:40:05,839 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.01/run_4_reconstruction_opt_20260123_134004.png
+2026-01-23 13:40:05,839 - INFO - Experiment 43, run 4 completed. PSNR: 11.68, SSIM: 0.1514
+2026-01-23 13:40:05,839 - INFO - Running experiment 43, run 5/5: BS=4, LR=0.05, Alpha=0.01
+2026-01-23 13:40:29,425 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.01/run_5_reconstruction_opt_20260123_134028.png
+2026-01-23 13:40:29,425 - INFO - Experiment 43, run 5 completed. PSNR: 10.37, SSIM: 0.1236
+2026-01-23 13:40:29,425 - INFO - Created experiment directory: ./viz/mnist/bs4_lr5e-02_alpha0.05
+2026-01-23 13:40:29,425 - INFO - Running experiment 44, run 1/5: BS=4, LR=0.05, Alpha=0.05
+2026-01-23 13:40:52,579 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.05/run_1_reconstruction_opt_20260123_134051.png
+2026-01-23 13:40:52,579 - INFO - Experiment 44, run 1 completed. PSNR: 13.41, SSIM: 0.1722
+2026-01-23 13:40:52,579 - INFO - Running experiment 44, run 2/5: BS=4, LR=0.05, Alpha=0.05
+2026-01-23 13:41:15,810 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.05/run_2_reconstruction_opt_20260123_134114.png
+2026-01-23 13:41:15,810 - INFO - Experiment 44, run 2 completed. PSNR: 14.56, SSIM: 0.2191
+2026-01-23 13:41:15,810 - INFO - Running experiment 44, run 3/5: BS=4, LR=0.05, Alpha=0.05
+2026-01-23 13:41:38,844 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.05/run_3_reconstruction_opt_20260123_134137.png
+2026-01-23 13:41:38,844 - INFO - Experiment 44, run 3 completed. PSNR: 12.43, SSIM: 0.1316
+2026-01-23 13:41:38,844 - INFO - Running experiment 44, run 4/5: BS=4, LR=0.05, Alpha=0.05
+2026-01-23 13:42:02,084 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.05/run_4_reconstruction_opt_20260123_134201.png
+2026-01-23 13:42:02,084 - INFO - Experiment 44, run 4 completed. PSNR: 14.28, SSIM: 0.1840
+2026-01-23 13:42:02,085 - INFO - Running experiment 44, run 5/5: BS=4, LR=0.05, Alpha=0.05
+2026-01-23 13:42:25,455 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.05/run_5_reconstruction_opt_20260123_134224.png
+2026-01-23 13:42:25,455 - INFO - Experiment 44, run 5 completed. PSNR: 10.11, SSIM: 0.0795
+2026-01-23 13:42:25,455 - INFO - Created experiment directory: ./viz/mnist/bs4_lr5e-02_alpha0.1
+2026-01-23 13:42:25,455 - INFO - Running experiment 45, run 1/5: BS=4, LR=0.05, Alpha=0.1
+2026-01-23 13:42:48,256 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.1/run_1_reconstruction_opt_20260123_134247.png
+2026-01-23 13:42:48,256 - INFO - Experiment 45, run 1 completed. PSNR: 12.61, SSIM: 0.2397
+2026-01-23 13:42:48,256 - INFO - Running experiment 45, run 2/5: BS=4, LR=0.05, Alpha=0.1
+2026-01-23 13:43:11,192 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.1/run_2_reconstruction_opt_20260123_134310.png
+2026-01-23 13:43:11,192 - INFO - Experiment 45, run 2 completed. PSNR: 13.02, SSIM: 0.2092
+2026-01-23 13:43:11,192 - INFO - Running experiment 45, run 3/5: BS=4, LR=0.05, Alpha=0.1
+2026-01-23 13:43:34,532 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.1/run_3_reconstruction_opt_20260123_134333.png
+2026-01-23 13:43:34,532 - INFO - Experiment 45, run 3 completed. PSNR: 12.79, SSIM: 0.1508
+2026-01-23 13:43:34,532 - INFO - Running experiment 45, run 4/5: BS=4, LR=0.05, Alpha=0.1
+2026-01-23 13:43:57,649 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.1/run_4_reconstruction_opt_20260123_134356.png
+2026-01-23 13:43:57,649 - INFO - Experiment 45, run 4 completed. PSNR: 12.20, SSIM: 0.1957
+2026-01-23 13:43:57,649 - INFO - Running experiment 45, run 5/5: BS=4, LR=0.05, Alpha=0.1
+2026-01-23 13:44:20,867 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.1/run_5_reconstruction_opt_20260123_134419.png
+2026-01-23 13:44:20,867 - INFO - Experiment 45, run 5 completed. PSNR: 13.83, SSIM: 0.2351
+2026-01-23 13:44:20,868 - INFO - Created experiment directory: ./viz/mnist/bs4_lr5e-02_alpha0.2
+2026-01-23 13:44:20,868 - INFO - Running experiment 46, run 1/5: BS=4, LR=0.05, Alpha=0.2
+2026-01-23 13:44:44,034 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.2/run_1_reconstruction_opt_20260123_134443.png
+2026-01-23 13:44:44,035 - INFO - Experiment 46, run 1 completed. PSNR: 13.20, SSIM: 0.1595
+2026-01-23 13:44:44,035 - INFO - Running experiment 46, run 2/5: BS=4, LR=0.05, Alpha=0.2
+2026-01-23 13:45:07,375 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.2/run_2_reconstruction_opt_20260123_134506.png
+2026-01-23 13:45:07,375 - INFO - Experiment 46, run 2 completed. PSNR: 13.85, SSIM: 0.1960
+2026-01-23 13:45:07,375 - INFO - Running experiment 46, run 3/5: BS=4, LR=0.05, Alpha=0.2
+2026-01-23 13:45:30,795 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.2/run_3_reconstruction_opt_20260123_134529.png
+2026-01-23 13:45:30,795 - INFO - Experiment 46, run 3 completed. PSNR: 12.42, SSIM: 0.2156
+2026-01-23 13:45:30,796 - INFO - Running experiment 46, run 4/5: BS=4, LR=0.05, Alpha=0.2
+2026-01-23 13:45:53,968 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.2/run_4_reconstruction_opt_20260123_134552.png
+2026-01-23 13:45:53,968 - INFO - Experiment 46, run 4 completed. PSNR: 15.04, SSIM: 0.2033
+2026-01-23 13:45:53,968 - INFO - Running experiment 46, run 5/5: BS=4, LR=0.05, Alpha=0.2
+2026-01-23 13:46:17,289 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.2/run_5_reconstruction_opt_20260123_134616.png
+2026-01-23 13:46:17,289 - INFO - Experiment 46, run 5 completed. PSNR: 12.09, SSIM: 0.1357
+2026-01-23 13:46:17,289 - INFO - Created experiment directory: ./viz/mnist/bs4_lr5e-02_alpha0.5
+2026-01-23 13:46:17,289 - INFO - Running experiment 47, run 1/5: BS=4, LR=0.05, Alpha=0.5
+2026-01-23 13:46:40,696 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.5/run_1_reconstruction_opt_20260123_134639.png
+2026-01-23 13:46:40,696 - INFO - Experiment 47, run 1 completed. PSNR: 11.54, SSIM: 0.1403
+2026-01-23 13:46:40,696 - INFO - Running experiment 47, run 2/5: BS=4, LR=0.05, Alpha=0.5
+2026-01-23 13:47:03,680 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.5/run_2_reconstruction_opt_20260123_134702.png
+2026-01-23 13:47:03,680 - INFO - Experiment 47, run 2 completed. PSNR: 10.57, SSIM: 0.1227
+2026-01-23 13:47:03,680 - INFO - Running experiment 47, run 3/5: BS=4, LR=0.05, Alpha=0.5
+2026-01-23 13:47:27,750 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.5/run_3_reconstruction_opt_20260123_134726.png
+2026-01-23 13:47:27,750 - INFO - Experiment 47, run 3 completed. PSNR: 11.78, SSIM: 0.1877
+2026-01-23 13:47:27,750 - INFO - Running experiment 47, run 4/5: BS=4, LR=0.05, Alpha=0.5
+2026-01-23 13:47:51,047 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.5/run_4_reconstruction_opt_20260123_134750.png
+2026-01-23 13:47:51,048 - INFO - Experiment 47, run 4 completed. PSNR: 12.71, SSIM: 0.1636
+2026-01-23 13:47:51,048 - INFO - Running experiment 47, run 5/5: BS=4, LR=0.05, Alpha=0.5
+2026-01-23 13:48:14,204 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha0.5/run_5_reconstruction_opt_20260123_134813.png
+2026-01-23 13:48:14,204 - INFO - Experiment 47, run 5 completed. PSNR: 12.08, SSIM: 0.1528
+2026-01-23 13:48:14,204 - INFO - Created experiment directory: ./viz/mnist/bs4_lr5e-02_alpha1.0
+2026-01-23 13:48:14,204 - INFO - Running experiment 48, run 1/5: BS=4, LR=0.05, Alpha=1.0
+2026-01-23 13:48:37,320 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha1.0/run_1_reconstruction_opt_20260123_134836.png
+2026-01-23 13:48:37,320 - INFO - Experiment 48, run 1 completed. PSNR: 11.25, SSIM: 0.1265
+2026-01-23 13:48:37,320 - INFO - Running experiment 48, run 2/5: BS=4, LR=0.05, Alpha=1.0
+2026-01-23 13:49:00,521 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha1.0/run_2_reconstruction_opt_20260123_134859.png
+2026-01-23 13:49:00,521 - INFO - Experiment 48, run 2 completed. PSNR: 11.85, SSIM: 0.1043
+2026-01-23 13:49:00,521 - INFO - Running experiment 48, run 3/5: BS=4, LR=0.05, Alpha=1.0
+2026-01-23 13:49:23,744 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha1.0/run_3_reconstruction_opt_20260123_134922.png
+2026-01-23 13:49:23,744 - INFO - Experiment 48, run 3 completed. PSNR: 9.70, SSIM: 0.1272
+2026-01-23 13:49:23,744 - INFO - Running experiment 48, run 4/5: BS=4, LR=0.05, Alpha=1.0
+2026-01-23 13:49:47,499 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha1.0/run_4_reconstruction_opt_20260123_134946.png
+2026-01-23 13:49:47,499 - INFO - Experiment 48, run 4 completed. PSNR: 10.52, SSIM: 0.1391
+2026-01-23 13:49:47,499 - INFO - Running experiment 48, run 5/5: BS=4, LR=0.05, Alpha=1.0
+2026-01-23 13:50:10,996 - INFO - Saved viz to ./viz/mnist/bs4_lr5e-02_alpha1.0/run_5_reconstruction_opt_20260123_135009.png
+2026-01-23 13:50:10,996 - INFO - Experiment 48, run 5 completed. PSNR: 11.37, SSIM: 0.0892
+2026-01-23 13:50:10,996 - INFO - Created experiment directory: ./viz/mnist/bs4_lr1e-01_alpha0.01
+2026-01-23 13:50:10,996 - INFO - Running experiment 49, run 1/5: BS=4, LR=0.1, Alpha=0.01
+2026-01-23 13:50:33,661 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.01/run_1_reconstruction_opt_20260123_135032.png
+2026-01-23 13:50:33,661 - INFO - Experiment 49, run 1 completed. PSNR: 19.93, SSIM: 0.3023
+2026-01-23 13:50:33,661 - INFO - Running experiment 49, run 2/5: BS=4, LR=0.1, Alpha=0.01
+2026-01-23 13:50:56,999 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.01/run_2_reconstruction_opt_20260123_135055.png
+2026-01-23 13:50:56,999 - INFO - Experiment 49, run 2 completed. PSNR: 14.68, SSIM: 0.1590
+2026-01-23 13:50:56,999 - INFO - Running experiment 49, run 3/5: BS=4, LR=0.1, Alpha=0.01
+2026-01-23 13:51:20,400 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.01/run_3_reconstruction_opt_20260123_135119.png
+2026-01-23 13:51:20,400 - INFO - Experiment 49, run 3 completed. PSNR: 15.99, SSIM: 0.2108
+2026-01-23 13:51:20,400 - INFO - Running experiment 49, run 4/5: BS=4, LR=0.1, Alpha=0.01
+2026-01-23 13:51:43,573 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.01/run_4_reconstruction_opt_20260123_135142.png
+2026-01-23 13:51:43,574 - INFO - Experiment 49, run 4 completed. PSNR: 18.53, SSIM: 0.2623
+2026-01-23 13:51:43,574 - INFO - Running experiment 49, run 5/5: BS=4, LR=0.1, Alpha=0.01
+2026-01-23 13:52:07,516 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.01/run_5_reconstruction_opt_20260123_135206.png
+2026-01-23 13:52:07,516 - INFO - Experiment 49, run 5 completed. PSNR: 19.50, SSIM: 0.3756
+2026-01-23 13:52:07,516 - INFO - Created experiment directory: ./viz/mnist/bs4_lr1e-01_alpha0.05
+2026-01-23 13:52:07,516 - INFO - Running experiment 50, run 1/5: BS=4, LR=0.1, Alpha=0.05
+2026-01-23 13:52:30,465 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.05/run_1_reconstruction_opt_20260123_135229.png
+2026-01-23 13:52:30,465 - INFO - Experiment 50, run 1 completed. PSNR: 15.52, SSIM: 0.2714
+2026-01-23 13:52:30,465 - INFO - Running experiment 50, run 2/5: BS=4, LR=0.1, Alpha=0.05
+2026-01-23 13:52:54,910 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.05/run_2_reconstruction_opt_20260123_135253.png
+2026-01-23 13:52:54,910 - INFO - Experiment 50, run 2 completed. PSNR: 14.46, SSIM: 0.2488
+2026-01-23 13:52:54,910 - INFO - Running experiment 50, run 3/5: BS=4, LR=0.1, Alpha=0.05
+2026-01-23 13:53:18,330 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.05/run_3_reconstruction_opt_20260123_135317.png
+2026-01-23 13:53:18,330 - INFO - Experiment 50, run 3 completed. PSNR: 17.96, SSIM: 0.2856
+2026-01-23 13:53:18,330 - INFO - Running experiment 50, run 4/5: BS=4, LR=0.1, Alpha=0.05
+2026-01-23 13:53:41,633 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.05/run_4_reconstruction_opt_20260123_135340.png
+2026-01-23 13:53:41,633 - INFO - Experiment 50, run 4 completed. PSNR: 16.75, SSIM: 0.2124
+2026-01-23 13:53:41,633 - INFO - Running experiment 50, run 5/5: BS=4, LR=0.1, Alpha=0.05
+2026-01-23 13:54:05,173 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.05/run_5_reconstruction_opt_20260123_135404.png
+2026-01-23 13:54:05,173 - INFO - Experiment 50, run 5 completed. PSNR: 17.51, SSIM: 0.2803
+2026-01-23 13:54:05,173 - INFO - Created experiment directory: ./viz/mnist/bs4_lr1e-01_alpha0.1
+2026-01-23 13:54:05,173 - INFO - Running experiment 51, run 1/5: BS=4, LR=0.1, Alpha=0.1
+2026-01-23 13:54:28,764 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.1/run_1_reconstruction_opt_20260123_135427.png
+2026-01-23 13:54:28,764 - INFO - Experiment 51, run 1 completed. PSNR: 15.22, SSIM: 0.2065
+2026-01-23 13:54:28,764 - INFO - Running experiment 51, run 2/5: BS=4, LR=0.1, Alpha=0.1
+2026-01-23 13:54:52,336 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.1/run_2_reconstruction_opt_20260123_135451.png
+2026-01-23 13:54:52,336 - INFO - Experiment 51, run 2 completed. PSNR: 15.12, SSIM: 0.2633
+2026-01-23 13:54:52,336 - INFO - Running experiment 51, run 3/5: BS=4, LR=0.1, Alpha=0.1
+2026-01-23 13:55:15,604 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.1/run_3_reconstruction_opt_20260123_135515.png
+2026-01-23 13:55:15,604 - INFO - Experiment 51, run 3 completed. PSNR: 15.69, SSIM: 0.2769
+2026-01-23 13:55:15,604 - INFO - Running experiment 51, run 4/5: BS=4, LR=0.1, Alpha=0.1
+2026-01-23 13:55:38,480 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.1/run_4_reconstruction_opt_20260123_135537.png
+2026-01-23 13:55:38,480 - INFO - Experiment 51, run 4 completed. PSNR: 14.35, SSIM: 0.2803
+2026-01-23 13:55:38,480 - INFO - Running experiment 51, run 5/5: BS=4, LR=0.1, Alpha=0.1
+2026-01-23 13:56:02,172 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.1/run_5_reconstruction_opt_20260123_135601.png
+2026-01-23 13:56:02,172 - INFO - Experiment 51, run 5 completed. PSNR: 15.63, SSIM: 0.2139
+2026-01-23 13:56:02,172 - INFO - Created experiment directory: ./viz/mnist/bs4_lr1e-01_alpha0.2
+2026-01-23 13:56:02,172 - INFO - Running experiment 52, run 1/5: BS=4, LR=0.1, Alpha=0.2
+2026-01-23 13:56:25,186 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.2/run_1_reconstruction_opt_20260123_135624.png
+2026-01-23 13:56:25,186 - INFO - Experiment 52, run 1 completed. PSNR: 12.22, SSIM: 0.1513
+2026-01-23 13:56:25,186 - INFO - Running experiment 52, run 2/5: BS=4, LR=0.1, Alpha=0.2
+2026-01-23 13:56:48,791 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.2/run_2_reconstruction_opt_20260123_135647.png
+2026-01-23 13:56:48,791 - INFO - Experiment 52, run 2 completed. PSNR: 13.19, SSIM: 0.1876
+2026-01-23 13:56:48,791 - INFO - Running experiment 52, run 3/5: BS=4, LR=0.1, Alpha=0.2
+2026-01-23 13:57:11,875 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.2/run_3_reconstruction_opt_20260123_135710.png
+2026-01-23 13:57:11,875 - INFO - Experiment 52, run 3 completed. PSNR: 14.08, SSIM: 0.1952
+2026-01-23 13:57:11,875 - INFO - Running experiment 52, run 4/5: BS=4, LR=0.1, Alpha=0.2
+2026-01-23 13:57:35,833 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.2/run_4_reconstruction_opt_20260123_135734.png
+2026-01-23 13:57:35,833 - INFO - Experiment 52, run 4 completed. PSNR: 12.64, SSIM: 0.1614
+2026-01-23 13:57:35,833 - INFO - Running experiment 52, run 5/5: BS=4, LR=0.1, Alpha=0.2
+2026-01-23 13:57:59,584 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.2/run_5_reconstruction_opt_20260123_135758.png
+2026-01-23 13:57:59,584 - INFO - Experiment 52, run 5 completed. PSNR: 14.08, SSIM: 0.2450
+2026-01-23 13:57:59,584 - INFO - Created experiment directory: ./viz/mnist/bs4_lr1e-01_alpha0.5
+2026-01-23 13:57:59,584 - INFO - Running experiment 53, run 1/5: BS=4, LR=0.1, Alpha=0.5
+2026-01-23 13:58:22,904 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.5/run_1_reconstruction_opt_20260123_135821.png
+2026-01-23 13:58:22,904 - INFO - Experiment 53, run 1 completed. PSNR: 11.57, SSIM: 0.1892
+2026-01-23 13:58:22,904 - INFO - Running experiment 53, run 2/5: BS=4, LR=0.1, Alpha=0.5
+2026-01-23 13:58:46,948 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.5/run_2_reconstruction_opt_20260123_135845.png
+2026-01-23 13:58:46,948 - INFO - Experiment 53, run 2 completed. PSNR: 12.80, SSIM: 0.1870
+2026-01-23 13:58:46,948 - INFO - Running experiment 53, run 3/5: BS=4, LR=0.1, Alpha=0.5
+2026-01-23 13:59:10,201 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.5/run_3_reconstruction_opt_20260123_135909.png
+2026-01-23 13:59:10,201 - INFO - Experiment 53, run 3 completed. PSNR: 13.43, SSIM: 0.1461
+2026-01-23 13:59:10,201 - INFO - Running experiment 53, run 4/5: BS=4, LR=0.1, Alpha=0.5
+2026-01-23 13:59:33,500 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.5/run_4_reconstruction_opt_20260123_135932.png
+2026-01-23 13:59:33,500 - INFO - Experiment 53, run 4 completed. PSNR: 11.37, SSIM: 0.1598
+2026-01-23 13:59:33,500 - INFO - Running experiment 53, run 5/5: BS=4, LR=0.1, Alpha=0.5
+2026-01-23 13:59:56,934 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha0.5/run_5_reconstruction_opt_20260123_135955.png
+2026-01-23 13:59:56,934 - INFO - Experiment 53, run 5 completed. PSNR: 12.83, SSIM: 0.1779
+2026-01-23 13:59:56,934 - INFO - Created experiment directory: ./viz/mnist/bs4_lr1e-01_alpha1.0
+2026-01-23 13:59:56,934 - INFO - Running experiment 54, run 1/5: BS=4, LR=0.1, Alpha=1.0
+2026-01-23 14:00:19,692 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha1.0/run_1_reconstruction_opt_20260123_140018.png
+2026-01-23 14:00:19,692 - INFO - Experiment 54, run 1 completed. PSNR: 10.56, SSIM: 0.1254
+2026-01-23 14:00:19,692 - INFO - Running experiment 54, run 2/5: BS=4, LR=0.1, Alpha=1.0
+2026-01-23 14:00:43,504 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha1.0/run_2_reconstruction_opt_20260123_140042.png
+2026-01-23 14:00:43,504 - INFO - Experiment 54, run 2 completed. PSNR: 10.81, SSIM: 0.1612
+2026-01-23 14:00:43,504 - INFO - Running experiment 54, run 3/5: BS=4, LR=0.1, Alpha=1.0
+2026-01-23 14:01:06,890 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha1.0/run_3_reconstruction_opt_20260123_140105.png
+2026-01-23 14:01:06,890 - INFO - Experiment 54, run 3 completed. PSNR: 11.38, SSIM: 0.1781
+2026-01-23 14:01:06,890 - INFO - Running experiment 54, run 4/5: BS=4, LR=0.1, Alpha=1.0
+2026-01-23 14:01:30,494 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha1.0/run_4_reconstruction_opt_20260123_140129.png
+2026-01-23 14:01:30,494 - INFO - Experiment 54, run 4 completed. PSNR: 12.17, SSIM: 0.1439
+2026-01-23 14:01:30,494 - INFO - Running experiment 54, run 5/5: BS=4, LR=0.1, Alpha=1.0
+2026-01-23 14:01:53,607 - INFO - Saved viz to ./viz/mnist/bs4_lr1e-01_alpha1.0/run_5_reconstruction_opt_20260123_140152.png
+2026-01-23 14:01:53,607 - INFO - Experiment 54, run 5 completed. PSNR: 13.48, SSIM: 0.2019
+2026-01-23 14:01:53,608 - INFO - Created experiment directory: ./viz/mnist/bs8_lr1e-02_alpha0.01
+2026-01-23 14:01:53,608 - INFO - Running experiment 55, run 1/5: BS=8, LR=0.01, Alpha=0.01
+2026-01-23 14:02:17,064 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.01/run_1_reconstruction_opt_20260123_140216.png
+2026-01-23 14:02:17,065 - INFO - Experiment 55, run 1 completed. PSNR: 10.25, SSIM: 0.0778
+2026-01-23 14:02:17,065 - INFO - Running experiment 55, run 2/5: BS=8, LR=0.01, Alpha=0.01
+2026-01-23 14:02:40,516 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.01/run_2_reconstruction_opt_20260123_140239.png
+2026-01-23 14:02:40,516 - INFO - Experiment 55, run 2 completed. PSNR: 10.94, SSIM: 0.0641
+2026-01-23 14:02:40,516 - INFO - Running experiment 55, run 3/5: BS=8, LR=0.01, Alpha=0.01
+2026-01-23 14:03:03,823 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.01/run_3_reconstruction_opt_20260123_140302.png
+2026-01-23 14:03:03,823 - INFO - Experiment 55, run 3 completed. PSNR: 9.51, SSIM: 0.0532
+2026-01-23 14:03:03,823 - INFO - Running experiment 55, run 4/5: BS=8, LR=0.01, Alpha=0.01
+2026-01-23 14:03:26,983 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.01/run_4_reconstruction_opt_20260123_140325.png
+2026-01-23 14:03:26,983 - INFO - Experiment 55, run 4 completed. PSNR: 9.72, SSIM: 0.0559
+2026-01-23 14:03:26,983 - INFO - Running experiment 55, run 5/5: BS=8, LR=0.01, Alpha=0.01
+2026-01-23 14:03:49,628 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.01/run_5_reconstruction_opt_20260122_223843.png
+2026-01-23 14:03:49,628 - INFO - Experiment 55, run 5 completed. PSNR: 10.42, SSIM: 0.0750
+2026-01-23 14:03:49,628 - INFO - Created experiment directory: ./viz/mnist/bs8_lr1e-02_alpha0.05
+2026-01-23 14:03:49,628 - INFO - Running experiment 56, run 1/5: BS=8, LR=0.01, Alpha=0.05
+2026-01-23 14:04:12,557 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.05/run_1_reconstruction_opt_20260123_140411.png
+2026-01-23 14:04:12,557 - INFO - Experiment 56, run 1 completed. PSNR: 9.83, SSIM: 0.0682
+2026-01-23 14:04:12,558 - INFO - Running experiment 56, run 2/5: BS=8, LR=0.01, Alpha=0.05
+2026-01-23 14:04:36,419 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.05/run_2_reconstruction_opt_20260123_140435.png
+2026-01-23 14:04:36,419 - INFO - Experiment 56, run 2 completed. PSNR: 11.08, SSIM: 0.0393
+2026-01-23 14:04:36,419 - INFO - Running experiment 56, run 3/5: BS=8, LR=0.01, Alpha=0.05
+2026-01-23 14:04:59,819 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.05/run_3_reconstruction_opt_20260123_140458.png
+2026-01-23 14:04:59,819 - INFO - Experiment 56, run 3 completed. PSNR: 10.14, SSIM: 0.0822
+2026-01-23 14:04:59,819 - INFO - Running experiment 56, run 4/5: BS=8, LR=0.01, Alpha=0.05
+2026-01-23 14:05:23,110 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.05/run_4_reconstruction_opt_20260123_140522.png
+2026-01-23 14:05:23,110 - INFO - Experiment 56, run 4 completed. PSNR: 10.30, SSIM: 0.0573
+2026-01-23 14:05:23,110 - INFO - Running experiment 56, run 5/5: BS=8, LR=0.01, Alpha=0.05
+2026-01-23 14:05:46,207 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.05/run_5_reconstruction_opt_20260123_140545.png
+2026-01-23 14:05:46,207 - INFO - Experiment 56, run 5 completed. PSNR: 9.91, SSIM: 0.0546
+2026-01-23 14:05:46,207 - INFO - Created experiment directory: ./viz/mnist/bs8_lr1e-02_alpha0.1
+2026-01-23 14:05:46,207 - INFO - Running experiment 57, run 1/5: BS=8, LR=0.01, Alpha=0.1
+2026-01-23 14:06:09,771 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.1/run_1_reconstruction_opt_20260123_140608.png
+2026-01-23 14:06:09,771 - INFO - Experiment 57, run 1 completed. PSNR: 9.87, SSIM: 0.0525
+2026-01-23 14:06:09,771 - INFO - Running experiment 57, run 2/5: BS=8, LR=0.01, Alpha=0.1
+2026-01-23 14:06:33,422 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.1/run_2_reconstruction_opt_20260123_140632.png
+2026-01-23 14:06:33,422 - INFO - Experiment 57, run 2 completed. PSNR: 8.83, SSIM: 0.0454
+2026-01-23 14:06:33,422 - INFO - Running experiment 57, run 3/5: BS=8, LR=0.01, Alpha=0.1
+2026-01-23 14:06:56,662 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.1/run_3_reconstruction_opt_20260123_140655.png
+2026-01-23 14:06:56,662 - INFO - Experiment 57, run 3 completed. PSNR: 9.23, SSIM: 0.0486
+2026-01-23 14:06:56,662 - INFO - Running experiment 57, run 4/5: BS=8, LR=0.01, Alpha=0.1
+2026-01-23 14:07:20,524 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.1/run_4_reconstruction_opt_20260123_140719.png
+2026-01-23 14:07:20,524 - INFO - Experiment 57, run 4 completed. PSNR: 9.69, SSIM: 0.0520
+2026-01-23 14:07:20,524 - INFO - Running experiment 57, run 5/5: BS=8, LR=0.01, Alpha=0.1
+2026-01-23 14:07:43,570 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.1/run_5_reconstruction_opt_20260123_140742.png
+2026-01-23 14:07:43,570 - INFO - Experiment 57, run 5 completed. PSNR: 8.42, SSIM: 0.0484
+2026-01-23 14:07:43,570 - INFO - Created experiment directory: ./viz/mnist/bs8_lr1e-02_alpha0.2
+2026-01-23 14:07:43,570 - INFO - Running experiment 58, run 1/5: BS=8, LR=0.01, Alpha=0.2
+2026-01-23 14:08:06,689 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.2/run_1_reconstruction_opt_20260123_140805.png
+2026-01-23 14:08:06,689 - INFO - Experiment 58, run 1 completed. PSNR: 8.98, SSIM: 0.0464
+2026-01-23 14:08:06,689 - INFO - Running experiment 58, run 2/5: BS=8, LR=0.01, Alpha=0.2
+2026-01-23 14:08:29,899 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.2/run_2_reconstruction_opt_20260123_140828.png
+2026-01-23 14:08:29,899 - INFO - Experiment 58, run 2 completed. PSNR: 8.80, SSIM: 0.0649
+2026-01-23 14:08:29,899 - INFO - Running experiment 58, run 3/5: BS=8, LR=0.01, Alpha=0.2
+2026-01-23 14:08:52,761 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.2/run_3_reconstruction_opt_20260123_140851.png
+2026-01-23 14:08:52,761 - INFO - Experiment 58, run 3 completed. PSNR: 9.62, SSIM: 0.0438
+2026-01-23 14:08:52,761 - INFO - Running experiment 58, run 4/5: BS=8, LR=0.01, Alpha=0.2
+2026-01-23 14:09:17,536 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.2/run_4_reconstruction_opt_20260123_140916.png
+2026-01-23 14:09:17,536 - INFO - Experiment 58, run 4 completed. PSNR: 8.15, SSIM: 0.0322
+2026-01-23 14:09:17,536 - INFO - Running experiment 58, run 5/5: BS=8, LR=0.01, Alpha=0.2
+2026-01-23 14:09:41,292 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.2/run_5_reconstruction_opt_20260123_140940.png
+2026-01-23 14:09:41,293 - INFO - Experiment 58, run 5 completed. PSNR: 9.58, SSIM: 0.0316
+2026-01-23 14:09:41,293 - INFO - Created experiment directory: ./viz/mnist/bs8_lr1e-02_alpha0.5
+2026-01-23 14:09:41,293 - INFO - Running experiment 59, run 1/5: BS=8, LR=0.01, Alpha=0.5
+2026-01-23 14:10:04,658 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.5/run_1_reconstruction_opt_20260123_141003.png
+2026-01-23 14:10:04,658 - INFO - Experiment 59, run 1 completed. PSNR: 8.09, SSIM: 0.0243
+2026-01-23 14:10:04,658 - INFO - Running experiment 59, run 2/5: BS=8, LR=0.01, Alpha=0.5
+2026-01-23 14:10:28,839 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.5/run_2_reconstruction_opt_20260123_141027.png
+2026-01-23 14:10:28,839 - INFO - Experiment 59, run 2 completed. PSNR: 8.60, SSIM: 0.0448
+2026-01-23 14:10:28,839 - INFO - Running experiment 59, run 3/5: BS=8, LR=0.01, Alpha=0.5
+2026-01-23 14:10:51,937 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.5/run_3_reconstruction_opt_20260123_141050.png
+2026-01-23 14:10:51,938 - INFO - Experiment 59, run 3 completed. PSNR: 9.23, SSIM: 0.0506
+2026-01-23 14:10:51,938 - INFO - Running experiment 59, run 4/5: BS=8, LR=0.01, Alpha=0.5
+2026-01-23 14:11:15,731 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.5/run_4_reconstruction_opt_20260123_141114.png
+2026-01-23 14:11:15,731 - INFO - Experiment 59, run 4 completed. PSNR: 8.82, SSIM: 0.0231
+2026-01-23 14:11:15,731 - INFO - Running experiment 59, run 5/5: BS=8, LR=0.01, Alpha=0.5
+2026-01-23 14:11:38,930 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha0.5/run_5_reconstruction_opt_20260123_141137.png
+2026-01-23 14:11:38,930 - INFO - Experiment 59, run 5 completed. PSNR: 8.97, SSIM: 0.0221
+2026-01-23 14:11:38,930 - INFO - Created experiment directory: ./viz/mnist/bs8_lr1e-02_alpha1.0
+2026-01-23 14:11:38,930 - INFO - Running experiment 60, run 1/5: BS=8, LR=0.01, Alpha=1.0
+2026-01-23 14:12:02,623 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha1.0/run_1_reconstruction_opt_20260123_141201.png
+2026-01-23 14:12:02,623 - INFO - Experiment 60, run 1 completed. PSNR: 8.54, SSIM: 0.0363
+2026-01-23 14:12:02,623 - INFO - Running experiment 60, run 2/5: BS=8, LR=0.01, Alpha=1.0
+2026-01-23 14:12:26,422 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha1.0/run_2_reconstruction_opt_20260123_141225.png
+2026-01-23 14:12:26,422 - INFO - Experiment 60, run 2 completed. PSNR: 8.74, SSIM: 0.0305
+2026-01-23 14:12:26,422 - INFO - Running experiment 60, run 3/5: BS=8, LR=0.01, Alpha=1.0
+2026-01-23 14:12:50,336 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha1.0/run_3_reconstruction_opt_20260123_141249.png
+2026-01-23 14:12:50,336 - INFO - Experiment 60, run 3 completed. PSNR: 10.14, SSIM: 0.0336
+2026-01-23 14:12:50,336 - INFO - Running experiment 60, run 4/5: BS=8, LR=0.01, Alpha=1.0
+2026-01-23 14:13:14,340 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha1.0/run_4_reconstruction_opt_20260123_141313.png
+2026-01-23 14:13:14,340 - INFO - Experiment 60, run 4 completed. PSNR: 8.23, SSIM: 0.0378
+2026-01-23 14:13:14,340 - INFO - Running experiment 60, run 5/5: BS=8, LR=0.01, Alpha=1.0
+2026-01-23 14:13:37,823 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-02_alpha1.0/run_5_reconstruction_opt_20260123_141336.png
+2026-01-23 14:13:37,823 - INFO - Experiment 60, run 5 completed. PSNR: 9.05, SSIM: 0.0327
+2026-01-23 14:13:37,823 - INFO - Created experiment directory: ./viz/mnist/bs8_lr5e-02_alpha0.01
+2026-01-23 14:13:37,823 - INFO - Running experiment 61, run 1/5: BS=8, LR=0.05, Alpha=0.01
+2026-01-23 14:14:01,423 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.01/run_1_reconstruction_opt_20260123_141400.png
+2026-01-23 14:14:01,424 - INFO - Experiment 61, run 1 completed. PSNR: 11.20, SSIM: 0.1285
+2026-01-23 14:14:01,424 - INFO - Running experiment 61, run 2/5: BS=8, LR=0.05, Alpha=0.01
+2026-01-23 14:14:24,852 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.01/run_2_reconstruction_opt_20260123_141423.png
+2026-01-23 14:14:24,852 - INFO - Experiment 61, run 2 completed. PSNR: 13.35, SSIM: 0.1590
+2026-01-23 14:14:24,853 - INFO - Running experiment 61, run 3/5: BS=8, LR=0.05, Alpha=0.01
+2026-01-23 14:14:48,143 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.01/run_3_reconstruction_opt_20260123_141447.png
+2026-01-23 14:14:48,143 - INFO - Experiment 61, run 3 completed. PSNR: 12.63, SSIM: 0.1982
+2026-01-23 14:14:48,143 - INFO - Running experiment 61, run 4/5: BS=8, LR=0.05, Alpha=0.01
+2026-01-23 14:15:11,899 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.01/run_4_reconstruction_opt_20260123_141510.png
+2026-01-23 14:15:11,899 - INFO - Experiment 61, run 4 completed. PSNR: 10.91, SSIM: 0.1024
+2026-01-23 14:15:11,899 - INFO - Running experiment 61, run 5/5: BS=8, LR=0.05, Alpha=0.01
+2026-01-23 14:15:35,839 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.01/run_5_reconstruction_opt_20260123_141534.png
+2026-01-23 14:15:35,839 - INFO - Experiment 61, run 5 completed. PSNR: 11.30, SSIM: 0.1318
+2026-01-23 14:15:35,839 - INFO - Created experiment directory: ./viz/mnist/bs8_lr5e-02_alpha0.05
+2026-01-23 14:15:35,839 - INFO - Running experiment 62, run 1/5: BS=8, LR=0.05, Alpha=0.05
+2026-01-23 14:16:00,862 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.05/run_1_reconstruction_opt_20260123_141559.png
+2026-01-23 14:16:00,862 - INFO - Experiment 62, run 1 completed. PSNR: 10.16, SSIM: 0.1082
+2026-01-23 14:16:00,862 - INFO - Running experiment 62, run 2/5: BS=8, LR=0.05, Alpha=0.05
+2026-01-23 14:16:24,076 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.05/run_2_reconstruction_opt_20260123_141623.png
+2026-01-23 14:16:24,076 - INFO - Experiment 62, run 2 completed. PSNR: 12.36, SSIM: 0.0851
+2026-01-23 14:16:24,076 - INFO - Running experiment 62, run 3/5: BS=8, LR=0.05, Alpha=0.05
+2026-01-23 14:16:47,668 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.05/run_3_reconstruction_opt_20260123_141646.png
+2026-01-23 14:16:47,668 - INFO - Experiment 62, run 3 completed. PSNR: 9.59, SSIM: 0.1060
+2026-01-23 14:16:47,668 - INFO - Running experiment 62, run 4/5: BS=8, LR=0.05, Alpha=0.05
+2026-01-23 14:17:11,890 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.05/run_4_reconstruction_opt_20260123_141710.png
+2026-01-23 14:17:11,890 - INFO - Experiment 62, run 4 completed. PSNR: 11.23, SSIM: 0.1097
+2026-01-23 14:17:11,890 - INFO - Running experiment 62, run 5/5: BS=8, LR=0.05, Alpha=0.05
+2026-01-23 14:17:35,777 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.05/run_5_reconstruction_opt_20260123_141734.png
+2026-01-23 14:17:35,777 - INFO - Experiment 62, run 5 completed. PSNR: 11.39, SSIM: 0.1136
+2026-01-23 14:17:35,777 - INFO - Created experiment directory: ./viz/mnist/bs8_lr5e-02_alpha0.1
+2026-01-23 14:17:35,777 - INFO - Running experiment 63, run 1/5: BS=8, LR=0.05, Alpha=0.1
+2026-01-23 14:17:59,646 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.1/run_1_reconstruction_opt_20260123_141758.png
+2026-01-23 14:17:59,646 - INFO - Experiment 63, run 1 completed. PSNR: 10.32, SSIM: 0.0847
+2026-01-23 14:17:59,646 - INFO - Running experiment 63, run 2/5: BS=8, LR=0.05, Alpha=0.1
+2026-01-23 14:18:23,104 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.1/run_2_reconstruction_opt_20260123_141822.png
+2026-01-23 14:18:23,104 - INFO - Experiment 63, run 2 completed. PSNR: 9.75, SSIM: 0.0755
+2026-01-23 14:18:23,104 - INFO - Running experiment 63, run 3/5: BS=8, LR=0.05, Alpha=0.1
+2026-01-23 14:18:46,753 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.1/run_3_reconstruction_opt_20260123_141845.png
+2026-01-23 14:18:46,753 - INFO - Experiment 63, run 3 completed. PSNR: 9.81, SSIM: 0.0668
+2026-01-23 14:18:46,753 - INFO - Running experiment 63, run 4/5: BS=8, LR=0.05, Alpha=0.1
+2026-01-23 14:19:10,566 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.1/run_4_reconstruction_opt_20260123_141909.png
+2026-01-23 14:19:10,566 - INFO - Experiment 63, run 4 completed. PSNR: 11.60, SSIM: 0.1179
+2026-01-23 14:19:10,566 - INFO - Running experiment 63, run 5/5: BS=8, LR=0.05, Alpha=0.1
+2026-01-23 14:19:34,016 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.1/run_5_reconstruction_opt_20260123_141932.png
+2026-01-23 14:19:34,016 - INFO - Experiment 63, run 5 completed. PSNR: 10.59, SSIM: 0.0956
+2026-01-23 14:19:34,016 - INFO - Created experiment directory: ./viz/mnist/bs8_lr5e-02_alpha0.2
+2026-01-23 14:19:34,016 - INFO - Running experiment 64, run 1/5: BS=8, LR=0.05, Alpha=0.2
+2026-01-23 14:19:58,118 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.2/run_1_reconstruction_opt_20260123_141957.png
+2026-01-23 14:19:58,118 - INFO - Experiment 64, run 1 completed. PSNR: 9.93, SSIM: 0.0754
+2026-01-23 14:19:58,118 - INFO - Running experiment 64, run 2/5: BS=8, LR=0.05, Alpha=0.2
+2026-01-23 14:20:21,883 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.2/run_2_reconstruction_opt_20260123_142020.png
+2026-01-23 14:20:21,883 - INFO - Experiment 64, run 2 completed. PSNR: 11.04, SSIM: 0.0919
+2026-01-23 14:20:21,883 - INFO - Running experiment 64, run 3/5: BS=8, LR=0.05, Alpha=0.2
+2026-01-23 14:20:46,713 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.2/run_3_reconstruction_opt_20260123_142045.png
+2026-01-23 14:20:46,713 - INFO - Experiment 64, run 3 completed. PSNR: 9.93, SSIM: 0.0877
+2026-01-23 14:20:46,713 - INFO - Running experiment 64, run 4/5: BS=8, LR=0.05, Alpha=0.2
+2026-01-23 14:21:10,781 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.2/run_4_reconstruction_opt_20260123_142109.png
+2026-01-23 14:21:10,782 - INFO - Experiment 64, run 4 completed. PSNR: 10.60, SSIM: 0.0972
+2026-01-23 14:21:10,782 - INFO - Running experiment 64, run 5/5: BS=8, LR=0.05, Alpha=0.2
+2026-01-23 14:21:34,422 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.2/run_5_reconstruction_opt_20260123_142133.png
+2026-01-23 14:21:34,422 - INFO - Experiment 64, run 5 completed. PSNR: 10.18, SSIM: 0.0720
+2026-01-23 14:21:34,422 - INFO - Created experiment directory: ./viz/mnist/bs8_lr5e-02_alpha0.5
+2026-01-23 14:21:34,422 - INFO - Running experiment 65, run 1/5: BS=8, LR=0.05, Alpha=0.5
+2026-01-23 14:21:58,570 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.5/run_1_reconstruction_opt_20260123_142157.png
+2026-01-23 14:21:58,570 - INFO - Experiment 65, run 1 completed. PSNR: 9.81, SSIM: 0.0523
+2026-01-23 14:21:58,570 - INFO - Running experiment 65, run 2/5: BS=8, LR=0.05, Alpha=0.5
+2026-01-23 14:22:21,936 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.5/run_2_reconstruction_opt_20260123_142220.png
+2026-01-23 14:22:21,936 - INFO - Experiment 65, run 2 completed. PSNR: 8.98, SSIM: 0.0800
+2026-01-23 14:22:21,936 - INFO - Running experiment 65, run 3/5: BS=8, LR=0.05, Alpha=0.5
+2026-01-23 14:22:45,849 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.5/run_3_reconstruction_opt_20260123_142244.png
+2026-01-23 14:22:45,850 - INFO - Experiment 65, run 3 completed. PSNR: 10.33, SSIM: 0.0569
+2026-01-23 14:22:45,850 - INFO - Running experiment 65, run 4/5: BS=8, LR=0.05, Alpha=0.5
+2026-01-23 14:23:09,437 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.5/run_4_reconstruction_opt_20260123_142308.png
+2026-01-23 14:23:09,437 - INFO - Experiment 65, run 4 completed. PSNR: 9.07, SSIM: 0.0616
+2026-01-23 14:23:09,437 - INFO - Running experiment 65, run 5/5: BS=8, LR=0.05, Alpha=0.5
+2026-01-23 14:23:33,552 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha0.5/run_5_reconstruction_opt_20260123_142332.png
+2026-01-23 14:23:33,552 - INFO - Experiment 65, run 5 completed. PSNR: 9.66, SSIM: 0.1063
+2026-01-23 14:23:33,552 - INFO - Created experiment directory: ./viz/mnist/bs8_lr5e-02_alpha1.0
+2026-01-23 14:23:33,552 - INFO - Running experiment 66, run 1/5: BS=8, LR=0.05, Alpha=1.0
+2026-01-23 14:23:57,646 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha1.0/run_1_reconstruction_opt_20260123_142356.png
+2026-01-23 14:23:57,646 - INFO - Experiment 66, run 1 completed. PSNR: 10.75, SSIM: 0.0495
+2026-01-23 14:23:57,646 - INFO - Running experiment 66, run 2/5: BS=8, LR=0.05, Alpha=1.0
+2026-01-23 14:24:21,140 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha1.0/run_2_reconstruction_opt_20260123_142420.png
+2026-01-23 14:24:21,140 - INFO - Experiment 66, run 2 completed. PSNR: 7.78, SSIM: 0.0473
+2026-01-23 14:24:21,140 - INFO - Running experiment 66, run 3/5: BS=8, LR=0.05, Alpha=1.0
+2026-01-23 14:24:45,578 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha1.0/run_3_reconstruction_opt_20260123_142444.png
+2026-01-23 14:24:45,578 - INFO - Experiment 66, run 3 completed. PSNR: 9.55, SSIM: 0.0647
+2026-01-23 14:24:45,578 - INFO - Running experiment 66, run 4/5: BS=8, LR=0.05, Alpha=1.0
+2026-01-23 14:25:09,058 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha1.0/run_4_reconstruction_opt_20260122_223549.png
+2026-01-23 14:25:09,058 - INFO - Experiment 66, run 4 completed. PSNR: 9.50, SSIM: 0.0505
+2026-01-23 14:25:09,059 - INFO - Running experiment 66, run 5/5: BS=8, LR=0.05, Alpha=1.0
+2026-01-23 14:25:32,604 - INFO - Saved viz to ./viz/mnist/bs8_lr5e-02_alpha1.0/run_5_reconstruction_opt_20260123_142531.png
+2026-01-23 14:25:32,604 - INFO - Experiment 66, run 5 completed. PSNR: 9.23, SSIM: 0.0651
+2026-01-23 14:25:32,604 - INFO - Created experiment directory: ./viz/mnist/bs8_lr1e-01_alpha0.01
+2026-01-23 14:25:32,604 - INFO - Running experiment 67, run 1/5: BS=8, LR=0.1, Alpha=0.01
+2026-01-23 14:25:56,700 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.01/run_1_reconstruction_opt_20260123_142555.png
+2026-01-23 14:25:56,700 - INFO - Experiment 67, run 1 completed. PSNR: 11.16, SSIM: 0.1485
+2026-01-23 14:25:56,700 - INFO - Running experiment 67, run 2/5: BS=8, LR=0.1, Alpha=0.01
+2026-01-23 14:26:20,244 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.01/run_2_reconstruction_opt_20260123_142619.png
+2026-01-23 14:26:20,244 - INFO - Experiment 67, run 2 completed. PSNR: 13.26, SSIM: 0.2025
+2026-01-23 14:26:20,244 - INFO - Running experiment 67, run 3/5: BS=8, LR=0.1, Alpha=0.01
+2026-01-23 14:26:43,804 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.01/run_3_reconstruction_opt_20260123_142642.png
+2026-01-23 14:26:43,804 - INFO - Experiment 67, run 3 completed. PSNR: 12.34, SSIM: 0.1809
+2026-01-23 14:26:43,804 - INFO - Running experiment 67, run 4/5: BS=8, LR=0.1, Alpha=0.01
+2026-01-23 14:27:07,298 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.01/run_4_reconstruction_opt_20260123_142706.png
+2026-01-23 14:27:07,298 - INFO - Experiment 67, run 4 completed. PSNR: 12.05, SSIM: 0.1030
+2026-01-23 14:27:07,298 - INFO - Running experiment 67, run 5/5: BS=8, LR=0.1, Alpha=0.01
+2026-01-23 14:27:30,537 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.01/run_5_reconstruction_opt_20260123_142729.png
+2026-01-23 14:27:30,537 - INFO - Experiment 67, run 5 completed. PSNR: 11.73, SSIM: 0.1317
+2026-01-23 14:27:30,537 - INFO - Created experiment directory: ./viz/mnist/bs8_lr1e-01_alpha0.05
+2026-01-23 14:27:30,537 - INFO - Running experiment 68, run 1/5: BS=8, LR=0.1, Alpha=0.05
+2026-01-23 14:27:54,388 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.05/run_1_reconstruction_opt_20260123_142753.png
+2026-01-23 14:27:54,388 - INFO - Experiment 68, run 1 completed. PSNR: 11.55, SSIM: 0.1194
+2026-01-23 14:27:54,388 - INFO - Running experiment 68, run 2/5: BS=8, LR=0.1, Alpha=0.05
+2026-01-23 14:28:18,307 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.05/run_2_reconstruction_opt_20260123_142817.png
+2026-01-23 14:28:18,307 - INFO - Experiment 68, run 2 completed. PSNR: 12.85, SSIM: 0.1145
+2026-01-23 14:28:18,307 - INFO - Running experiment 68, run 3/5: BS=8, LR=0.1, Alpha=0.05
+2026-01-23 14:28:42,208 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.05/run_3_reconstruction_opt_20260123_142841.png
+2026-01-23 14:28:42,208 - INFO - Experiment 68, run 3 completed. PSNR: 11.20, SSIM: 0.1051
+2026-01-23 14:28:42,208 - INFO - Running experiment 68, run 4/5: BS=8, LR=0.1, Alpha=0.05
+2026-01-23 14:29:05,558 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.05/run_4_reconstruction_opt_20260123_142904.png
+2026-01-23 14:29:05,559 - INFO - Experiment 68, run 4 completed. PSNR: 11.14, SSIM: 0.1182
+2026-01-23 14:29:05,559 - INFO - Running experiment 68, run 5/5: BS=8, LR=0.1, Alpha=0.05
+2026-01-23 14:29:29,584 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.05/run_5_reconstruction_opt_20260123_142928.png
+2026-01-23 14:29:29,584 - INFO - Experiment 68, run 5 completed. PSNR: 12.46, SSIM: 0.1098
+2026-01-23 14:29:29,584 - INFO - Created experiment directory: ./viz/mnist/bs8_lr1e-01_alpha0.1
+2026-01-23 14:29:29,584 - INFO - Running experiment 69, run 1/5: BS=8, LR=0.1, Alpha=0.1
+2026-01-23 14:29:53,342 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.1/run_1_reconstruction_opt_20260123_142952.png
+2026-01-23 14:29:53,342 - INFO - Experiment 69, run 1 completed. PSNR: 11.70, SSIM: 0.0835
+2026-01-23 14:29:53,342 - INFO - Running experiment 69, run 2/5: BS=8, LR=0.1, Alpha=0.1
+2026-01-23 14:30:16,739 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.1/run_2_reconstruction_opt_20260123_143015.png
+2026-01-23 14:30:16,739 - INFO - Experiment 69, run 2 completed. PSNR: 9.45, SSIM: 0.0842
+2026-01-23 14:30:16,739 - INFO - Running experiment 69, run 3/5: BS=8, LR=0.1, Alpha=0.1
+2026-01-23 14:30:40,917 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.1/run_3_reconstruction_opt_20260123_143039.png
+2026-01-23 14:30:40,917 - INFO - Experiment 69, run 3 completed. PSNR: 10.93, SSIM: 0.1393
+2026-01-23 14:30:40,917 - INFO - Running experiment 69, run 4/5: BS=8, LR=0.1, Alpha=0.1
+2026-01-23 14:31:04,311 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.1/run_4_reconstruction_opt_20260123_143103.png
+2026-01-23 14:31:04,311 - INFO - Experiment 69, run 4 completed. PSNR: 10.90, SSIM: 0.1048
+2026-01-23 14:31:04,311 - INFO - Running experiment 69, run 5/5: BS=8, LR=0.1, Alpha=0.1
+2026-01-23 14:31:28,422 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.1/run_5_reconstruction_opt_20260123_143127.png
+2026-01-23 14:31:28,423 - INFO - Experiment 69, run 5 completed. PSNR: 9.38, SSIM: 0.0825
+2026-01-23 14:31:28,423 - INFO - Created experiment directory: ./viz/mnist/bs8_lr1e-01_alpha0.2
+2026-01-23 14:31:28,423 - INFO - Running experiment 70, run 1/5: BS=8, LR=0.1, Alpha=0.2
+2026-01-23 14:31:51,658 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.2/run_1_reconstruction_opt_20260123_143150.png
+2026-01-23 14:31:51,658 - INFO - Experiment 70, run 1 completed. PSNR: 9.53, SSIM: 0.1210
+2026-01-23 14:31:51,658 - INFO - Running experiment 70, run 2/5: BS=8, LR=0.1, Alpha=0.2
+2026-01-23 14:32:15,555 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.2/run_2_reconstruction_opt_20260123_143214.png
+2026-01-23 14:32:15,556 - INFO - Experiment 70, run 2 completed. PSNR: 9.60, SSIM: 0.1276
+2026-01-23 14:32:15,556 - INFO - Running experiment 70, run 3/5: BS=8, LR=0.1, Alpha=0.2
+2026-01-23 14:32:39,201 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.2/run_3_reconstruction_opt_20260123_143238.png
+2026-01-23 14:32:39,201 - INFO - Experiment 70, run 3 completed. PSNR: 10.11, SSIM: 0.1020
+2026-01-23 14:32:39,201 - INFO - Running experiment 70, run 4/5: BS=8, LR=0.1, Alpha=0.2
+2026-01-23 14:33:02,236 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.2/run_4_reconstruction_opt_20260123_143301.png
+2026-01-23 14:33:02,237 - INFO - Experiment 70, run 4 completed. PSNR: 10.59, SSIM: 0.0889
+2026-01-23 14:33:02,237 - INFO - Running experiment 70, run 5/5: BS=8, LR=0.1, Alpha=0.2
+2026-01-23 14:33:26,509 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.2/run_5_reconstruction_opt_20260123_143325.png
+2026-01-23 14:33:26,509 - INFO - Experiment 70, run 5 completed. PSNR: 9.38, SSIM: 0.1160
+2026-01-23 14:33:26,509 - INFO - Created experiment directory: ./viz/mnist/bs8_lr1e-01_alpha0.5
+2026-01-23 14:33:26,509 - INFO - Running experiment 71, run 1/5: BS=8, LR=0.1, Alpha=0.5
+2026-01-23 14:33:50,096 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.5/run_1_reconstruction_opt_20260123_143349.png
+2026-01-23 14:33:50,096 - INFO - Experiment 71, run 1 completed. PSNR: 9.79, SSIM: 0.0778
+2026-01-23 14:33:50,096 - INFO - Running experiment 71, run 2/5: BS=8, LR=0.1, Alpha=0.5
+2026-01-23 14:34:13,476 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.5/run_2_reconstruction_opt_20260123_143412.png
+2026-01-23 14:34:13,476 - INFO - Experiment 71, run 2 completed. PSNR: 9.86, SSIM: 0.0819
+2026-01-23 14:34:13,476 - INFO - Running experiment 71, run 3/5: BS=8, LR=0.1, Alpha=0.5
+2026-01-23 14:34:38,237 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.5/run_3_reconstruction_opt_20260123_143437.png
+2026-01-23 14:34:38,237 - INFO - Experiment 71, run 3 completed. PSNR: 9.28, SSIM: 0.0906
+2026-01-23 14:34:38,237 - INFO - Running experiment 71, run 4/5: BS=8, LR=0.1, Alpha=0.5
+2026-01-23 14:35:01,721 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.5/run_4_reconstruction_opt_20260123_143500.png
+2026-01-23 14:35:01,721 - INFO - Experiment 71, run 4 completed. PSNR: 9.66, SSIM: 0.0767
+2026-01-23 14:35:01,721 - INFO - Running experiment 71, run 5/5: BS=8, LR=0.1, Alpha=0.5
+2026-01-23 14:35:25,636 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha0.5/run_5_reconstruction_opt_20260123_143524.png
+2026-01-23 14:35:25,636 - INFO - Experiment 71, run 5 completed. PSNR: 10.07, SSIM: 0.0864
+2026-01-23 14:35:25,636 - INFO - Created experiment directory: ./viz/mnist/bs8_lr1e-01_alpha1.0
+2026-01-23 14:35:25,636 - INFO - Running experiment 72, run 1/5: BS=8, LR=0.1, Alpha=1.0
+2026-01-23 14:35:49,148 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha1.0/run_1_reconstruction_opt_20260123_143548.png
+2026-01-23 14:35:49,148 - INFO - Experiment 72, run 1 completed. PSNR: 8.90, SSIM: 0.0645
+2026-01-23 14:35:49,148 - INFO - Running experiment 72, run 2/5: BS=8, LR=0.1, Alpha=1.0
+2026-01-23 14:36:12,724 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha1.0/run_2_reconstruction_opt_20260123_143611.png
+2026-01-23 14:36:12,724 - INFO - Experiment 72, run 2 completed. PSNR: 9.65, SSIM: 0.0734
+2026-01-23 14:36:12,724 - INFO - Running experiment 72, run 3/5: BS=8, LR=0.1, Alpha=1.0
+2026-01-23 14:36:36,852 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha1.0/run_3_reconstruction_opt_20260123_143635.png
+2026-01-23 14:36:36,852 - INFO - Experiment 72, run 3 completed. PSNR: 9.65, SSIM: 0.0646
+2026-01-23 14:36:36,852 - INFO - Running experiment 72, run 4/5: BS=8, LR=0.1, Alpha=1.0
+2026-01-23 14:37:00,215 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha1.0/run_4_reconstruction_opt_20260123_143659.png
+2026-01-23 14:37:00,215 - INFO - Experiment 72, run 4 completed. PSNR: 9.33, SSIM: 0.0648
+2026-01-23 14:37:00,215 - INFO - Running experiment 72, run 5/5: BS=8, LR=0.1, Alpha=1.0
+2026-01-23 14:37:23,624 - INFO - Saved viz to ./viz/mnist/bs8_lr1e-01_alpha1.0/run_5_reconstruction_opt_20260123_143722.png
+2026-01-23 14:37:23,624 - INFO - Experiment 72, run 5 completed. PSNR: 9.56, SSIM: 0.0686
+2026-01-23 14:37:23,625 - INFO - Created experiment directory: ./viz/mnist/bs16_lr1e-02_alpha0.01
+2026-01-23 14:37:23,625 - INFO - Running experiment 73, run 1/5: BS=16, LR=0.01, Alpha=0.01
+2026-01-23 14:37:48,232 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.01/run_1_reconstruction_opt_20260123_143747.png
+2026-01-23 14:37:48,232 - INFO - Experiment 73, run 1 completed. PSNR: 8.83, SSIM: 0.0352
+2026-01-23 14:37:48,232 - INFO - Running experiment 73, run 2/5: BS=16, LR=0.01, Alpha=0.01
+2026-01-23 14:38:11,977 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.01/run_2_reconstruction_opt_20260123_143810.png
+2026-01-23 14:38:11,978 - INFO - Experiment 73, run 2 completed. PSNR: 9.19, SSIM: 0.0416
+2026-01-23 14:38:11,978 - INFO - Running experiment 73, run 3/5: BS=16, LR=0.01, Alpha=0.01
+2026-01-23 14:38:35,576 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.01/run_3_reconstruction_opt_20260122_215544.png
+2026-01-23 14:38:35,576 - INFO - Experiment 73, run 3 completed. PSNR: 8.77, SSIM: 0.0414
+2026-01-23 14:38:35,576 - INFO - Running experiment 73, run 4/5: BS=16, LR=0.01, Alpha=0.01
+2026-01-23 14:38:59,028 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.01/run_4_reconstruction_opt_20260123_143857.png
+2026-01-23 14:38:59,028 - INFO - Experiment 73, run 4 completed. PSNR: 9.05, SSIM: 0.0423
+2026-01-23 14:38:59,028 - INFO - Running experiment 73, run 5/5: BS=16, LR=0.01, Alpha=0.01
+2026-01-23 14:39:22,892 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.01/run_5_reconstruction_opt_20260123_143921.png
+2026-01-23 14:39:22,893 - INFO - Experiment 73, run 5 completed. PSNR: 8.70, SSIM: 0.0462
+2026-01-23 14:39:22,893 - INFO - Created experiment directory: ./viz/mnist/bs16_lr1e-02_alpha0.05
+2026-01-23 14:39:22,893 - INFO - Running experiment 74, run 1/5: BS=16, LR=0.01, Alpha=0.05
+2026-01-23 14:39:46,250 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.05/run_1_reconstruction_opt_20260123_143945.png
+2026-01-23 14:39:46,250 - INFO - Experiment 74, run 1 completed. PSNR: 8.98, SSIM: 0.0160
+2026-01-23 14:39:46,250 - INFO - Running experiment 74, run 2/5: BS=16, LR=0.01, Alpha=0.05
+2026-01-23 14:40:10,171 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.05/run_2_reconstruction_opt_20260123_144009.png
+2026-01-23 14:40:10,171 - INFO - Experiment 74, run 2 completed. PSNR: 9.51, SSIM: 0.0359
+2026-01-23 14:40:10,171 - INFO - Running experiment 74, run 3/5: BS=16, LR=0.01, Alpha=0.05
+2026-01-23 14:40:33,564 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.05/run_3_reconstruction_opt_20260123_144032.png
+2026-01-23 14:40:33,564 - INFO - Experiment 74, run 3 completed. PSNR: 8.71, SSIM: 0.0485
+2026-01-23 14:40:33,564 - INFO - Running experiment 74, run 4/5: BS=16, LR=0.01, Alpha=0.05
+2026-01-23 14:40:57,414 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.05/run_4_reconstruction_opt_20260123_144056.png
+2026-01-23 14:40:57,414 - INFO - Experiment 74, run 4 completed. PSNR: 8.53, SSIM: 0.0270
+2026-01-23 14:40:57,414 - INFO - Running experiment 74, run 5/5: BS=16, LR=0.01, Alpha=0.05
+2026-01-23 14:41:21,284 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.05/run_5_reconstruction_opt_20260123_144120.png
+2026-01-23 14:41:21,284 - INFO - Experiment 74, run 5 completed. PSNR: 8.45, SSIM: 0.0448
+2026-01-23 14:41:21,284 - INFO - Created experiment directory: ./viz/mnist/bs16_lr1e-02_alpha0.1
+2026-01-23 14:41:21,284 - INFO - Running experiment 75, run 1/5: BS=16, LR=0.01, Alpha=0.1
+2026-01-23 14:41:44,634 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.1/run_1_reconstruction_opt_20260123_144143.png
+2026-01-23 14:41:44,634 - INFO - Experiment 75, run 1 completed. PSNR: 8.96, SSIM: 0.0420
+2026-01-23 14:41:44,635 - INFO - Running experiment 75, run 2/5: BS=16, LR=0.01, Alpha=0.1
+2026-01-23 14:42:08,273 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.1/run_2_reconstruction_opt_20260123_144207.png
+2026-01-23 14:42:08,273 - INFO - Experiment 75, run 2 completed. PSNR: 7.70, SSIM: 0.0339
+2026-01-23 14:42:08,273 - INFO - Running experiment 75, run 3/5: BS=16, LR=0.01, Alpha=0.1
+2026-01-23 14:42:31,759 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.1/run_3_reconstruction_opt_20260123_144230.png
+2026-01-23 14:42:31,760 - INFO - Experiment 75, run 3 completed. PSNR: 8.33, SSIM: 0.0235
+2026-01-23 14:42:31,760 - INFO - Running experiment 75, run 4/5: BS=16, LR=0.01, Alpha=0.1
+2026-01-23 14:42:55,467 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.1/run_4_reconstruction_opt_20260123_144254.png
+2026-01-23 14:42:55,467 - INFO - Experiment 75, run 4 completed. PSNR: 9.43, SSIM: 0.0525
+2026-01-23 14:42:55,467 - INFO - Running experiment 75, run 5/5: BS=16, LR=0.01, Alpha=0.1
+2026-01-23 14:43:19,597 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.1/run_5_reconstruction_opt_20260123_144318.png
+2026-01-23 14:43:19,597 - INFO - Experiment 75, run 5 completed. PSNR: 9.86, SSIM: 0.0392
+2026-01-23 14:43:19,597 - INFO - Created experiment directory: ./viz/mnist/bs16_lr1e-02_alpha0.2
+2026-01-23 14:43:19,597 - INFO - Running experiment 76, run 1/5: BS=16, LR=0.01, Alpha=0.2
+2026-01-23 14:43:42,795 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.2/run_1_reconstruction_opt_20260123_144341.png
+2026-01-23 14:43:42,795 - INFO - Experiment 76, run 1 completed. PSNR: 7.97, SSIM: 0.0222
+2026-01-23 14:43:42,795 - INFO - Running experiment 76, run 2/5: BS=16, LR=0.01, Alpha=0.2
+2026-01-23 14:44:06,661 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.2/run_2_reconstruction_opt_20260123_144405.png
+2026-01-23 14:44:06,661 - INFO - Experiment 76, run 2 completed. PSNR: 8.70, SSIM: 0.0151
+2026-01-23 14:44:06,661 - INFO - Running experiment 76, run 3/5: BS=16, LR=0.01, Alpha=0.2
+2026-01-23 14:44:30,219 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.2/run_3_reconstruction_opt_20260123_144429.png
+2026-01-23 14:44:30,219 - INFO - Experiment 76, run 3 completed. PSNR: 8.75, SSIM: 0.0252
+2026-01-23 14:44:30,219 - INFO - Running experiment 76, run 4/5: BS=16, LR=0.01, Alpha=0.2
+2026-01-23 14:44:54,500 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.2/run_4_reconstruction_opt_20260123_144453.png
+2026-01-23 14:44:54,500 - INFO - Experiment 76, run 4 completed. PSNR: 9.63, SSIM: 0.0171
+2026-01-23 14:44:54,500 - INFO - Running experiment 76, run 5/5: BS=16, LR=0.01, Alpha=0.2
+2026-01-23 14:45:18,199 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.2/run_5_reconstruction_opt_20260123_144517.png
+2026-01-23 14:45:18,199 - INFO - Experiment 76, run 5 completed. PSNR: 8.92, SSIM: 0.0122
+2026-01-23 14:45:18,199 - INFO - Created experiment directory: ./viz/mnist/bs16_lr1e-02_alpha0.5
+2026-01-23 14:45:18,199 - INFO - Running experiment 77, run 1/5: BS=16, LR=0.01, Alpha=0.5
+2026-01-23 14:45:41,736 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.5/run_1_reconstruction_opt_20260123_144540.png
+2026-01-23 14:45:41,736 - INFO - Experiment 77, run 1 completed. PSNR: 8.60, SSIM: 0.0275
+2026-01-23 14:45:41,736 - INFO - Running experiment 77, run 2/5: BS=16, LR=0.01, Alpha=0.5
+2026-01-23 14:46:05,462 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.5/run_2_reconstruction_opt_20260123_144604.png
+2026-01-23 14:46:05,462 - INFO - Experiment 77, run 2 completed. PSNR: 8.12, SSIM: 0.0103
+2026-01-23 14:46:05,462 - INFO - Running experiment 77, run 3/5: BS=16, LR=0.01, Alpha=0.5
+2026-01-23 14:46:28,916 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.5/run_3_reconstruction_opt_20260123_144627.png
+2026-01-23 14:46:28,916 - INFO - Experiment 77, run 3 completed. PSNR: 8.42, SSIM: 0.0151
+2026-01-23 14:46:28,916 - INFO - Running experiment 77, run 4/5: BS=16, LR=0.01, Alpha=0.5
+2026-01-23 14:46:52,873 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.5/run_4_reconstruction_opt_20260123_144651.png
+2026-01-23 14:46:52,873 - INFO - Experiment 77, run 4 completed. PSNR: 8.80, SSIM: 0.0060
+2026-01-23 14:46:52,873 - INFO - Running experiment 77, run 5/5: BS=16, LR=0.01, Alpha=0.5
+2026-01-23 14:47:16,373 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha0.5/run_5_reconstruction_opt_20260123_144715.png
+2026-01-23 14:47:16,373 - INFO - Experiment 77, run 5 completed. PSNR: 8.81, SSIM: 0.0213
+2026-01-23 14:47:16,373 - INFO - Created experiment directory: ./viz/mnist/bs16_lr1e-02_alpha1.0
+2026-01-23 14:47:16,373 - INFO - Running experiment 78, run 1/5: BS=16, LR=0.01, Alpha=1.0
+2026-01-23 14:47:39,868 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha1.0/run_1_reconstruction_opt_20260123_144738.png
+2026-01-23 14:47:39,868 - INFO - Experiment 78, run 1 completed. PSNR: 8.87, SSIM: 0.0163
+2026-01-23 14:47:39,868 - INFO - Running experiment 78, run 2/5: BS=16, LR=0.01, Alpha=1.0
+2026-01-23 14:48:03,592 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha1.0/run_2_reconstruction_opt_20260123_144802.png
+2026-01-23 14:48:03,592 - INFO - Experiment 78, run 2 completed. PSNR: 7.62, SSIM: 0.0202
+2026-01-23 14:48:03,592 - INFO - Running experiment 78, run 3/5: BS=16, LR=0.01, Alpha=1.0
+2026-01-23 14:48:27,199 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha1.0/run_3_reconstruction_opt_20260123_144826.png
+2026-01-23 14:48:27,199 - INFO - Experiment 78, run 3 completed. PSNR: 8.54, SSIM: 0.0194
+2026-01-23 14:48:27,199 - INFO - Running experiment 78, run 4/5: BS=16, LR=0.01, Alpha=1.0
+2026-01-23 14:48:50,982 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha1.0/run_4_reconstruction_opt_20260123_144849.png
+2026-01-23 14:48:50,982 - INFO - Experiment 78, run 4 completed. PSNR: 9.07, SSIM: 0.0232
+2026-01-23 14:48:50,982 - INFO - Running experiment 78, run 5/5: BS=16, LR=0.01, Alpha=1.0
+2026-01-23 14:49:15,033 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-02_alpha1.0/run_5_reconstruction_opt_20260123_144913.png
+2026-01-23 14:49:15,033 - INFO - Experiment 78, run 5 completed. PSNR: 8.46, SSIM: 0.0168
+2026-01-23 14:49:15,033 - INFO - Created experiment directory: ./viz/mnist/bs16_lr5e-02_alpha0.01
+2026-01-23 14:49:15,033 - INFO - Running experiment 79, run 1/5: BS=16, LR=0.05, Alpha=0.01
+2026-01-23 14:49:39,111 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.01/run_1_reconstruction_opt_20260123_144938.png
+2026-01-23 14:49:39,111 - INFO - Experiment 79, run 1 completed. PSNR: 10.23, SSIM: 0.0965
+2026-01-23 14:49:39,111 - INFO - Running experiment 79, run 2/5: BS=16, LR=0.05, Alpha=0.01
+2026-01-23 14:50:02,974 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.01/run_2_reconstruction_opt_20260123_145001.png
+2026-01-23 14:50:02,974 - INFO - Experiment 79, run 2 completed. PSNR: 10.87, SSIM: 0.0588
+2026-01-23 14:50:02,974 - INFO - Running experiment 79, run 3/5: BS=16, LR=0.05, Alpha=0.01
+2026-01-23 14:50:26,291 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.01/run_3_reconstruction_opt_20260123_145025.png
+2026-01-23 14:50:26,291 - INFO - Experiment 79, run 3 completed. PSNR: 12.42, SSIM: 0.1122
+2026-01-23 14:50:26,291 - INFO - Running experiment 79, run 4/5: BS=16, LR=0.05, Alpha=0.01
+2026-01-23 14:50:50,031 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.01/run_4_reconstruction_opt_20260123_145049.png
+2026-01-23 14:50:50,031 - INFO - Experiment 79, run 4 completed. PSNR: 9.47, SSIM: 0.0602
+2026-01-23 14:50:50,031 - INFO - Running experiment 79, run 5/5: BS=16, LR=0.05, Alpha=0.01
+2026-01-23 14:51:13,245 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.01/run_5_reconstruction_opt_20260123_145112.png
+2026-01-23 14:51:13,245 - INFO - Experiment 79, run 5 completed. PSNR: 9.79, SSIM: 0.0502
+2026-01-23 14:51:13,245 - INFO - Created experiment directory: ./viz/mnist/bs16_lr5e-02_alpha0.05
+2026-01-23 14:51:13,245 - INFO - Running experiment 80, run 1/5: BS=16, LR=0.05, Alpha=0.05
+2026-01-23 14:51:37,159 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.05/run_1_reconstruction_opt_20260123_145136.png
+2026-01-23 14:51:37,159 - INFO - Experiment 80, run 1 completed. PSNR: 8.69, SSIM: 0.0783
+2026-01-23 14:51:37,159 - INFO - Running experiment 80, run 2/5: BS=16, LR=0.05, Alpha=0.05
+2026-01-23 14:52:01,027 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.05/run_2_reconstruction_opt_20260123_145159.png
+2026-01-23 14:52:01,027 - INFO - Experiment 80, run 2 completed. PSNR: 10.05, SSIM: 0.0567
+2026-01-23 14:52:01,027 - INFO - Running experiment 80, run 3/5: BS=16, LR=0.05, Alpha=0.05
+2026-01-23 14:52:24,488 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.05/run_3_reconstruction_opt_20260123_145223.png
+2026-01-23 14:52:24,488 - INFO - Experiment 80, run 3 completed. PSNR: 9.74, SSIM: 0.0586
+2026-01-23 14:52:24,488 - INFO - Running experiment 80, run 4/5: BS=16, LR=0.05, Alpha=0.05
+2026-01-23 14:52:48,399 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.05/run_4_reconstruction_opt_20260123_145247.png
+2026-01-23 14:52:48,399 - INFO - Experiment 80, run 4 completed. PSNR: 8.73, SSIM: 0.0479
+2026-01-23 14:52:48,399 - INFO - Running experiment 80, run 5/5: BS=16, LR=0.05, Alpha=0.05
+2026-01-23 14:53:11,383 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.05/run_5_reconstruction_opt_20260123_145310.png
+2026-01-23 14:53:11,383 - INFO - Experiment 80, run 5 completed. PSNR: 9.04, SSIM: 0.0603
+2026-01-23 14:53:11,384 - INFO - Created experiment directory: ./viz/mnist/bs16_lr5e-02_alpha0.1
+2026-01-23 14:53:11,384 - INFO - Running experiment 81, run 1/5: BS=16, LR=0.05, Alpha=0.1
+2026-01-23 14:53:35,538 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.1/run_1_reconstruction_opt_20260123_145334.png
+2026-01-23 14:53:35,538 - INFO - Experiment 81, run 1 completed. PSNR: 7.77, SSIM: 0.0482
+2026-01-23 14:53:35,538 - INFO - Running experiment 81, run 2/5: BS=16, LR=0.05, Alpha=0.1
+2026-01-23 14:53:58,942 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.1/run_2_reconstruction_opt_20260122_211055.png
+2026-01-23 14:53:58,942 - INFO - Experiment 81, run 2 completed. PSNR: 9.97, SSIM: 0.0381
+2026-01-23 14:53:58,942 - INFO - Running experiment 81, run 3/5: BS=16, LR=0.05, Alpha=0.1
+2026-01-23 14:54:22,616 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.1/run_3_reconstruction_opt_20260123_145421.png
+2026-01-23 14:54:22,616 - INFO - Experiment 81, run 3 completed. PSNR: 8.48, SSIM: 0.0398
+2026-01-23 14:54:22,617 - INFO - Running experiment 81, run 4/5: BS=16, LR=0.05, Alpha=0.1
+2026-01-23 14:54:46,763 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.1/run_4_reconstruction_opt_20260123_145445.png
+2026-01-23 14:54:46,763 - INFO - Experiment 81, run 4 completed. PSNR: 8.87, SSIM: 0.0372
+2026-01-23 14:54:46,763 - INFO - Running experiment 81, run 5/5: BS=16, LR=0.05, Alpha=0.1
+2026-01-23 14:55:10,005 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.1/run_5_reconstruction_opt_20260123_145508.png
+2026-01-23 14:55:10,005 - INFO - Experiment 81, run 5 completed. PSNR: 9.79, SSIM: 0.0451
+2026-01-23 14:55:10,006 - INFO - Created experiment directory: ./viz/mnist/bs16_lr5e-02_alpha0.2
+2026-01-23 14:55:10,006 - INFO - Running experiment 82, run 1/5: BS=16, LR=0.05, Alpha=0.2
+2026-01-23 14:55:33,735 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.2/run_1_reconstruction_opt_20260123_145532.png
+2026-01-23 14:55:33,735 - INFO - Experiment 82, run 1 completed. PSNR: 9.11, SSIM: 0.0395
+2026-01-23 14:55:33,735 - INFO - Running experiment 82, run 2/5: BS=16, LR=0.05, Alpha=0.2
+2026-01-23 14:55:57,019 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.2/run_2_reconstruction_opt_20260123_145555.png
+2026-01-23 14:55:57,019 - INFO - Experiment 82, run 2 completed. PSNR: 8.36, SSIM: 0.0509
+2026-01-23 14:55:57,019 - INFO - Running experiment 82, run 3/5: BS=16, LR=0.05, Alpha=0.2
+2026-01-23 14:56:20,742 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.2/run_3_reconstruction_opt_20260123_145619.png
+2026-01-23 14:56:20,742 - INFO - Experiment 82, run 3 completed. PSNR: 10.12, SSIM: 0.0477
+2026-01-23 14:56:20,742 - INFO - Running experiment 82, run 4/5: BS=16, LR=0.05, Alpha=0.2
+2026-01-23 14:56:44,625 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.2/run_4_reconstruction_opt_20260123_145643.png
+2026-01-23 14:56:44,625 - INFO - Experiment 82, run 4 completed. PSNR: 8.74, SSIM: 0.0387
+2026-01-23 14:56:44,625 - INFO - Running experiment 82, run 5/5: BS=16, LR=0.05, Alpha=0.2
+2026-01-23 14:57:08,258 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.2/run_5_reconstruction_opt_20260123_145707.png
+2026-01-23 14:57:08,258 - INFO - Experiment 82, run 5 completed. PSNR: 8.93, SSIM: 0.0390
+2026-01-23 14:57:08,258 - INFO - Created experiment directory: ./viz/mnist/bs16_lr5e-02_alpha0.5
+2026-01-23 14:57:08,258 - INFO - Running experiment 83, run 1/5: BS=16, LR=0.05, Alpha=0.5
+2026-01-23 14:57:32,106 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.5/run_1_reconstruction_opt_20260123_145731.png
+2026-01-23 14:57:32,107 - INFO - Experiment 83, run 1 completed. PSNR: 9.79, SSIM: 0.0338
+2026-01-23 14:57:32,107 - INFO - Running experiment 83, run 2/5: BS=16, LR=0.05, Alpha=0.5
+2026-01-23 14:57:55,820 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.5/run_2_reconstruction_opt_20260123_145754.png
+2026-01-23 14:57:55,820 - INFO - Experiment 83, run 2 completed. PSNR: 9.06, SSIM: 0.0351
+2026-01-23 14:57:55,820 - INFO - Running experiment 83, run 3/5: BS=16, LR=0.05, Alpha=0.5
+2026-01-23 14:58:19,388 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.5/run_3_reconstruction_opt_20260123_145818.png
+2026-01-23 14:58:19,388 - INFO - Experiment 83, run 3 completed. PSNR: 9.31, SSIM: 0.0401
+2026-01-23 14:58:19,388 - INFO - Running experiment 83, run 4/5: BS=16, LR=0.05, Alpha=0.5
+2026-01-23 14:58:43,101 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.5/run_4_reconstruction_opt_20260123_145841.png
+2026-01-23 14:58:43,101 - INFO - Experiment 83, run 4 completed. PSNR: 9.36, SSIM: 0.0383
+2026-01-23 14:58:43,101 - INFO - Running experiment 83, run 5/5: BS=16, LR=0.05, Alpha=0.5
+2026-01-23 14:59:05,809 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha0.5/run_5_reconstruction_opt_20260123_145904.png
+2026-01-23 14:59:05,809 - INFO - Experiment 83, run 5 completed. PSNR: 8.38, SSIM: 0.0248
+2026-01-23 14:59:05,810 - INFO - Created experiment directory: ./viz/mnist/bs16_lr5e-02_alpha1.0
+2026-01-23 14:59:05,810 - INFO - Running experiment 84, run 1/5: BS=16, LR=0.05, Alpha=1.0
+2026-01-23 14:59:29,647 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha1.0/run_1_reconstruction_opt_20260123_145928.png
+2026-01-23 14:59:29,647 - INFO - Experiment 84, run 1 completed. PSNR: 8.67, SSIM: 0.0321
+2026-01-23 14:59:29,647 - INFO - Running experiment 84, run 2/5: BS=16, LR=0.05, Alpha=1.0
+2026-01-23 14:59:53,194 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha1.0/run_2_reconstruction_opt_20260123_145952.png
+2026-01-23 14:59:53,195 - INFO - Experiment 84, run 2 completed. PSNR: 8.75, SSIM: 0.0245
+2026-01-23 14:59:53,195 - INFO - Running experiment 84, run 3/5: BS=16, LR=0.05, Alpha=1.0
+2026-01-23 15:00:17,144 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha1.0/run_3_reconstruction_opt_20260123_150016.png
+2026-01-23 15:00:17,144 - INFO - Experiment 84, run 3 completed. PSNR: 9.62, SSIM: 0.0460
+2026-01-23 15:00:17,144 - INFO - Running experiment 84, run 4/5: BS=16, LR=0.05, Alpha=1.0
+2026-01-23 15:00:40,181 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha1.0/run_4_reconstruction_opt_20260123_150039.png
+2026-01-23 15:00:40,181 - INFO - Experiment 84, run 4 completed. PSNR: 8.96, SSIM: 0.0218
+2026-01-23 15:00:40,181 - INFO - Running experiment 84, run 5/5: BS=16, LR=0.05, Alpha=1.0
+2026-01-23 15:01:03,644 - INFO - Saved viz to ./viz/mnist/bs16_lr5e-02_alpha1.0/run_5_reconstruction_opt_20260123_150102.png
+2026-01-23 15:01:03,644 - INFO - Experiment 84, run 5 completed. PSNR: 8.08, SSIM: 0.0337
+2026-01-23 15:01:03,644 - INFO - Created experiment directory: ./viz/mnist/bs16_lr1e-01_alpha0.01
+2026-01-23 15:01:03,644 - INFO - Running experiment 85, run 1/5: BS=16, LR=0.1, Alpha=0.01
+2026-01-23 15:01:27,266 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.01/run_1_reconstruction_opt_20260123_150126.png
+2026-01-23 15:01:27,266 - INFO - Experiment 85, run 1 completed. PSNR: 10.13, SSIM: 0.0948
+2026-01-23 15:01:27,266 - INFO - Running experiment 85, run 2/5: BS=16, LR=0.1, Alpha=0.01
+2026-01-23 15:01:50,558 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.01/run_2_reconstruction_opt_20260123_150149.png
+2026-01-23 15:01:50,559 - INFO - Experiment 85, run 2 completed. PSNR: 10.17, SSIM: 0.1093
+2026-01-23 15:01:50,559 - INFO - Running experiment 85, run 3/5: BS=16, LR=0.1, Alpha=0.01
+2026-01-23 15:02:15,203 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.01/run_3_reconstruction_opt_20260123_150214.png
+2026-01-23 15:02:15,203 - INFO - Experiment 85, run 3 completed. PSNR: 9.53, SSIM: 0.0838
+2026-01-23 15:02:15,203 - INFO - Running experiment 85, run 4/5: BS=16, LR=0.1, Alpha=0.01
+2026-01-23 15:02:38,107 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.01/run_4_reconstruction_opt_20260123_150237.png
+2026-01-23 15:02:38,107 - INFO - Experiment 85, run 4 completed. PSNR: 10.12, SSIM: 0.0697
+2026-01-23 15:02:38,107 - INFO - Running experiment 85, run 5/5: BS=16, LR=0.1, Alpha=0.01
+2026-01-23 15:03:01,784 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.01/run_5_reconstruction_opt_20260123_150300.png
+2026-01-23 15:03:01,784 - INFO - Experiment 85, run 5 completed. PSNR: 10.26, SSIM: 0.0736
+2026-01-23 15:03:01,785 - INFO - Created experiment directory: ./viz/mnist/bs16_lr1e-01_alpha0.05
+2026-01-23 15:03:01,785 - INFO - Running experiment 86, run 1/5: BS=16, LR=0.1, Alpha=0.05
+2026-01-23 15:03:25,568 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.05/run_1_reconstruction_opt_20260123_150324.png
+2026-01-23 15:03:25,568 - INFO - Experiment 86, run 1 completed. PSNR: 9.22, SSIM: 0.0685
+2026-01-23 15:03:25,568 - INFO - Running experiment 86, run 2/5: BS=16, LR=0.1, Alpha=0.05
+2026-01-23 15:03:49,031 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.05/run_2_reconstruction_opt_20260123_150348.png
+2026-01-23 15:03:49,031 - INFO - Experiment 86, run 2 completed. PSNR: 9.34, SSIM: 0.0941
+2026-01-23 15:03:49,031 - INFO - Running experiment 86, run 3/5: BS=16, LR=0.1, Alpha=0.05
+2026-01-23 15:04:12,287 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.05/run_3_reconstruction_opt_20260123_150411.png
+2026-01-23 15:04:12,287 - INFO - Experiment 86, run 3 completed. PSNR: 10.07, SSIM: 0.0944
+2026-01-23 15:04:12,287 - INFO - Running experiment 86, run 4/5: BS=16, LR=0.1, Alpha=0.05
+2026-01-23 15:04:36,464 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.05/run_4_reconstruction_opt_20260123_150435.png
+2026-01-23 15:04:36,464 - INFO - Experiment 86, run 4 completed. PSNR: 9.44, SSIM: 0.0703
+2026-01-23 15:04:36,464 - INFO - Running experiment 86, run 5/5: BS=16, LR=0.1, Alpha=0.05
+2026-01-23 15:04:59,884 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.05/run_5_reconstruction_opt_20260123_150458.png
+2026-01-23 15:04:59,884 - INFO - Experiment 86, run 5 completed. PSNR: 8.93, SSIM: 0.0890
+2026-01-23 15:04:59,884 - INFO - Created experiment directory: ./viz/mnist/bs16_lr1e-01_alpha0.1
+2026-01-23 15:04:59,884 - INFO - Running experiment 87, run 1/5: BS=16, LR=0.1, Alpha=0.1
+2026-01-23 15:05:23,487 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.1/run_1_reconstruction_opt_20260123_150522.png
+2026-01-23 15:05:23,487 - INFO - Experiment 87, run 1 completed. PSNR: 9.14, SSIM: 0.0746
+2026-01-23 15:05:23,487 - INFO - Running experiment 87, run 2/5: BS=16, LR=0.1, Alpha=0.1
+2026-01-23 15:05:46,913 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.1/run_2_reconstruction_opt_20260123_150545.png
+2026-01-23 15:05:46,913 - INFO - Experiment 87, run 2 completed. PSNR: 11.25, SSIM: 0.1103
+2026-01-23 15:05:46,913 - INFO - Running experiment 87, run 3/5: BS=16, LR=0.1, Alpha=0.1
+2026-01-23 15:06:10,844 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.1/run_3_reconstruction_opt_20260123_150609.png
+2026-01-23 15:06:10,844 - INFO - Experiment 87, run 3 completed. PSNR: 9.55, SSIM: 0.0675
+2026-01-23 15:06:10,844 - INFO - Running experiment 87, run 4/5: BS=16, LR=0.1, Alpha=0.1
+2026-01-23 15:06:33,856 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.1/run_4_reconstruction_opt_20260123_150632.png
+2026-01-23 15:06:33,857 - INFO - Experiment 87, run 4 completed. PSNR: 8.77, SSIM: 0.0616
+2026-01-23 15:06:33,857 - INFO - Running experiment 87, run 5/5: BS=16, LR=0.1, Alpha=0.1
+2026-01-23 15:06:57,396 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.1/run_5_reconstruction_opt_20260123_150656.png
+2026-01-23 15:06:57,396 - INFO - Experiment 87, run 5 completed. PSNR: 8.83, SSIM: 0.0695
+2026-01-23 15:06:57,396 - INFO - Created experiment directory: ./viz/mnist/bs16_lr1e-01_alpha0.2
+2026-01-23 15:06:57,396 - INFO - Running experiment 88, run 1/5: BS=16, LR=0.1, Alpha=0.2
+2026-01-23 15:07:20,747 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.2/run_1_reconstruction_opt_20260122_184312.png
+2026-01-23 15:07:20,747 - INFO - Experiment 88, run 1 completed. PSNR: 10.46, SSIM: 0.0385
+2026-01-23 15:07:20,747 - INFO - Running experiment 88, run 2/5: BS=16, LR=0.1, Alpha=0.2
+2026-01-23 15:07:44,111 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.2/run_2_reconstruction_opt_20260123_150743.png
+2026-01-23 15:07:44,111 - INFO - Experiment 88, run 2 completed. PSNR: 8.51, SSIM: 0.0541
+2026-01-23 15:07:44,111 - INFO - Running experiment 88, run 3/5: BS=16, LR=0.1, Alpha=0.2
+2026-01-23 15:08:07,764 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.2/run_3_reconstruction_opt_20260123_150806.png
+2026-01-23 15:08:07,764 - INFO - Experiment 88, run 3 completed. PSNR: 9.08, SSIM: 0.0709
+2026-01-23 15:08:07,764 - INFO - Running experiment 88, run 4/5: BS=16, LR=0.1, Alpha=0.2
+2026-01-23 15:08:31,281 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.2/run_4_reconstruction_opt_20260123_150830.png
+2026-01-23 15:08:31,282 - INFO - Experiment 88, run 4 completed. PSNR: 9.27, SSIM: 0.0488
+2026-01-23 15:08:31,282 - INFO - Running experiment 88, run 5/5: BS=16, LR=0.1, Alpha=0.2
+2026-01-23 15:08:55,210 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.2/run_5_reconstruction_opt_20260123_150854.png
+2026-01-23 15:08:55,210 - INFO - Experiment 88, run 5 completed. PSNR: 8.65, SSIM: 0.0378
+2026-01-23 15:08:55,210 - INFO - Created experiment directory: ./viz/mnist/bs16_lr1e-01_alpha0.5
+2026-01-23 15:08:55,210 - INFO - Running experiment 89, run 1/5: BS=16, LR=0.1, Alpha=0.5
+2026-01-23 15:09:18,308 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.5/run_1_reconstruction_opt_20260123_150917.png
+2026-01-23 15:09:18,308 - INFO - Experiment 89, run 1 completed. PSNR: 8.59, SSIM: 0.0268
+2026-01-23 15:09:18,308 - INFO - Running experiment 89, run 2/5: BS=16, LR=0.1, Alpha=0.5
+2026-01-23 15:09:42,327 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.5/run_2_reconstruction_opt_20260123_150941.png
+2026-01-23 15:09:42,327 - INFO - Experiment 89, run 2 completed. PSNR: 9.12, SSIM: 0.0739
+2026-01-23 15:09:42,327 - INFO - Running experiment 89, run 3/5: BS=16, LR=0.1, Alpha=0.5
+2026-01-23 15:10:06,052 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.5/run_3_reconstruction_opt_20260123_151005.png
+2026-01-23 15:10:06,052 - INFO - Experiment 89, run 3 completed. PSNR: 8.33, SSIM: 0.0546
+2026-01-23 15:10:06,052 - INFO - Running experiment 89, run 4/5: BS=16, LR=0.1, Alpha=0.5
+2026-01-23 15:10:29,496 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.5/run_4_reconstruction_opt_20260123_151028.png
+2026-01-23 15:10:29,496 - INFO - Experiment 89, run 4 completed. PSNR: 9.45, SSIM: 0.0351
+2026-01-23 15:10:29,496 - INFO - Running experiment 89, run 5/5: BS=16, LR=0.1, Alpha=0.5
+2026-01-23 15:10:54,564 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha0.5/run_5_reconstruction_opt_20260123_151053.png
+2026-01-23 15:10:54,565 - INFO - Experiment 89, run 5 completed. PSNR: 8.18, SSIM: 0.0465
+2026-01-23 15:10:54,565 - INFO - Created experiment directory: ./viz/mnist/bs16_lr1e-01_alpha1.0
+2026-01-23 15:10:54,565 - INFO - Running experiment 90, run 1/5: BS=16, LR=0.1, Alpha=1.0
+2026-01-23 15:11:18,769 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha1.0/run_1_reconstruction_opt_20260123_151117.png
+2026-01-23 15:11:18,769 - INFO - Experiment 90, run 1 completed. PSNR: 7.53, SSIM: 0.0382
+2026-01-23 15:11:18,769 - INFO - Running experiment 90, run 2/5: BS=16, LR=0.1, Alpha=1.0
+2026-01-23 15:11:43,071 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha1.0/run_2_reconstruction_opt_20260123_151142.png
+2026-01-23 15:11:43,071 - INFO - Experiment 90, run 2 completed. PSNR: 8.47, SSIM: 0.0357
+2026-01-23 15:11:43,071 - INFO - Running experiment 90, run 3/5: BS=16, LR=0.1, Alpha=1.0
+2026-01-23 15:12:06,883 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha1.0/run_3_reconstruction_opt_20260123_151205.png
+2026-01-23 15:12:06,883 - INFO - Experiment 90, run 3 completed. PSNR: 8.28, SSIM: 0.0215
+2026-01-23 15:12:06,883 - INFO - Running experiment 90, run 4/5: BS=16, LR=0.1, Alpha=1.0
+2026-01-23 15:12:30,687 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha1.0/run_4_reconstruction_opt_20260123_151229.png
+2026-01-23 15:12:30,687 - INFO - Experiment 90, run 4 completed. PSNR: 8.39, SSIM: 0.0256
+2026-01-23 15:12:30,687 - INFO - Running experiment 90, run 5/5: BS=16, LR=0.1, Alpha=1.0
+2026-01-23 15:12:55,352 - INFO - Saved viz to ./viz/mnist/bs16_lr1e-01_alpha1.0/run_5_reconstruction_opt_20260123_151254.png
+2026-01-23 15:12:55,352 - INFO - Experiment 90, run 5 completed. PSNR: 8.32, SSIM: 0.0442
+2026-01-23 15:12:55,352 - INFO - Created experiment directory: ./viz/mnist/bs24_lr1e-02_alpha0.01
+2026-01-23 15:12:55,352 - INFO - Running experiment 91, run 1/5: BS=24, LR=0.01, Alpha=0.01
+2026-01-23 15:13:20,532 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.01/run_1_reconstruction_opt_20260123_151319.png
+2026-01-23 15:13:20,532 - INFO - Experiment 91, run 1 completed. PSNR: 8.70, SSIM: 0.0322
+2026-01-23 15:13:20,532 - INFO - Running experiment 91, run 2/5: BS=24, LR=0.01, Alpha=0.01
+2026-01-23 15:13:46,681 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.01/run_2_reconstruction_opt_20260123_151345.png
+2026-01-23 15:13:46,682 - INFO - Experiment 91, run 2 completed. PSNR: 9.67, SSIM: 0.0364
+2026-01-23 15:13:46,682 - INFO - Running experiment 91, run 3/5: BS=24, LR=0.01, Alpha=0.01
+2026-01-23 15:14:10,634 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.01/run_3_reconstruction_opt_20260122_175222.png
+2026-01-23 15:14:10,634 - INFO - Experiment 91, run 3 completed. PSNR: 8.96, SSIM: 0.0299
+2026-01-23 15:14:10,634 - INFO - Running experiment 91, run 4/5: BS=24, LR=0.01, Alpha=0.01
+2026-01-23 15:14:35,761 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.01/run_4_reconstruction_opt_20260123_151434.png
+2026-01-23 15:14:35,761 - INFO - Experiment 91, run 4 completed. PSNR: 9.91, SSIM: 0.0340
+2026-01-23 15:14:35,761 - INFO - Running experiment 91, run 5/5: BS=24, LR=0.01, Alpha=0.01
+2026-01-23 15:15:00,436 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.01/run_5_reconstruction_opt_20260123_151459.png
+2026-01-23 15:15:00,436 - INFO - Experiment 91, run 5 completed. PSNR: 8.44, SSIM: 0.0292
+2026-01-23 15:15:00,437 - INFO - Created experiment directory: ./viz/mnist/bs24_lr1e-02_alpha0.05
+2026-01-23 15:15:00,437 - INFO - Running experiment 92, run 1/5: BS=24, LR=0.01, Alpha=0.05
+2026-01-23 15:15:26,003 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.05/run_1_reconstruction_opt_20260123_151524.png
+2026-01-23 15:15:26,003 - INFO - Experiment 92, run 1 completed. PSNR: 8.62, SSIM: 0.0177
+2026-01-23 15:15:26,003 - INFO - Running experiment 92, run 2/5: BS=24, LR=0.01, Alpha=0.05
+2026-01-23 15:15:51,307 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.05/run_2_reconstruction_opt_20260123_151550.png
+2026-01-23 15:15:51,307 - INFO - Experiment 92, run 2 completed. PSNR: 8.56, SSIM: 0.0261
+2026-01-23 15:15:51,307 - INFO - Running experiment 92, run 3/5: BS=24, LR=0.01, Alpha=0.05
+2026-01-23 15:16:16,234 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.05/run_3_reconstruction_opt_20260123_151615.png
+2026-01-23 15:16:16,234 - INFO - Experiment 92, run 3 completed. PSNR: 9.26, SSIM: 0.0244
+2026-01-23 15:16:16,234 - INFO - Running experiment 92, run 4/5: BS=24, LR=0.01, Alpha=0.05
+2026-01-23 15:16:41,162 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.05/run_4_reconstruction_opt_20260123_151640.png
+2026-01-23 15:16:41,162 - INFO - Experiment 92, run 4 completed. PSNR: 8.92, SSIM: 0.0340
+2026-01-23 15:16:41,162 - INFO - Running experiment 92, run 5/5: BS=24, LR=0.01, Alpha=0.05
+2026-01-23 15:17:06,229 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.05/run_5_reconstruction_opt_20260123_151705.png
+2026-01-23 15:17:06,229 - INFO - Experiment 92, run 5 completed. PSNR: 7.29, SSIM: 0.0255
+2026-01-23 15:17:06,229 - INFO - Created experiment directory: ./viz/mnist/bs24_lr1e-02_alpha0.1
+2026-01-23 15:17:06,229 - INFO - Running experiment 93, run 1/5: BS=24, LR=0.01, Alpha=0.1
+2026-01-23 15:17:31,429 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.1/run_1_reconstruction_opt_20260123_151730.png
+2026-01-23 15:17:31,429 - INFO - Experiment 93, run 1 completed. PSNR: 8.74, SSIM: 0.0129
+2026-01-23 15:17:31,429 - INFO - Running experiment 93, run 2/5: BS=24, LR=0.01, Alpha=0.1
+2026-01-23 15:17:55,686 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.1/run_2_reconstruction_opt_20260123_151754.png
+2026-01-23 15:17:55,686 - INFO - Experiment 93, run 2 completed. PSNR: 8.98, SSIM: 0.0170
+2026-01-23 15:17:55,686 - INFO - Running experiment 93, run 3/5: BS=24, LR=0.01, Alpha=0.1
+2026-01-23 15:18:18,997 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.1/run_3_reconstruction_opt_20260123_151817.png
+2026-01-23 15:18:18,998 - INFO - Experiment 93, run 3 completed. PSNR: 9.07, SSIM: 0.0130
+2026-01-23 15:18:18,998 - INFO - Running experiment 93, run 4/5: BS=24, LR=0.01, Alpha=0.1
+2026-01-23 15:18:42,770 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.1/run_4_reconstruction_opt_20260123_151841.png
+2026-01-23 15:18:42,770 - INFO - Experiment 93, run 4 completed. PSNR: 8.65, SSIM: 0.0132
+2026-01-23 15:18:42,770 - INFO - Running experiment 93, run 5/5: BS=24, LR=0.01, Alpha=0.1
+2026-01-23 15:19:06,284 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.1/run_5_reconstruction_opt_20260123_151905.png
+2026-01-23 15:19:06,284 - INFO - Experiment 93, run 5 completed. PSNR: 8.19, SSIM: 0.0087
+2026-01-23 15:19:06,284 - INFO - Created experiment directory: ./viz/mnist/bs24_lr1e-02_alpha0.2
+2026-01-23 15:19:06,284 - INFO - Running experiment 94, run 1/5: BS=24, LR=0.01, Alpha=0.2
+2026-01-23 15:19:29,908 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.2/run_1_reconstruction_opt_20260123_151928.png
+2026-01-23 15:19:29,908 - INFO - Experiment 94, run 1 completed. PSNR: 8.82, SSIM: 0.0230
+2026-01-23 15:19:29,908 - INFO - Running experiment 94, run 2/5: BS=24, LR=0.01, Alpha=0.2
+2026-01-23 15:19:53,651 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.2/run_2_reconstruction_opt_20260123_151952.png
+2026-01-23 15:19:53,651 - INFO - Experiment 94, run 2 completed. PSNR: 8.82, SSIM: 0.0244
+2026-01-23 15:19:53,651 - INFO - Running experiment 94, run 3/5: BS=24, LR=0.01, Alpha=0.2
+2026-01-23 15:20:16,828 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.2/run_3_reconstruction_opt_20260123_152015.png
+2026-01-23 15:20:16,828 - INFO - Experiment 94, run 3 completed. PSNR: 8.26, SSIM: 0.0199
+2026-01-23 15:20:16,828 - INFO - Running experiment 94, run 4/5: BS=24, LR=0.01, Alpha=0.2
+2026-01-23 15:20:40,590 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.2/run_4_reconstruction_opt_20260123_152039.png
+2026-01-23 15:20:40,590 - INFO - Experiment 94, run 4 completed. PSNR: 8.46, SSIM: 0.0230
+2026-01-23 15:20:40,590 - INFO - Running experiment 94, run 5/5: BS=24, LR=0.01, Alpha=0.2
+2026-01-23 15:21:03,918 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.2/run_5_reconstruction_opt_20260123_152102.png
+2026-01-23 15:21:03,918 - INFO - Experiment 94, run 5 completed. PSNR: 8.51, SSIM: 0.0130
+2026-01-23 15:21:03,918 - INFO - Created experiment directory: ./viz/mnist/bs24_lr1e-02_alpha0.5
+2026-01-23 15:21:03,918 - INFO - Running experiment 95, run 1/5: BS=24, LR=0.01, Alpha=0.5
+2026-01-23 15:21:27,060 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.5/run_1_reconstruction_opt_20260123_152126.png
+2026-01-23 15:21:27,060 - INFO - Experiment 95, run 1 completed. PSNR: 8.42, SSIM: 0.0149
+2026-01-23 15:21:27,060 - INFO - Running experiment 95, run 2/5: BS=24, LR=0.01, Alpha=0.5
+2026-01-23 15:21:50,810 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.5/run_2_reconstruction_opt_20260123_152149.png
+2026-01-23 15:21:50,810 - INFO - Experiment 95, run 2 completed. PSNR: 8.07, SSIM: 0.0049
+2026-01-23 15:21:50,810 - INFO - Running experiment 95, run 3/5: BS=24, LR=0.01, Alpha=0.5
+2026-01-23 15:22:14,345 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.5/run_3_reconstruction_opt_20260123_152213.png
+2026-01-23 15:22:14,345 - INFO - Experiment 95, run 3 completed. PSNR: 9.26, SSIM: 0.0154
+2026-01-23 15:22:14,346 - INFO - Running experiment 95, run 4/5: BS=24, LR=0.01, Alpha=0.5
+2026-01-23 15:22:37,494 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.5/run_4_reconstruction_opt_20260123_152236.png
+2026-01-23 15:22:37,494 - INFO - Experiment 95, run 4 completed. PSNR: 8.54, SSIM: 0.0128
+2026-01-23 15:22:37,494 - INFO - Running experiment 95, run 5/5: BS=24, LR=0.01, Alpha=0.5
+2026-01-23 15:23:00,993 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha0.5/run_5_reconstruction_opt_20260123_152259.png
+2026-01-23 15:23:00,993 - INFO - Experiment 95, run 5 completed. PSNR: 8.04, SSIM: 0.0029
+2026-01-23 15:23:00,993 - INFO - Created experiment directory: ./viz/mnist/bs24_lr1e-02_alpha1.0
+2026-01-23 15:23:00,993 - INFO - Running experiment 96, run 1/5: BS=24, LR=0.01, Alpha=1.0
+2026-01-23 15:23:24,593 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha1.0/run_1_reconstruction_opt_20260123_152323.png
+2026-01-23 15:23:24,593 - INFO - Experiment 96, run 1 completed. PSNR: 8.94, SSIM: 0.0118
+2026-01-23 15:23:24,593 - INFO - Running experiment 96, run 2/5: BS=24, LR=0.01, Alpha=1.0
+2026-01-23 15:23:48,295 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha1.0/run_2_reconstruction_opt_20260123_152347.png
+2026-01-23 15:23:48,295 - INFO - Experiment 96, run 2 completed. PSNR: 9.27, SSIM: 0.0146
+2026-01-23 15:23:48,295 - INFO - Running experiment 96, run 3/5: BS=24, LR=0.01, Alpha=1.0
+2026-01-23 15:24:11,711 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha1.0/run_3_reconstruction_opt_20260123_152410.png
+2026-01-23 15:24:11,711 - INFO - Experiment 96, run 3 completed. PSNR: 8.34, SSIM: 0.0075
+2026-01-23 15:24:11,711 - INFO - Running experiment 96, run 4/5: BS=24, LR=0.01, Alpha=1.0
+2026-01-23 15:24:35,482 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha1.0/run_4_reconstruction_opt_20260123_152434.png
+2026-01-23 15:24:35,482 - INFO - Experiment 96, run 4 completed. PSNR: 7.96, SSIM: 0.0003
+2026-01-23 15:24:35,482 - INFO - Running experiment 96, run 5/5: BS=24, LR=0.01, Alpha=1.0
+2026-01-23 15:24:58,984 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-02_alpha1.0/run_5_reconstruction_opt_20260123_152458.png
+2026-01-23 15:24:58,984 - INFO - Experiment 96, run 5 completed. PSNR: 8.16, SSIM: 0.0101
+2026-01-23 15:24:58,984 - INFO - Created experiment directory: ./viz/mnist/bs24_lr5e-02_alpha0.01
+2026-01-23 15:24:58,985 - INFO - Running experiment 97, run 1/5: BS=24, LR=0.05, Alpha=0.01
+2026-01-23 15:25:22,629 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.01/run_1_reconstruction_opt_20260123_152521.png
+2026-01-23 15:25:22,629 - INFO - Experiment 97, run 1 completed. PSNR: 10.01, SSIM: 0.0450
+2026-01-23 15:25:22,629 - INFO - Running experiment 97, run 2/5: BS=24, LR=0.05, Alpha=0.01
+2026-01-23 15:25:46,450 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.01/run_2_reconstruction_opt_20260123_152545.png
+2026-01-23 15:25:46,450 - INFO - Experiment 97, run 2 completed. PSNR: 8.92, SSIM: 0.0581
+2026-01-23 15:25:46,450 - INFO - Running experiment 97, run 3/5: BS=24, LR=0.05, Alpha=0.01
+2026-01-23 15:26:09,743 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.01/run_3_reconstruction_opt_20260123_152608.png
+2026-01-23 15:26:09,743 - INFO - Experiment 97, run 3 completed. PSNR: 8.64, SSIM: 0.0430
+2026-01-23 15:26:09,743 - INFO - Running experiment 97, run 4/5: BS=24, LR=0.05, Alpha=0.01
+2026-01-23 15:26:33,482 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.01/run_4_reconstruction_opt_20260123_152632.png
+2026-01-23 15:26:33,482 - INFO - Experiment 97, run 4 completed. PSNR: 9.58, SSIM: 0.0611
+2026-01-23 15:26:33,482 - INFO - Running experiment 97, run 5/5: BS=24, LR=0.05, Alpha=0.01
+2026-01-23 15:26:56,767 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.01/run_5_reconstruction_opt_20260123_152655.png
+2026-01-23 15:26:56,767 - INFO - Experiment 97, run 5 completed. PSNR: 9.91, SSIM: 0.0515
+2026-01-23 15:26:56,767 - INFO - Created experiment directory: ./viz/mnist/bs24_lr5e-02_alpha0.05
+2026-01-23 15:26:56,767 - INFO - Running experiment 98, run 1/5: BS=24, LR=0.05, Alpha=0.05
+2026-01-23 15:27:20,412 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.05/run_1_reconstruction_opt_20260123_152719.png
+2026-01-23 15:27:20,412 - INFO - Experiment 98, run 1 completed. PSNR: 8.89, SSIM: 0.0631
+2026-01-23 15:27:20,412 - INFO - Running experiment 98, run 2/5: BS=24, LR=0.05, Alpha=0.05
+2026-01-23 15:27:43,439 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.05/run_2_reconstruction_opt_20260123_152742.png
+2026-01-23 15:27:43,439 - INFO - Experiment 98, run 2 completed. PSNR: 9.45, SSIM: 0.0277
+2026-01-23 15:27:43,439 - INFO - Running experiment 98, run 3/5: BS=24, LR=0.05, Alpha=0.05
+2026-01-23 15:28:07,149 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.05/run_3_reconstruction_opt_20260123_152806.png
+2026-01-23 15:28:07,150 - INFO - Experiment 98, run 3 completed. PSNR: 9.95, SSIM: 0.0333
+2026-01-23 15:28:07,150 - INFO - Running experiment 98, run 4/5: BS=24, LR=0.05, Alpha=0.05
+2026-01-23 15:28:30,672 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.05/run_4_reconstruction_opt_20260123_152829.png
+2026-01-23 15:28:30,672 - INFO - Experiment 98, run 4 completed. PSNR: 9.49, SSIM: 0.0380
+2026-01-23 15:28:30,672 - INFO - Running experiment 98, run 5/5: BS=24, LR=0.05, Alpha=0.05
+2026-01-23 15:28:53,889 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.05/run_5_reconstruction_opt_20260123_152852.png
+2026-01-23 15:28:53,889 - INFO - Experiment 98, run 5 completed. PSNR: 10.05, SSIM: 0.0548
+2026-01-23 15:28:53,889 - INFO - Created experiment directory: ./viz/mnist/bs24_lr5e-02_alpha0.1
+2026-01-23 15:28:53,889 - INFO - Running experiment 99, run 1/5: BS=24, LR=0.05, Alpha=0.1
+2026-01-23 15:29:17,128 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.1/run_1_reconstruction_opt_20260123_152916.png
+2026-01-23 15:29:17,129 - INFO - Experiment 99, run 1 completed. PSNR: 9.48, SSIM: 0.0406
+2026-01-23 15:29:17,129 - INFO - Running experiment 99, run 2/5: BS=24, LR=0.05, Alpha=0.1
+2026-01-23 15:29:40,838 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.1/run_2_reconstruction_opt_20260123_152939.png
+2026-01-23 15:29:40,838 - INFO - Experiment 99, run 2 completed. PSNR: 9.45, SSIM: 0.0446
+2026-01-23 15:29:40,838 - INFO - Running experiment 99, run 3/5: BS=24, LR=0.05, Alpha=0.1
+2026-01-23 15:30:05,080 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.1/run_3_reconstruction_opt_20260123_153004.png
+2026-01-23 15:30:05,080 - INFO - Experiment 99, run 3 completed. PSNR: 9.43, SSIM: 0.0323
+2026-01-23 15:30:05,081 - INFO - Running experiment 99, run 4/5: BS=24, LR=0.05, Alpha=0.1
+2026-01-23 15:30:28,727 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.1/run_4_reconstruction_opt_20260123_153027.png
+2026-01-23 15:30:28,727 - INFO - Experiment 99, run 4 completed. PSNR: 8.66, SSIM: 0.0382
+2026-01-23 15:30:28,727 - INFO - Running experiment 99, run 5/5: BS=24, LR=0.05, Alpha=0.1
+2026-01-23 15:30:52,417 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.1/run_5_reconstruction_opt_20260123_153051.png
+2026-01-23 15:30:52,417 - INFO - Experiment 99, run 5 completed. PSNR: 8.13, SSIM: 0.0275
+2026-01-23 15:30:52,417 - INFO - Created experiment directory: ./viz/mnist/bs24_lr5e-02_alpha0.2
+2026-01-23 15:30:52,418 - INFO - Running experiment 100, run 1/5: BS=24, LR=0.05, Alpha=0.2
+2026-01-23 15:31:15,645 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.2/run_1_reconstruction_opt_20260123_153114.png
+2026-01-23 15:31:15,645 - INFO - Experiment 100, run 1 completed. PSNR: 9.12, SSIM: 0.0413
+2026-01-23 15:31:15,645 - INFO - Running experiment 100, run 2/5: BS=24, LR=0.05, Alpha=0.2
+2026-01-23 15:31:39,319 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.2/run_2_reconstruction_opt_20260123_153138.png
+2026-01-23 15:31:39,319 - INFO - Experiment 100, run 2 completed. PSNR: 9.19, SSIM: 0.0176
+2026-01-23 15:31:39,319 - INFO - Running experiment 100, run 3/5: BS=24, LR=0.05, Alpha=0.2
+2026-01-23 15:32:02,450 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.2/run_3_reconstruction_opt_20260123_153201.png
+2026-01-23 15:32:02,450 - INFO - Experiment 100, run 3 completed. PSNR: 7.49, SSIM: 0.0319
+2026-01-23 15:32:02,450 - INFO - Running experiment 100, run 4/5: BS=24, LR=0.05, Alpha=0.2
+2026-01-23 15:32:26,114 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.2/run_4_reconstruction_opt_20260123_153225.png
+2026-01-23 15:32:26,114 - INFO - Experiment 100, run 4 completed. PSNR: 8.51, SSIM: 0.0430
+2026-01-23 15:32:26,114 - INFO - Running experiment 100, run 5/5: BS=24, LR=0.05, Alpha=0.2
+2026-01-23 15:32:49,533 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.2/run_5_reconstruction_opt_20260123_153248.png
+2026-01-23 15:32:49,534 - INFO - Experiment 100, run 5 completed. PSNR: 9.49, SSIM: 0.0401
+2026-01-23 15:32:49,534 - INFO - Created experiment directory: ./viz/mnist/bs24_lr5e-02_alpha0.5
+2026-01-23 15:32:49,534 - INFO - Running experiment 101, run 1/5: BS=24, LR=0.05, Alpha=0.5
+2026-01-23 15:33:13,261 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.5/run_1_reconstruction_opt_20260123_153312.png
+2026-01-23 15:33:13,261 - INFO - Experiment 101, run 1 completed. PSNR: 8.71, SSIM: 0.0212
+2026-01-23 15:33:13,261 - INFO - Running experiment 101, run 2/5: BS=24, LR=0.05, Alpha=0.5
+2026-01-23 15:33:36,661 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.5/run_2_reconstruction_opt_20260122_175157.png
+2026-01-23 15:33:36,662 - INFO - Experiment 101, run 2 completed. PSNR: 8.56, SSIM: 0.0225
+2026-01-23 15:33:36,662 - INFO - Running experiment 101, run 3/5: BS=24, LR=0.05, Alpha=0.5
+2026-01-23 15:34:00,537 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.5/run_3_reconstruction_opt_20260123_153359.png
+2026-01-23 15:34:00,537 - INFO - Experiment 101, run 3 completed. PSNR: 8.83, SSIM: 0.0315
+2026-01-23 15:34:00,537 - INFO - Running experiment 101, run 4/5: BS=24, LR=0.05, Alpha=0.5
+2026-01-23 15:34:24,265 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.5/run_4_reconstruction_opt_20260123_153423.png
+2026-01-23 15:34:24,265 - INFO - Experiment 101, run 4 completed. PSNR: 8.16, SSIM: 0.0201
+2026-01-23 15:34:24,265 - INFO - Running experiment 101, run 5/5: BS=24, LR=0.05, Alpha=0.5
+2026-01-23 15:34:48,124 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha0.5/run_5_reconstruction_opt_20260123_153447.png
+2026-01-23 15:34:48,124 - INFO - Experiment 101, run 5 completed. PSNR: 7.85, SSIM: 0.0103
+2026-01-23 15:34:48,124 - INFO - Created experiment directory: ./viz/mnist/bs24_lr5e-02_alpha1.0
+2026-01-23 15:34:48,124 - INFO - Running experiment 102, run 1/5: BS=24, LR=0.05, Alpha=1.0
+2026-01-23 15:35:11,445 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha1.0/run_1_reconstruction_opt_20260123_153510.png
+2026-01-23 15:35:11,445 - INFO - Experiment 102, run 1 completed. PSNR: 8.49, SSIM: 0.0327
+2026-01-23 15:35:11,445 - INFO - Running experiment 102, run 2/5: BS=24, LR=0.05, Alpha=1.0
+2026-01-23 15:35:34,904 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha1.0/run_2_reconstruction_opt_20260123_153533.png
+2026-01-23 15:35:34,904 - INFO - Experiment 102, run 2 completed. PSNR: 8.93, SSIM: 0.0068
+2026-01-23 15:35:34,904 - INFO - Running experiment 102, run 3/5: BS=24, LR=0.05, Alpha=1.0
+2026-01-23 15:35:58,801 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha1.0/run_3_reconstruction_opt_20260123_153557.png
+2026-01-23 15:35:58,801 - INFO - Experiment 102, run 3 completed. PSNR: 8.85, SSIM: 0.0296
+2026-01-23 15:35:58,801 - INFO - Running experiment 102, run 4/5: BS=24, LR=0.05, Alpha=1.0
+2026-01-23 15:36:22,350 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha1.0/run_4_reconstruction_opt_20260123_153621.png
+2026-01-23 15:36:22,350 - INFO - Experiment 102, run 4 completed. PSNR: 7.81, SSIM: 0.0203
+2026-01-23 15:36:22,350 - INFO - Running experiment 102, run 5/5: BS=24, LR=0.05, Alpha=1.0
+2026-01-23 15:36:48,038 - INFO - Saved viz to ./viz/mnist/bs24_lr5e-02_alpha1.0/run_5_reconstruction_opt_20260123_153647.png
+2026-01-23 15:36:48,038 - INFO - Experiment 102, run 5 completed. PSNR: 8.13, SSIM: 0.0054
+2026-01-23 15:36:48,038 - INFO - Created experiment directory: ./viz/mnist/bs24_lr1e-01_alpha0.01
+2026-01-23 15:36:48,038 - INFO - Running experiment 103, run 1/5: BS=24, LR=0.1, Alpha=0.01
+2026-01-23 15:37:14,092 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.01/run_1_reconstruction_opt_20260123_153713.png
+2026-01-23 15:37:14,092 - INFO - Experiment 103, run 1 completed. PSNR: 8.20, SSIM: 0.0475
+2026-01-23 15:37:14,092 - INFO - Running experiment 103, run 2/5: BS=24, LR=0.1, Alpha=0.01
+2026-01-23 15:37:37,618 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.01/run_2_reconstruction_opt_20260123_153736.png
+2026-01-23 15:37:37,618 - INFO - Experiment 103, run 2 completed. PSNR: 9.29, SSIM: 0.0492
+2026-01-23 15:37:37,618 - INFO - Running experiment 103, run 3/5: BS=24, LR=0.1, Alpha=0.01
+2026-01-23 15:38:01,134 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.01/run_3_reconstruction_opt_20260123_153800.png
+2026-01-23 15:38:01,135 - INFO - Experiment 103, run 3 completed. PSNR: 10.49, SSIM: 0.0628
+2026-01-23 15:38:01,135 - INFO - Running experiment 103, run 4/5: BS=24, LR=0.1, Alpha=0.01
+2026-01-23 15:38:28,686 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.01/run_4_reconstruction_opt_20260123_153827.png
+2026-01-23 15:38:28,686 - INFO - Experiment 103, run 4 completed. PSNR: 10.06, SSIM: 0.0432
+2026-01-23 15:38:28,686 - INFO - Running experiment 103, run 5/5: BS=24, LR=0.1, Alpha=0.01
+2026-01-23 15:38:52,723 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.01/run_5_reconstruction_opt_20260123_153851.png
+2026-01-23 15:38:52,723 - INFO - Experiment 103, run 5 completed. PSNR: 9.15, SSIM: 0.0619
+2026-01-23 15:38:52,724 - INFO - Created experiment directory: ./viz/mnist/bs24_lr1e-01_alpha0.05
+2026-01-23 15:38:52,724 - INFO - Running experiment 104, run 1/5: BS=24, LR=0.1, Alpha=0.05
+2026-01-23 15:39:16,751 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.05/run_1_reconstruction_opt_20260123_153915.png
+2026-01-23 15:39:16,751 - INFO - Experiment 104, run 1 completed. PSNR: 9.12, SSIM: 0.0725
+2026-01-23 15:39:16,752 - INFO - Running experiment 104, run 2/5: BS=24, LR=0.1, Alpha=0.05
+2026-01-23 15:39:40,284 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.05/run_2_reconstruction_opt_20260123_153939.png
+2026-01-23 15:39:40,284 - INFO - Experiment 104, run 2 completed. PSNR: 9.00, SSIM: 0.0432
+2026-01-23 15:39:40,284 - INFO - Running experiment 104, run 3/5: BS=24, LR=0.1, Alpha=0.05
+2026-01-23 15:40:04,482 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.05/run_3_reconstruction_opt_20260123_154003.png
+2026-01-23 15:40:04,482 - INFO - Experiment 104, run 3 completed. PSNR: 8.94, SSIM: 0.0419
+2026-01-23 15:40:04,482 - INFO - Running experiment 104, run 4/5: BS=24, LR=0.1, Alpha=0.05
+2026-01-23 15:40:28,840 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.05/run_4_reconstruction_opt_20260123_154027.png
+2026-01-23 15:40:28,840 - INFO - Experiment 104, run 4 completed. PSNR: 9.71, SSIM: 0.0538
+2026-01-23 15:40:28,840 - INFO - Running experiment 104, run 5/5: BS=24, LR=0.1, Alpha=0.05
+2026-01-23 15:40:52,896 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.05/run_5_reconstruction_opt_20260123_154051.png
+2026-01-23 15:40:52,896 - INFO - Experiment 104, run 5 completed. PSNR: 9.22, SSIM: 0.0492
+2026-01-23 15:40:52,896 - INFO - Created experiment directory: ./viz/mnist/bs24_lr1e-01_alpha0.1
+2026-01-23 15:40:52,896 - INFO - Running experiment 105, run 1/5: BS=24, LR=0.1, Alpha=0.1
+2026-01-23 15:41:17,049 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.1/run_1_reconstruction_opt_20260123_154116.png
+2026-01-23 15:41:17,050 - INFO - Experiment 105, run 1 completed. PSNR: 8.99, SSIM: 0.0357
+2026-01-23 15:41:17,050 - INFO - Running experiment 105, run 2/5: BS=24, LR=0.1, Alpha=0.1
+2026-01-23 15:41:41,659 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.1/run_2_reconstruction_opt_20260123_154140.png
+2026-01-23 15:41:41,659 - INFO - Experiment 105, run 2 completed. PSNR: 8.77, SSIM: 0.0388
+2026-01-23 15:41:41,659 - INFO - Running experiment 105, run 3/5: BS=24, LR=0.1, Alpha=0.1
+2026-01-23 15:42:06,297 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.1/run_3_reconstruction_opt_20260123_154205.png
+2026-01-23 15:42:06,297 - INFO - Experiment 105, run 3 completed. PSNR: 8.57, SSIM: 0.0525
+2026-01-23 15:42:06,297 - INFO - Running experiment 105, run 4/5: BS=24, LR=0.1, Alpha=0.1
+2026-01-23 15:42:30,608 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.1/run_4_reconstruction_opt_20260123_154229.png
+2026-01-23 15:42:30,608 - INFO - Experiment 105, run 4 completed. PSNR: 9.19, SSIM: 0.0611
+2026-01-23 15:42:30,608 - INFO - Running experiment 105, run 5/5: BS=24, LR=0.1, Alpha=0.1
+2026-01-23 15:42:54,875 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.1/run_5_reconstruction_opt_20260123_154253.png
+2026-01-23 15:42:54,875 - INFO - Experiment 105, run 5 completed. PSNR: 8.96, SSIM: 0.0540
+2026-01-23 15:42:54,875 - INFO - Created experiment directory: ./viz/mnist/bs24_lr1e-01_alpha0.2
+2026-01-23 15:42:54,875 - INFO - Running experiment 106, run 1/5: BS=24, LR=0.1, Alpha=0.2
+2026-01-23 15:43:19,377 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.2/run_1_reconstruction_opt_20260123_154318.png
+2026-01-23 15:43:19,377 - INFO - Experiment 106, run 1 completed. PSNR: 8.12, SSIM: 0.0484
+2026-01-23 15:43:19,377 - INFO - Running experiment 106, run 2/5: BS=24, LR=0.1, Alpha=0.2
+2026-01-23 15:43:42,875 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.2/run_2_reconstruction_opt_20260123_154341.png
+2026-01-23 15:43:42,875 - INFO - Experiment 106, run 2 completed. PSNR: 9.59, SSIM: 0.0392
+2026-01-23 15:43:42,875 - INFO - Running experiment 106, run 3/5: BS=24, LR=0.1, Alpha=0.2
+2026-01-23 15:44:07,328 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.2/run_3_reconstruction_opt_20260123_154406.png
+2026-01-23 15:44:07,328 - INFO - Experiment 106, run 3 completed. PSNR: 8.69, SSIM: 0.0195
+2026-01-23 15:44:07,328 - INFO - Running experiment 106, run 4/5: BS=24, LR=0.1, Alpha=0.2
+2026-01-23 15:44:32,312 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.2/run_4_reconstruction_opt_20260123_154432.png
+2026-01-23 15:44:32,312 - INFO - Experiment 106, run 4 completed. PSNR: 9.43, SSIM: 0.0435
+2026-01-23 15:44:32,312 - INFO - Running experiment 106, run 5/5: BS=24, LR=0.1, Alpha=0.2
+2026-01-23 15:44:57,143 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.2/run_5_reconstruction_opt_20260123_154456.png
+2026-01-23 15:44:57,143 - INFO - Experiment 106, run 5 completed. PSNR: 9.60, SSIM: 0.0346
+2026-01-23 15:44:57,143 - INFO - Created experiment directory: ./viz/mnist/bs24_lr1e-01_alpha0.5
+2026-01-23 15:44:57,143 - INFO - Running experiment 107, run 1/5: BS=24, LR=0.1, Alpha=0.5
+2026-01-23 15:45:22,778 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.5/run_1_reconstruction_opt_20260123_154521.png
+2026-01-23 15:45:22,778 - INFO - Experiment 107, run 1 completed. PSNR: 8.86, SSIM: 0.0480
+2026-01-23 15:45:22,779 - INFO - Running experiment 107, run 2/5: BS=24, LR=0.1, Alpha=0.5
+2026-01-23 15:45:46,649 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.5/run_2_reconstruction_opt_20260123_154545.png
+2026-01-23 15:45:46,649 - INFO - Experiment 107, run 2 completed. PSNR: 8.31, SSIM: 0.0249
+2026-01-23 15:45:46,649 - INFO - Running experiment 107, run 3/5: BS=24, LR=0.1, Alpha=0.5
+2026-01-23 15:46:11,029 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.5/run_3_reconstruction_opt_20260123_154609.png
+2026-01-23 15:46:11,030 - INFO - Experiment 107, run 3 completed. PSNR: 7.91, SSIM: 0.0322
+2026-01-23 15:46:11,030 - INFO - Running experiment 107, run 4/5: BS=24, LR=0.1, Alpha=0.5
+2026-01-23 15:46:34,824 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.5/run_4_reconstruction_opt_20260123_154633.png
+2026-01-23 15:46:34,824 - INFO - Experiment 107, run 4 completed. PSNR: 7.81, SSIM: 0.0371
+2026-01-23 15:46:34,824 - INFO - Running experiment 107, run 5/5: BS=24, LR=0.1, Alpha=0.5
+2026-01-23 15:46:59,193 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha0.5/run_5_reconstruction_opt_20260123_154658.png
+2026-01-23 15:46:59,193 - INFO - Experiment 107, run 5 completed. PSNR: 8.63, SSIM: 0.0387
+2026-01-23 15:46:59,193 - INFO - Created experiment directory: ./viz/mnist/bs24_lr1e-01_alpha1.0
+2026-01-23 15:46:59,193 - INFO - Running experiment 108, run 1/5: BS=24, LR=0.1, Alpha=1.0
+2026-01-23 15:47:23,544 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha1.0/run_1_reconstruction_opt_20260123_154722.png
+2026-01-23 15:47:23,544 - INFO - Experiment 108, run 1 completed. PSNR: 7.76, SSIM: 0.0299
+2026-01-23 15:47:23,544 - INFO - Running experiment 108, run 2/5: BS=24, LR=0.1, Alpha=1.0
+2026-01-23 15:47:47,516 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha1.0/run_2_reconstruction_opt_20260123_154746.png
+2026-01-23 15:47:47,516 - INFO - Experiment 108, run 2 completed. PSNR: 7.47, SSIM: 0.0274
+2026-01-23 15:47:47,516 - INFO - Running experiment 108, run 3/5: BS=24, LR=0.1, Alpha=1.0
+2026-01-23 15:48:12,079 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha1.0/run_3_reconstruction_opt_20260123_154811.png
+2026-01-23 15:48:12,079 - INFO - Experiment 108, run 3 completed. PSNR: 8.23, SSIM: 0.0140
+2026-01-23 15:48:12,079 - INFO - Running experiment 108, run 4/5: BS=24, LR=0.1, Alpha=1.0
+2026-01-23 15:48:35,988 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha1.0/run_4_reconstruction_opt_20260123_154834.png
+2026-01-23 15:48:35,989 - INFO - Experiment 108, run 4 completed. PSNR: 7.83, SSIM: 0.0316
+2026-01-23 15:48:35,989 - INFO - Running experiment 108, run 5/5: BS=24, LR=0.1, Alpha=1.0
+2026-01-23 15:49:00,085 - INFO - Saved viz to ./viz/mnist/bs24_lr1e-01_alpha1.0/run_5_reconstruction_opt_20260123_154858.png
+2026-01-23 15:49:00,085 - INFO - Experiment 108, run 5 completed. PSNR: 8.56, SSIM: 0.0364
+2026-01-23 15:49:00,094 - INFO - Summary CSV saved to ./results_summary/results_summary.csv
+
+========================================================================================================================
+EXPERIMENT SUMMARY (Averaged across 5 runs)
+========================================================================================================================
+BS   LR         Alpha    PSNR Mean       PSNR Std   SSIM Mean       SSIM Std   MSE            
+------------------------------------------------------------------------------------------------------------------------
+1    1e-02      0.010    9.23            1.67       0.0785          0.0328     0.128985       
+1    1e-02      0.050    11.77           1.11       0.1689          0.0449     0.068827       
+1    1e-02      0.100    13.13           1.18       0.2393          0.0255     0.050514       
+1    1e-02      0.200    14.47           1.75       0.2282          0.0394     0.038715       
+1    1e-02      0.500    12.88           0.95       0.2185          0.0335     0.052724       
+1    1e-02      1.000    14.88           1.52       0.2372          0.0552     0.034474       
+1    5e-02      0.010    14.39           4.20       0.2248          0.0992     0.053132       
+1    5e-02      0.050    25.98           4.98       0.4388          0.0743     0.004692       
+1    5e-02      0.100    27.16           4.62       0.5211          0.1064     0.003167       
+1    5e-02      0.200    27.33           4.38       0.4906          0.0482     0.002704       
+1    5e-02      0.500    29.97           3.44       0.5739          0.0946     0.001361       
+1    5e-02      1.000    30.25           1.63       0.5595          0.0611     0.001013       
+1    1e-01      0.010    32.24           2.63       0.6555          0.0787     0.000694       
+1    1e-01      0.050    34.14           6.32       0.7184          0.1299     0.000919       
+1    1e-01      0.100    40.46           3.27       0.8558          0.0596     0.000119       
+1    1e-01      0.200    41.06           2.97       0.8679          0.0596     0.000096       
+1    1e-01      0.500    41.51           3.93       0.8751          0.0727     0.000099       
+1    1e-01      1.000    39.67           6.90       0.8506          0.1212     0.000414       
+2    1e-02      0.010    9.87            0.84       0.1012          0.0405     0.105482       
+2    1e-02      0.050    11.02           0.76       0.1316          0.0288     0.083539       
+2    1e-02      0.100    12.75           0.67       0.1679          0.0244     0.055817       
+2    1e-02      0.200    11.71           0.59       0.1488          0.0150     0.072940       
+2    1e-02      0.500    12.45           0.71       0.1681          0.0258     0.058997       
+2    1e-02      1.000    11.58           0.81       0.1567          0.0166     0.074606       
+2    5e-02      0.010    16.36           1.50       0.2702          0.0117     0.031236       
+2    5e-02      0.050    20.67           0.98       0.3691          0.0373     0.009235       
+2    5e-02      0.100    21.56           1.61       0.3461          0.0487     0.008280       
+2    5e-02      0.200    21.87           2.26       0.3844          0.0162     0.009946       
+2    5e-02      0.500    20.44           2.43       0.3016          0.0912     0.011473       
+2    5e-02      1.000    18.78           0.59       0.2773          0.0372     0.015358       
+2    1e-01      0.010    25.24           4.05       0.4559          0.0640     0.006418       
+2    1e-01      0.050    30.10           1.81       0.5663          0.0396     0.001118       
+2    1e-01      0.100    25.20           8.08       0.4410          0.1767     0.026193       
+2    1e-01      0.200    26.09           3.69       0.4413          0.1230     0.003827       
+2    1e-01      0.500    26.59           2.19       0.4350          0.0406     0.002744       
+2    1e-01      1.000    19.17           6.38       0.3106          0.1410     0.034658       
+4    1e-02      0.010    10.21           0.23       0.1028          0.0181     0.098233       
+4    1e-02      0.050    10.18           0.28       0.0999          0.0148     0.098613       
+4    1e-02      0.100    10.91           0.84       0.0895          0.0241     0.088477       
+4    1e-02      0.200    10.19           0.40       0.0798          0.0082     0.100629       
+4    1e-02      0.500    10.09           0.09       0.0818          0.0118     0.101724       
+4    1e-02      1.000    10.05           0.66       0.0745          0.0087     0.104858       
+4    5e-02      0.010    13.84           3.62       0.1809          0.0735     0.057792       
+4    5e-02      0.050    12.96           1.61       0.1573          0.0479     0.056384       
+4    5e-02      0.100    12.89           0.54       0.2061          0.0321     0.056765       
+4    5e-02      0.200    13.32           1.06       0.1820          0.0298     0.052536       
+4    5e-02      0.500    11.74           0.70       0.1534          0.0219     0.072242       
+4    5e-02      1.000    10.94           0.75       0.1173          0.0180     0.085242       
+4    1e-01      0.010    17.73           2.05       0.2620          0.0745     0.029611       
+4    1e-01      0.050    16.44           1.29       0.2597          0.0268     0.027347       
+4    1e-01      0.100    15.20           0.48       0.2482          0.0316     0.033528       
+4    1e-01      0.200    13.24           0.75       0.1881          0.0327     0.055186       
+4    1e-01      0.500    12.40           0.79       0.1720          0.0166     0.061579       
+4    1e-01      1.000    11.68           1.06       0.1621          0.0265     0.073997       
+8    1e-02      0.010    10.17           0.51       0.0652          0.0099     0.102748       
+8    1e-02      0.050    10.25           0.45       0.0603          0.0143     0.097948       
+8    1e-02      0.100    9.21            0.54       0.0494          0.0026     0.123839       
+8    1e-02      0.200    9.03            0.54       0.0438          0.0121     0.129139       
+8    1e-02      0.500    8.74            0.39       0.0330          0.0122     0.135980       
+8    1e-02      1.000    8.94            0.66       0.0342          0.0026     0.130493       
+8    5e-02      0.010    11.88           0.94       0.1440          0.0325     0.070741       
+8    5e-02      0.050    10.95           0.97       0.1045          0.0100     0.087903       
+8    5e-02      0.100    10.41           0.67       0.0881          0.0177     0.094929       
+8    5e-02      0.200    10.34           0.43       0.0848          0.0096     0.096758       
+8    5e-02      0.500    9.57            0.50       0.0714          0.0198     0.115810       
+8    5e-02      1.000    9.36            0.95       0.0554          0.0078     0.122139       
+8    1e-01      0.010    12.11           0.70       0.1533          0.0352     0.072446       
+8    1e-01      0.050    11.84           0.69       0.1134          0.0053     0.074380       
+8    1e-01      0.100    10.47           0.91       0.0989          0.0219     0.095103       
+8    1e-01      0.200    9.84            0.45       0.1111          0.0139     0.107751       
+8    1e-01      0.500    9.73            0.26       0.0827          0.0052     0.112282       
+8    1e-01      1.000    9.42            0.28       0.0672          0.0035     0.117023       
+16   1e-02      0.010    8.91            0.18       0.0413          0.0035     0.131692       
+16   1e-02      0.050    8.84            0.38       0.0344          0.0119     0.132303       
+16   1e-02      0.100    8.86            0.77       0.0382          0.0095     0.135165       
+16   1e-02      0.200    8.79            0.53       0.0184          0.0047     0.137112       
+16   1e-02      0.500    8.55            0.26       0.0160          0.0077     0.143765       
+16   1e-02      1.000    8.51            0.50       0.0192          0.0025     0.143606       
+16   5e-02      0.010    10.56           1.04       0.0756          0.0243     0.093986       
+16   5e-02      0.050    9.25            0.55       0.0604          0.0099     0.122562       
+2026-01-23 15:49:00,101 - INFO - Experiment grid search completed!
+16   5e-02      0.100    8.98            0.82       0.0417          0.0043     0.134043       
+16   5e-02      0.200    9.05            0.59       0.0432          0.0051     0.129182       
+16   5e-02      0.500    9.18            0.46       0.0344          0.0053     0.126572       
+16   5e-02      1.000    8.82            0.50       0.0316          0.0085     0.136362       
+16   1e-01      0.010    10.04           0.26       0.0862          0.0145     0.102414       
+16   1e-01      0.050    9.40            0.38       0.0833          0.0115     0.119255       
+16   1e-01      0.100    9.51            0.91       0.0767          0.0173     0.117604       
+16   1e-01      0.200    9.19            0.69       0.0500          0.0121     0.126457       
+16   1e-01      0.500    8.73            0.48       0.0474          0.0163     0.137192       
+16   1e-01      1.000    8.20            0.34       0.0330          0.0083     0.154997       
+24   1e-02      0.010    9.14            0.56       0.0323          0.0026     0.126091       
+24   1e-02      0.050    8.53            0.67       0.0255          0.0052     0.144318       
+24   1e-02      0.100    8.73            0.31       0.0130          0.0026     0.136884       
+24   1e-02      0.200    8.57            0.22       0.0207          0.0041     0.141222       
+24   1e-02      0.500    8.47            0.44       0.0102          0.0052     0.144419       
+24   1e-02      1.000    8.53            0.49       0.0089          0.0049     0.143336       
+24   5e-02      0.010    9.41            0.54       0.0517          0.0071     0.119060       
+24   5e-02      0.050    9.57            0.41       0.0434          0.0134     0.113548       
+24   5e-02      0.100    9.03            0.55       0.0366          0.0061     0.128805       
+24   5e-02      0.200    8.76            0.71       0.0348          0.0094     0.138131       
+24   5e-02      0.500    8.42            0.36       0.0211          0.0067     0.146169       
+24   5e-02      1.000    8.44            0.43       0.0190          0.0113     0.146732       
+24   1e-01      0.010    9.44            0.79       0.0529          0.0079     0.119973       
+24   1e-01      0.050    9.20            0.27       0.0521          0.0111     0.123746       
+24   1e-01      0.100    8.90            0.21       0.0484          0.0096     0.132108       
+24   1e-01      0.200    9.09            0.59       0.0370          0.0099     0.128536       
+24   1e-01      0.500    8.30            0.40       0.0362          0.0076     0.151886       
+24   1e-01      1.000    7.97            0.38       0.0279          0.0075     0.161381       
+========================================================================================================================
+
