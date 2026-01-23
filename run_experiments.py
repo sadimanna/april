@@ -52,6 +52,8 @@ def run_experiment(batch_size, lr_opt, alpha, exp_id, run_num, exp_dir):
         '--alpha', str(alpha),
         '--iterations', str(ITERATIONS),
         '--dataset', DATASET,
+        '--use_layernorm',
+        '--use_residual'
     ]
     
     if PRETRAINED:
